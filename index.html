@@ -1,6 +1,31 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head><meta name="google-site-verification" content="8K9xUEUEIV5yYpNFADtXKGosE5ON2arrEQFhsj92owU" />
+<head><meta name="google-site-verification" content="8K9xUEUEIV5yYpNFADtXKGosE5ON2arrEQFhsj92owU" /><section id="mawjEditorialSection" class="mx-auto my-6 max-w-5xl rounded-2xl border border-amber-200 bg-white p-5 text-right shadow-sm" dir="rtl">
+  <div class="mb-3 flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
+    <span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-extrabold text-amber-900">الافتتاحية</span>
+    <span class="text-xs text-slate-500">بقلم: زاد الهاجري</span>
+  </div>
+
+  <h2 class="mb-4 text-xl font-extrabold leading-snug text-slate-900">
+    قمة دون سقف التوقعات: حين تتقدّم البروتوكولات على القرار
+  </h2>
+
+  <div class="space-y-3 text-sm leading-8 text-slate-700">
+    <p>
+      لم تكن القمة الأخيرة بحاجة إلى بيانات ختامية مطوّلة أو صور تذكارية تُتقن الكاميرات التقاطها بقدر ما كانت بحاجة إلى قرار شجاع يردم الفجوة بين حجم التحديات الراهنة ومستوى الاستجابة السياسية. فحين تجتمع الأطراف المعنية تحت وطأة أزمات متلاحقة تمسّ الأمن والاستقرار والاقتصاد، يصبح انتظار المخرجات العملية حقاً مشروعاً لا ترفاً إعلامياً، ومعياراً حقيقياً لقياس جدوى أي لقاء رفيع المستوى.
+    </p>
+    <p>
+      غير أن المتابع لمجريات القمة يلحظ بوضوح أن السقف الذي بُنيت عليه الآمال كان أعلى بكثير مما انتهت إليه الطاولة. فبدلاً من خطوات تنفيذية واضحة، وجداول زمنية ملزمة، وآليات حقيقية لمعالجة الملفات العالقة، غلب الطابع التشاوري العام، وتكررت العبارات الدبلوماسية التي ترحّل الخلافات إلى جولات مقبلة دون أن تحسم جوهرها.
+    </p>
+    <p>
+      إن أخطر ما يواجه القمم الكبرى ليس اختلاف وجهات النظر في حد ذاته، بل أن تتحول المنصة من أداة لصناعة الحلول إلى مساحة لإدارة الوقت وتبادل الرسائل غير المباشرة. فالشعوب والأسواق والمؤسسات لا تبحث عن توصيات إنشائية تُتلى أمام المنابر، بل عن إرادة سياسية تترجم التفاهمات إلى واقع ملموس يخفف من حدة التوتر ويمنح المستقبل قدراً أكبر من اليقين.
+    </p>
+    <p>
+      الرهان الحقيقي اليوم لم يعد على انعقاد القمم وتعدّدها، بل على قدرتها في أن تكون نقطة تحوّل لا مجرد محطة عابرة في سجل البيانات. وحين تغيب الآليات التنفيذية، تبقى التوقعات معلّقة، ويبقى السؤال مطروحاً: إلى متى تسبق الكلمات الفعل؟
+    </p>
+  </div>
+</section>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>صحيفة الموج | صحيفة إلكترونية خاصة — نرصد الحدث ونربط الصورة بالسياق</title>
@@ -86,7 +111,162 @@
     <!-- أيقونات Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <script>
+    <script><script>
+  const WORLD_POLITICS_FALLBACK = [
+    {
+      region: 'أمريكا وكندا',
+      tag: 'سياسة ودولي',
+      title: 'ملفات السياسة الخارجية والتجارة عبر الأطلسي بين واشنطن وأوتاوا',
+      summary: 'متابعة مستمرة للتنسيق السياسي والدبلوماسي والحدودي بين الولايات المتحدة وكندا والقضايا الدولية المرتبطة بهما.',
+      source: 'موجز دولي تلقائي'
+    },
+    {
+      region: 'دولي',
+      tag: 'سياسة ودولي',
+      title: 'قراءات في التحركات الدبلوماسية والموازين الدولية الراهنة',
+      summary: 'رصد للمواقف الرسمية والتصريحات الدولية وتأثيرها على الاستقرار الإقليمي والعالمي.',
+      source: 'موجز دولي تلقائي'
+    }
+  ];
+
+  const ECON_ENERGY_FALLBACK = [
+    {
+      region: 'أمريكا',
+      tag: 'اقتصاد وطاقة',
+      title: 'مؤشرات الأسواق الأمريكية ومسار الفائدة والطلب على الطاقة',
+      summary: 'تغطية اقتصادية لأداء الشركات والأسواق المالية والنفط والغاز في الولايات المتحدة.',
+      source: 'اقتصاد وطاقة تلقائي'
+    },
+    {
+      region: 'كندا',
+      tag: 'اقتصاد وطاقة',
+      title: 'إمدادات الطاقة الكندية وحركة التجارة والموارد الطبيعية',
+      summary: 'متابعة لقطاع النفط والغاز والمعادن والتبادل التجاري الكندي مع الأسواق العالمية.',
+      source: 'اقتصاد وطاقة تلقائي'
+    },
+    {
+      region: 'الصين',
+      tag: 'اقتصاد وطاقة',
+      title: 'النشاط الصناعي والطلب الصيني على السلع والطاقة العالمية',
+      summary: 'رصد لبيانات التصنيع والصادرات وحركة الاستيراد الصينية للنفط والغاز والمواد الخام.',
+      source: 'اقتصاد وطاقة تلقائي'
+    },
+    {
+      region: 'الخليج',
+      tag: 'اقتصاد وطاقة',
+      title: 'أسواق الطاقة الخليجية والاستثمارات وتنويع الاقتصاد الإقليمي',
+      summary: 'متابعة لإنتاج وإمدادات الطاقة والمشاريع الاقتصادية والاستثمارية في دول الخليج.',
+      source: 'اقتصاد وطاقة تلقائي'
+    }
+  ];
+
+  function detectRegionTag(text, sectionType) {
+    const t = (text || '').toLowerCase();
+    if (sectionType === 'economy') {
+      if (t.includes('china') || t.includes('beijing') || t.includes('صين')) return 'الصين';
+      if (t.includes('canada') || t.includes('ottawa') || t.includes('toronto') || t.includes('كندا')) return 'كندا';
+      if (t.includes('gulf') || t.includes('saudi') || t.includes('uae') || t.includes('opec') || t.includes('خليج') || t.includes('أوبك')) return 'الخليج';
+      if (t.includes('us') || t.includes('u.s.') || t.includes('america') || t.includes('fed') || t.includes('أمريكا') || t.includes('واشنطن')) return 'أمريكا';
+      return 'اقتصاد وطاقة';
+    }
+    if (t.includes('canada') || t.includes('ottawa') || t.includes('كندا')) return 'كندا';
+    if (t.includes('us') || t.includes('u.s.') || t.includes('washington') || t.includes('أمريكا') || t.includes('واشنطن')) return 'أمريكا';
+    return 'سياسة ودولي';
+  }
+
+  async function fetchRssItems(rssUrl, sectionType, fallbackList) {
+    try {
+      const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`);
+      if (!res.ok) throw new Error('RSS error');
+      const data = await res.json();
+      if (!Array.isArray(data.items) || data.items.length === 0) return fallbackList;
+
+      return data.items.slice(0, 8).map((item) => ({
+        region: detectRegionTag(`${item.title || ''} ${item.description || ''}`, sectionType),
+        tag: sectionType === 'economy' ? 'اقتصاد وطاقة' : 'سياسة ودولي',
+        title: item.title || 'خبر محدث',
+        summary: (item.description || '').replace(/<[^>]*>/g, '').slice(0, 180) || 'تحديث تلقائي من المصدر الإخباري.',
+        link: item.link || '#',
+        source: data.feed?.title || 'تحديث تلقائي',
+        pubDate: item.pubDate || ''
+      }));
+    } catch (e) {
+      return fallbackList;
+    }
+  }
+
+  function injectTabFeedsIntoDom(politicsItems, econItems) {
+    // إذا كان هناك حاويات مخصصة في الصفحة سنملأها، وإلا سننشئ حاوية منظمة أسفل منطقة العرض الرئيسية
+    let container = document.getElementById('mawjSegmentedFeedsBox');
+    if (!container) {
+      container = document.createElement('section');
+      container.id = 'mawjSegmentedFeedsBox';
+      container.className = 'mx-auto my-6 max-w-5xl rounded-2xl border border-slate-200 bg-white p-4 text-right shadow-sm';
+      container.setAttribute('dir', 'rtl');
+      const mainTarget = document.querySelector('main') || document.body;
+      mainTarget.appendChild(container);
+    }
+
+    container.innerHTML = `
+      <div class="mb-4 flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
+        <h3 class="text-lg font-extrabold text-slate-900">تغطية الأقسام: سياسة ودولي — اقتصاد وطاقة</h3>
+        <span class="text-xs text-slate-500">تحديث تلقائي: ${new Date().toLocaleTimeString('ar-SA')}</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div>
+          <h4 class="mb-3 text-sm font-extrabold text-indigo-900">سياسة ودولي (أمريكا وكندا والعالم)</h4>
+          <div class="space-y-2.5">
+            ${politicsItems.map((n) => `
+              <article class="rounded-xl border border-slate-200 p-3">
+                <div class="mb-1 flex items-center justify-between text-[11px] font-bold text-slate-500">
+                  <span>${n.region}</span>
+                  <span>${n.source}</span>
+                </div>
+                <h5 class="text-sm font-bold text-slate-900">
+                  ${n.link ? `<a href="${n.link}" target="_blank" rel="noopener noreferrer" class="hover:underline">${n.title}</a>` : n.title}
+                </h5>
+                <p class="mt-1 text-xs leading-relaxed text-slate-600">${n.summary}</p>
+              </article>
+            `).join('')}
+          </div>
+        </div>
+
+        <div>
+          <h4 class="mb-3 text-sm font-extrabold text-emerald-900">اقتصاد وطاقة (أمريكا • كندا • الصين • الخليج)</h4>
+          <div class="space-y-2.5">
+            ${econItems.map((n) => `
+              <article class="rounded-xl border border-slate-200 p-3">
+                <div class="mb-1 flex items-center justify-between text-[11px] font-bold text-slate-500">
+                  <span>${n.region}</span>
+                  <span>${n.source}</span>
+                </div>
+                <h5 class="text-sm font-bold text-slate-900">
+                  ${n.link ? `<a href="${n.link}" target="_blank" rel="noopener noreferrer" class="hover:underline">${n.title}</a>` : n.title}
+                </h5>
+                <p class="mt-1 text-xs leading-relaxed text-slate-600">${n.summary}</p>
+              </article>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  async function syncMawjSectionsAuto() {
+    const [politics, economy] = await Promise.all([
+      fetchRssItems('https://feeds.bbci.co.uk/news/world/us_and_canada/rss.xml', 'politics', WORLD_POLITICS_FALLBACK),
+      fetchRssItems('https://feeds.bbci.co.uk/news/business/rss.xml', 'economy', ECON_ENERGY_FALLBACK)
+    ]);
+    injectTabFeedsIntoDom(politics, economy);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    syncMawjSectionsAuto();
+    setInterval(syncMawjSectionsAuto, 300000);
+  });
+</script>
+
         tailwind.config = {
             theme: {
                 extend: {
