@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+خخ<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
@@ -1689,48 +1689,4 @@ setDate();loadNews();
       { tag: 'صحافة عربية', title: 'الشرق الأوسط — أخبار وتحليلات عربية ودولية', url: 'https://aawsat.com/' },
       { tag: 'صحافة عربية', title: 'الجزيرة نت / سكاي نيوز عربية — تغطية الأخبار', url: 'https://www.aljazeera.net/' }
     ]);
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => setTimeout(ensureFallbackContent, 400));
-  } else {
-    setTimeout(ensureFallbackContent, 400);
-  }
-  setInterval(ensureFallbackContent, 60000);
-})();
-</script>
-
-</body>
-</html>https://www.youtube.com/live/5vfaDsMhCF4?si=UyCsbjmqZCB_kezG
-https://www.youtube.com/live/QpWEiHwtGIE?si=3FP5LHYJTb3_nEGW https://www.youtube.com/live/C96oohpWBGw?si=BxrG6KowYOda8AMj 
-https://www.youtube.com/live/Kbph5xbQ8Xk?si=DbmzGUtAJ-HZu6HY
-https://youtube.com/@almoujnewspaper?si=JUnSACI2dh6gQ_Uz
- let items=[...local,...allNews];
- items=items.filter(n=>(activeCategory==="الكل"||n.category===activeCategory)&&(!q||(n.title+" "+n.summary+" "+n.source).toLowerCase().includes(q)));
- $("newsGrid").innerHTML=items.length?items.map(n=>`<article class="card">${n.image?`<img loading="lazy" src="${esc(n.image)}" alt="">`:""}<div class="cardbody"><span class="category">${esc(n.category||"أخبار")} · ${esc(n.source||"صحيفة الموج")}</span><h3><a href="${esc(n.link||"#")}" target="_blank" rel="noopener">${esc(n.title)}</a></h3><p>${esc(n.summary||"اقرأ التفاصيل في المصدر الأصلي.")}</p><div class="cardfoot"><span>${esc(dateLabel(n.date))}</span><a href="${esc(n.link||"#")}" target="_blank" rel="noopener">المصدر الأصلي ↗</a></div></div></article>`).join(""):`<div class="empty">لا توجد مواد مطابقة حالياً. جرّب قسماً آخر أو امسح البحث.</div>`;
-}
-async function loadFeed(feed){
- const url=RSS_API+encodeURIComponent(feed.url);
- const res=await fetch(url);if(!res.ok)throw new Error("RSS service error");
- const data=await res.json();if(data.status!=="ok")throw new Error(data.message||"Feed error");
- return (data.items||[]).map(item=>({title:clean(item.title),summary:clean(item.description||item.content||"").slice(0,330),link:item.link,date:item.pubDate,source:feed.name,category:feed.cat,image:item.thumbnail||item.enclosure?.link||""}));
-}
-async function loadNews(){
- $("status").style.display="block";$("status").textContent="جارٍ تحديث الأخبار من المصادر...";
- const results=await Promise.allSettled(FEEDS.map(loadFeed));
- allNews=results.filter(r=>r.status==="fulfilled").flatMap(r=>r.value);
- allNews.sort((a,b)=>new Date(b.date)-new Date(a.date));
- $("status").style.display="none";
- if(!allNews.length){$("status").style.display="block";$("status").innerHTML='تعذر تحميل الخلاصات الآن. يمكنك فتح المصادر مباشرة: <a href="https://www.aljazeera.net/" target="_blank">الجزيرة</a> · <a href="https://www.bbc.com/arabic" target="_blank">BBC عربي</a> · <a href="https://www.reuters.com/" target="_blank">Reuters</a>'; }
- $("breakingText").textContent=allNews.slice(0,5).map(n=>n.title+" — "+n.source).join("  |  ")||"تعذر تحديث العناوين حالياً";
- render();
-}
-$("nav").addEventListener("click",e=>{const b=e.target.closest("button[data-cat]");if(!b)return;activeCategory=b.dataset.cat;document.querySelectorAll("#nav button").forEach(x=>x.classList.toggle("active",x===b));$("newsHeading").textContent=activeCategory==="الكل"?"أحدث الأخبار":"أخبار "+activeCategory;render();});
-$("search").addEventListener("input",render);$("clearSearch").onclick=()=>{$("search").value="";render();};
-$("reload").onclick=loadNews;
-$("headlinesBtn").onclick=()=>{activeCategory="الكل";$("search").value="";render();$("newsHeading").textContent="عناوين الصحف العالمية والعربية";document.querySelector("#newsHeading").scrollIntoView({behavior:"smooth"});};
-$("tvButton").onclick=()=>window.open("https://www.youtube.com/results?search_query=قنوات+الأخبار+مباشر","_blank","noopener");
-$("tvNewsBtn").onclick=()=>$("markets").scrollIntoView({behavior:"smooth"});
-$("openEditor").onclick=()=>$("editorModal").classList.add("show");
-$("closeEditor").onclick=()=>$("editorModal").classList.remove("show");
-$("savePost").onclick=()=>{const title=$("postTitle").value.trim(),summary=$("postSummary").value.trim(),link=$("postUrl").value.trim(),category=$("postCat").value;if(!title||!summary){alert("أدخل العنوان والملخص أولاً");return;}if(link&&!/^https?:\/\//i.test(link)){alert("أدخل رابطاً يبدأ بـ https:// أو http://");return;}const posts=JSON.parse(localStorage.getItem("mawjPosts")||"[]");posts.unshift({title,summary,link:link||"#",category,source:"صحيفة الموج",date:new Date().toISOString()});localStorage.setItem("mawjPosts",JSON.stringify(posts));$("postTitle").value=$("postSummary").value=$("postUrl").value=
+  ("postUrl").value=
