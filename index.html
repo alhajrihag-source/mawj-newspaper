@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -325,7 +325,10 @@
 
     <!-- شريط الأخبار العاجلة -->
     <div class="bg-cream-100 border-b border-cream-200 shadow-sm">● واشنطن وبكين تجريان محادثات بشأن السلامة العسكرية البحرية.
-● تقارير عن تطورات جديدة في صادرات الرقائق الأمريكية إلى الصين.آخر الأخبار والتطورات الدولية
+●         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center gap-3">
+            <span class="bg-urgent-600 text-white text-xs font-bold px-3 py-1 rounded-lg flex items-center gap-1.5 shrink-0 shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                <span>عاجل</span>
 ● السعودية تعلن اعتراض خمس طائرات مسيّرة وصاروخ باليستي استهدف المملكة.
 ● تقارير عن أضرار مادية في برج تابع لصندوق الاستثمارات العامة بالرياض.
 ● ولي العهد السعودي يستقبل قائد القيادة المركزية الأمريكية لبحث التعاون العسكري والتطورات الإقليمية.
@@ -341,10 +344,7 @@
 ● تقارير عن حكم لمحكمة العدل الدولية بشأن قضية الروهينغا في ميانمار.
 صحيفة الموج | الخبر أولاً.. والحقيقة دائماً
 المصدر: رويترز، أسوشيتد برس، وتقارير صحفية أخرى. بعض العناوين تحتاج إلى استكمال التحقق من نصوصها الأصلية قبل البث.
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center gap-3">
-            <span class="bg-urgent-600 text-white text-xs font-bold px-3 py-1 rounded-lg flex items-center gap-1.5 shrink-0 shadow-sm">
-                <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
-                <span>عاجل</span>
+
             </span>
             <div class="ticker-box flex-1 text-sm font-semibold text-navy-900">
                 <div class="ticker-track" id="breakingTickerTrack">
@@ -1258,4 +1258,5 @@
 
             document.getElementById('newVideoForm').reset();
             closeEditorModal();
-            showToast
+            showToast('تمت إضافة الفيديو إلى الموج TV');
+        }
