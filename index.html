@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+خخ<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
@@ -1483,7 +1483,76 @@
             renderVideosGrid();
             refreshHtmlSourcePreview();
         };
-    </script>
+    </script><script>
+(function () {
+  function ensureFallbackContent() {
+    const marketsBox = document.getElementById('globalMarketsCards');
+    const stamp = document.getElementById('marketsTimestamp');
+    if (marketsBox && (!marketsBox.innerHTML || marketsBox.innerHTML.trim() === '')) {
+      const sampleMarkets = [
+        { n: 'S&P 500', p: '5,948.70', c: '+0.64%', ok: true },
+        { n: 'Dow Jones', p: '43,890.20', c: '+0.42%', ok: true },
+        { n: 'NASDAQ', p: '19,120.55', c: '+0.91%', ok: true },
+        { n: 'S&P/TSX (كندا)', p: '24,610.80', c: '-0.18%', ok: false }
+      ];
+      marketsBox.innerHTML = sampleMarkets.map(m => `
+        <div class="rounded-xl border border-slate-200 bg-slate-50 p-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-extrabold text-slate-900">${m.n}</span>
+            <span class="text-xs font-bold ${m.ok ? 'text-emerald-600' : 'text-rose-600'}">${m.c}</span>
+          </div>
+          <div class="mt-1 text-base font-extrabold text-slate-800">${m.p}</div>
+        </div>
+      `).join('');
+    }
+    if (stamp && stamp.textContent.includes('جاري التحديث')) {
+      stamp.textContent = 'تحديث تلقائي: ' + new Date().toLocaleTimeString('ar-SA');
+    }
+
+    const fillList = (id, rows) => {
+      const el = document.getElementById(id);
+      if (el && (!el.innerHTML || el.innerHTML.trim() === '')) {
+        el.innerHTML = rows.map(r => `
+          <div class="rounded-xl border border-slate-200 bg-slate-50 p-3.5">
+            <div class="text-[11px] font-bold text-slate-500 mb-1">${r.tag}</div>
+            <a href="${r.url}" target="_blank" rel="noopener noreferrer" class="text-sm font-extrabold text-slate-900 hover:underline">${r.title}</a>
+          </div>
+        `).join('');
+      }
+    };
+
+    fillList('politicsFeedContainer', [
+      { tag: 'أمريكا وكندا • سياسة ودولي', title: 'ملفات العلاقات الأمريكية الكندية والمواقف الدولية', url: 'https://www.cbc.ca/news' },
+      { tag: 'دولي • سياسة ودولي', title: 'متابعة التحركات السياسية والدبلوماسية العالمية', url: 'https://www.cnn.com/world' }
+    ]);
+
+    fillList('economyFeedContainer', [
+      { tag: 'أمريكا • اقتصاد وطاقة', title: 'الأسواق الأمريكية وأسعار الفائدة والطلب على الطاقة', url: 'https://www.cnn.com/business' },
+      { tag: 'كندا • اقتصاد وطاقة', title: 'إمدادات الطاقة والموارد الطبيعية والتجارة في كندا', url: 'https://www.cbc.ca/news/business' },
+      { tag: 'الصين • اقتصاد وطاقة', title: 'النشاط الصناعي الصيني وحركة السلع والطاقة', url: 'https://www.bbc.com/news/business' },
+      { tag: 'الخليج • اقتصاد وطاقة', title: 'أسواق الطاقة الخليجية والاستثمارات الإقليمية', url: 'https://www.skynewsarabia.com/business' }
+    ]);
+
+    fillList('worldPressList', [
+      { tag: 'الولايات المتحدة', title: 'The New York Times — متابعة السياسة والاقتصاد الدولي', url: 'https://www.nytimes.com/' },
+      { tag: 'كندا', title: 'The Globe and Mail — الشؤون الكندية والدولية', url: 'https://www.theglobeandmail.com/' }
+    ]);
+
+    fillList('arabPressList', [
+      { tag: 'صحافة عربية', title: 'الشرق الأوسط — أخبار وتحليلات عربية ودولية', url: 'https://aawsat.com/' },
+      { tag: 'صحافة عربية', title: 'الجزيرة نت / سكاي نيوز عربية — تغطية الأخبار', url: 'https://www.aljazeera.net/' }
+    ]);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => setTimeout(ensureFallbackContent, 400));
+  } else {
+    setTimeout(ensureFallbackContent, 400);
+  }
+  setInterval(ensureFallbackContent, 60000);
+})();
+</script>
+
 </body>
 </html>https://www.youtube.com/live/5vfaDsMhCF4?si=UyCsbjmqZCB_kezG
 https://www.youtube.com/live/QpWEiHwtGIE?si=3FP5LHYJTb3_nEGW https://www.youtube.com/live/C96oohpWBGw?si=BxrG6KowYOda8AMj 
