@@ -1196,8 +1196,30 @@
             saveStore();
             renderVideosGrid();
             refreshHtmlSourcePreview();
+<div id="youtubersGrid" class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+  <!-- مثال بطاقة قناة أو فيديو يوتيوبر -->
+  <div class="rounded-xl border border-slate-200 p-4 bg-white">
+    <div class="text-xs font-bold text-red-600 mb-1">يوتيوب</div>
+    <h4 class="font-bold text-slate-900 text-sm mb-2">اسم القناة أو عنوان الحلقة</h4>
+    <a href="https://www.youtube.com/@ChannelHandle" target="_blank" rel="noopener noreferrer"
+       class="inline-block rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-bold text-white hover:bg-slate-800">
+      زيارة القناة على يوتيوب
+    </a>
+  </div>
+</div>
 
-            document.getElementById('newVideoForm').reset();
+    <div id="youtubersGrid" class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+  <!-- مثال بطاقة قناة أو فيديو يوتيوبر -->
+  <div class="rounded-xl border border-slate-200 p-4 bg-white">
+    <div class="text-xs font-bold text-red-600 mb-1">يوتيوب</div>
+    <h4 class="font-bold text-slate-900 text-sm mb-2">اسم القناة أو عنوان الحلقة</h4>
+    <a href="https://www.youtube.com/@ChannelHandle" target="_blank" rel="noopener noreferrer"
+       class="inline-block rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-bold text-white hover:bg-slate-800">
+      زيارة القناة على يوتيوب
+    </a>
+  </div>
+</div>
+        document.getElementById('newVideoForm').reset();
             closeEditorModal();
             showToast('تمت إضافة الفيديو إلى الموج TV');
         }
@@ -1213,44 +1235,83 @@
             }
         }
 
-        function copyFullPageHtml() {
-            copyToClipboardFallback(getCompleteHtmlDocument(), 'تم نسخ كامل كود HTML لصحيفة الموج بنجاح');
-        }
+        
+        function toggleHtmlPreviewBox()><section id="liveMediaAndMarketsSection" class="my-8 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm text-right" dir="rtl">
+  <div class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 pb-4 mb-5">
+    <div>
+      <span class="inline-block rounded-full bg-red-50 px-3 py-1 text-xs font-bold text-red-700">بث وأسواق حية</span>
+      <h2 class="mt-1 text-xl font-extrabold text-slate-900">تلفزيون الأخبار الكندي والأمريكي، البورصة العالمية، وتحديث الأخبار</h2>
+    </div>
+    <button type="button" onclick="refreshAllLiveFeeds()" class="rounded-lg bg-slate-900 px-4 py-2 text-xs font-bold text-white hover:bg-slate-800 transition">
+      تحديث الآن
+    </button>
+  </div>
 
-        function toggleHtmlPreviewBox() {
-            const box = document.getElementById('htmlSourceContainer');
-            const label = document.getElementById('toggleCodeBtnLabel');
-            refreshHtmlSourcePreview();
-            const isHidden = box.classList.contains('hidden');
-            box.classList.toggle('hidden', !isHidden);
-            label.textContent = isHidden ? 'إخفاء الكود' : 'عرض / إخفاء الكود';
-        }
+  <!-- البورصة العالمية بتحديث تلقائي -->
+  <div class="mb-6 rounded-xl bg-slate-50 p-4 border border-slate-200">
+    <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+      <h3 class="text-base font-bold text-slate-800">البورصة العالمية (تحديث تلقائي)</h3>
+      <span id="marketsLastUpdate" class="text-xs text-slate-500">جاري التحميل...</span>
+    </div>
+    <div id="globalMarketsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3"></div>
+  </div>
 
-        function showToast(message) {
-            const toast = document.getElementById('toastBanner');
-            document.getElementById('toastText').textContent = message;
-            toast.classList.remove('translate-y-24', 'opacity-0');
-            setTimeout(() => {
-                toast.classList.add('translate-y-24', 'opacity-0');
-            }, 3400);
-        }
+  <!-- روابط تلفزيون الأخبار الكندي والأمريكي -->
+  <div class="mb-6">
+    <h3 class="text-base font-bold text-slate-800 mb-3">قنوات تلفزيون الأخبار الكندي والأمريكي</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="rounded-xl border border-slate-200 p-4">
+        <div class="text-xs font-bold text-red-600 mb-2">تلفزيون الأخبار الكندي</div>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="https://www.cbc.ca/news/live" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-700 hover:underline">
+              CBC News Live — البث الإخباري الكندي المباشر
+            </a>
+          </li>
+          <li>
+            <a href="https://www.ctvnews.ca/video" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-700 hover:underline">
+              CTV News — تغطية وفيديو الأخبار الكندية
+            </a>
+          </li>
+          <li>
+            <a href="https://globalnews.ca/live/" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-700 hover:underline">
+              Global News Live — البث المباشر الكندي
+            </a>
+          </li>
+        </ul>
+      </div>
 
-        window.addEventListener('click', (e) => {
-            const readerModal = document.getElementById('articleReaderModal');
-            const editorModal = document.getElementById('editorModal');
-            if (e.target === readerModal) closeArticleReaderModal();
-            if (e.target === editorModal) closeEditorModal();
-        });
+      <div class="rounded-xl border border-slate-200 p-4">
+        <div class="text-xs font-bold text-blue-700 mb-2">تلفزيون الأخبار الأمريكي</div>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="https://www.cnn.com/world/live-news" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-700 hover:underline">
+              CNN — التغطيات الإخبارية المباشرة الأمريكية والعالمية
+            </a>
+          </li>
+          <li>
+            <a href="https://www.nbcnews.com/now" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-700 hover:underline">
+              NBC News NOW — البث الإخباري الأمريكي المباشر
+            </a>
+          </li>
+          <li>
+            <a href="https://abcnews.go.com/Live" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-700 hover:underline">
+              ABC News Live — البث التلفزيوني الإخباري الأمريكي
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-        window.onload = function() {
-            loadStore();
-            renderHeroSection();
-            renderArticlesGrid();
-            renderMostRead();
-            renderVideosGrid();
-            refreshHtmlSourcePreview();
-        };
-    </script>
-</body>
-</html>
+  <!-- موجز الأخبار التلقائي -->
+  <div>
+    <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+      <h3 class="text-base font-bold text-slate-800">الأخبار التلقائية</h3>
+      <span id="autoNewsStatus" class="text-xs text-slate-500">تحديث تلقائي كل 5 دقائق</span>
+    </div>
+    <div id="autoNewsFeedList" class="space-y-2.5 text-sm"></div>
+  </div>
+</section>
+
 
