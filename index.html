@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+م<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -1656,4 +1656,591 @@
         };
     </script>
 </body>
-</html>
+</html><!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صحيفة الموج | AL-MAWJ PRESS — النشرة الإخبارية الشاملة</title>
+
+    <!-- وسوم SEO الأساسية للظهور في محركات البحث -->
+    <meta name="description" content="صحيفة الموج (AL-MAWJ PRESS)، صحيفة إلكترونية خاصة باللغة العربية برئاسة تحرير زاد الهاجري. الخبر أولاً.. والحقيقة دائماً. تغطيات الاقتصاد والأسواق والطاقة والتكنولوجيا والسياسة الأمريكية وكندا والسياسة الدولية والشرق الأوسط.">
+    <meta name="keywords" content="صحيفة الموج, AL-MAWJ PRESS, زاد الهاجري, النشرة الإخبارية الشاملة, الاقتصاد والأسواق والطاقة, التكنولوجيا والذكاء الاصطناعي, السياسة الأمريكية, كندا, السياسة الدولية, الشرق الأوسط والخليج, الموج TV">
+    <meta name="author" content="زاد الهاجري - رئيس التحرير">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://alhajrihag-source.github.io/mawj-newspaper/">
+
+    <!-- وسوم Open Graph للمشاركة على المنصات الاجتماعية -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:site_name" content="صحيفة الموج">
+    <meta property="og:title" content="صحيفة الموج | AL-MAWJ PRESS — النشرة الإخبارية الشاملة">
+    <meta property="og:description" content="الخبر أولاً.. والحقيقة دائماً — النشرة الإخبارية الشاملة وقراءة المقدم زاد الهاجري.">
+    <meta property="og:url" content="https://alhajrihag-source.github.io/mawj-newspaper/">
+
+    <!-- وسوم Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="صحيفة الموج | AL-MAWJ PRESS">
+    <meta name="twitter:description" content="الخبر أولاً.. والحقيقة دائماً — برئاسة تحرير زاد الهاجري.">
+
+    <!-- بيانات مهيكلة JSON-LD (NewsMediaOrganization + Article) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "NewsMediaOrganization",
+          "@id": "https://alhajrihag-source.github.io/mawj-newspaper/#organization",
+          "name": "صحيفة الموج",
+          "alternateName": "Al-Mawj Press",
+          "description": "صحيفة إلكترونية خاصة باللغة العربية برئاسة تحرير زاد الهاجري",
+          "url": "https://alhajrihag-source.github.io/mawj-newspaper/",
+          "inLanguage": "ar",
+          "editor": {
+            "@type": "Person",
+            "name": "زاد الهاجري",
+            "jobTitle": "رئيس التحرير"
+          }
+        },
+        {
+          "@type": "Article",
+          "@id": "https://alhajrihag-source.github.io/mawj-newspaper/#editorial-article",
+          "headline": "قراءة المقدم زاد الهاجري: العالم بين ضغوط الاقتصاد وتوتر السياسة",
+          "description": "قراءة المقدم زاد الهاجري في النشرة الإخبارية الشاملة لصحيفة الموج حول تشابك أمن الطاقة والذكاء الاصطناعي والتنافس الدولي والأزمات الإقليمية.",
+          "datePublished": "2026-11-20T18:24:00+03:00",
+          "dateModified": "2026-11-20T18:50:00+03:00",
+          "inLanguage": "ar",
+          "author": {
+            "@type": "Person",
+            "name": "زاد الهاجري"
+          },
+          "publisher": {
+            "@id": "https://alhajrihag-source.github.io/mawj-newspaper/#organization"
+          },
+          "isPartOf": {
+            "@id": "https://alhajrihag-source.github.io/mawj-newspaper/#organization"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- تحميل Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- تحميل الخطوط العربية: Amiri و IBM Plex Sans Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            950: '#060B17',
+                            900: '#0B132B',
+                            800: '#1C2541',
+                            700: '#2E3B5E',
+                        },
+                        cream: {
+                            50: '#FCFBF7',
+                            100: '#F6F3EA',
+                            200: '#EAE4D3',
+                        },
+                        gold: {
+                            600: '#A88224',
+                            500: '#D4AF37',
+                            400: '#E5C76B',
+                            100: '#FDF8E7',
+                        },
+                        urgent: {
+                            600: '#B91C1C',
+                            500: '#DC2626',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Amiri', 'Georgia', 'serif'],
+                        sans: ['IBM Plex Sans Arabic', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FCFBF7;
+            color: #0B132B;
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .press-headline {
+            font-family: 'Amiri', serif;
+            line-height: 1.35;
+        }
+
+        @keyframes mawjMarqueeSlide {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100vw);
+            }
+        }
+
+        .mawj-marquee-box {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+            position: relative;
+        }
+
+        .mawj-marquee-track {
+            display: inline-block;
+            white-space: nowrap;
+            animation: mawjMarqueeSlide 75s linear infinite;
+            will-change: transform;
+        }
+
+        .mawj-marquee-box:hover .mawj-marquee-track {
+            animation-play-state: paused;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .video-tile:hover .play-badge {
+            transform: scale(1.1);
+            background-color: #D4AF37;
+            color: #0B132B;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold-500 selection:text-navy-900">
+
+    <!-- الشريط العلوي للتاريخ وهيئة التحرير -->
+    <div class="bg-navy-950 text-cream-100 text-xs border-b border-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-wrap items-center justify-between gap-2">
+            <div class="flex flex-wrap items-center gap-3 sm:gap-4">
+                <span class="flex items-center gap-1.5 text-gold-400 font-semibold">
+                    <i class="fa-regular fa-calendar-check"></i>
+                    <span id="liveDateDisplay">الجمعة 20 نوفمبر 2026</span>
+                </span>
+                <span class="hidden sm:inline text-navy-700">|</span>
+                <span class="text-cream-200/80">
+                    رئيس التحرير: <strong class="text-white font-bold">زاد الهاجري</strong>
+                </span>
+                <span class="hidden md:inline text-navy-700">|</span>
+                <span class="hidden md:inline bg-gold-500/15 text-gold-400 border border-gold-500/30 px-2 py-0.5 rounded-md font-medium">
+                    النشرة الإخبارية الشاملة
+                </span>
+            </div>
+
+            <!-- شريط أدوات المالك (يظهر فقط للمالك بعد التحقق) -->
+            <div id="ownerToolbar" class="hidden flex-wrap items-center gap-2">
+                <span class="bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 px-2.5 py-0.5 rounded-md font-semibold">
+                    وضع المالك مفعل
+                </span>
+                <button type="button" onclick="openEditorModal('article')" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-3 py-1 rounded-lg transition flex items-center gap-1">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>إضافة مادة</span>
+                </button>
+                <button type="button" onclick="openEditorModal('video')" class="bg-navy-800 hover:bg-navy-700 text-cream-100 border border-navy-700 font-bold px-3 py-1 rounded-lg transition flex items-center gap-1">
+                    <i class="fa-solid fa-video"></i>
+                    <span>إضافة فيديو</span>
+                </button>
+                <button type="button" onclick="copyUpdatedSourceCode()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-3 py-1 rounded-lg transition flex items-center gap-1">
+                    <i class="fa-solid fa-code"></i>
+                    <span>نسخ كود index.html المحدّث</span>
+                </button>
+                <button type="button" onclick="logoutOwnerMode()" class="bg-urgent-600 hover:bg-urgent-500 text-white font-bold px-2.5 py-1 rounded-lg transition">
+                    خروج
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ترويسة الصحيفة الرئيسية -->
+    <header class="bg-navy-900 text-white border-b-4 border-gold-500 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
+                <!-- الشعار والهوية -->
+                <div class="flex items-center gap-4 text-center lg:text-right">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-gold-400 to-gold-600 p-0.5 shadow-xl shrink-0">
+                        <div class="w-full h-full bg-navy-900 rounded-[14px] flex items-center justify-center">
+                            <svg class="w-11 h-11 text-gold-500" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="شعار صحيفة الموج">
+                                <path d="M6 39C14 27 22 27 30 39C38 51 46 51 58 35" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"></path>
+                                <path d="M10 26C17 17 24 17 31 26C38 35 45 35 54 23" stroke="#FCFBF7" stroke-width="3" stroke-linecap="round" opacity="0.85"></path>
+                                <circle cx="50" cy="14" r="3.5" fill="#D4AF37"></circle>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-center lg:justify-start gap-2 mb-1">
+                            <span class="px-2.5 py-0.5 text-[11px] font-bold bg-gold-500 text-navy-950 rounded-md">
+                                النشرة الإخبارية الشاملة
+                            </span>
+                            <span class="text-xs text-cream-200/70 tracking-wider">AL-MAWJ PRESS</span>
+                        </div>
+                        <h1 class="press-headline text-3xl sm:text-5xl font-bold text-white">
+                            صحيفة <span class="text-gold-500">الموج</span>
+                        </h1>
+                        <p class="text-cream-100/85 text-sm sm:text-base mt-1 font-light">
+                            « الخبر أولاً.. والحقيقة دائماً » — الجمعة 20 نوفمبر 2026 • رئيس التحرير: زاد الهاجري
+                        </p>
+                    </div>
+                </div>
+
+                <!-- البحث والانتقال للموج TV -->
+                <div class="w-full lg:w-auto flex flex-col sm:flex-row items-center gap-3">
+                    <div class="relative w-full sm:w-72">
+                        <input type="text" id="searchBox" onkeyup="renderArticlesGrid()" placeholder="ابحث في أخبار النشرة والمقالات..." class="w-full bg-navy-800 text-white placeholder-slate-400 text-sm rounded-xl pr-10 pl-4 py-2.5 border border-navy-700 focus:outline-none focus:border-gold-500 transition">
+                        <i class="fa-solid fa-magnifying-glass absolute right-3.5 top-3 text-gold-400 text-sm"></i>
+                    </div>
+                    <a href="#almaj-tv" class="w-full sm:w-auto justify-center bg-urgent-600 hover:bg-urgent-500 text-white text-sm font-bold px-4 py-2.5 rounded-xl flex items-center gap-2 transition shadow-md">
+                        <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
+                        <span>الموج TV</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- شريط التنقل بين الأقسام -->
+        <nav class="bg-navy-800/95 border-t border-navy-700 sticky top-0 z-30 backdrop-blur-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center overflow-x-auto py-2.5 gap-2 no-scrollbar" id="sectionNav">
+                    <button type="button" onclick="selectSection('all')" data-sec="all" class="sec-btn bg-gold-500 text-navy-950 font-bold px-4 py-1.5 rounded-lg text-sm whitespace-nowrap transition">
+                        الرئيسية
+                    </button>
+                    <button type="button" onclick="selectSection('politics')" data-sec="politics" class="sec-btn text-cream-100 hover:bg-navy-700 px-4 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition">
+                        سياسة ودولي
+                    </button>
+                    <button type="button" onclick="selectSection('economy')" data-sec="economy" class="sec-btn text-cream-100 hover:bg-navy-700 px-4 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition">
+                        اقتصاد وطاقة
+                    </button>
+                    <button type="button" onclick="selectSection('opinion')" data-sec="opinion" class="sec-btn text-cream-100 hover:bg-navy-700 px-4 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition">
+                        الافتتاحية والرأي
+                    </button>
+                    <button type="button" onclick="selectSection('tech')" data-sec="tech" class="sec-btn text-cream-100 hover:bg-navy-700 px-4 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition">
+                        تكنولوجيا وأسواق
+                    </button>
+                    <a href="#almaj-tv" class="text-gold-400 hover:bg-navy-700 px-4 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-play-circle"></i>
+                        <span>الموج TV</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- شريط الأخبار العاجلة المتحرك -->
+    <div class="bg-[#060B17] text-white border-b-2 border-[#B91C1C] shadow-md" dir="rtl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center gap-3">
+            <span class="bg-[#B91C1C] text-white text-xs font-bold px-3 py-1 rounded-lg flex items-center gap-1.5 shrink-0 z-10">
+                <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
+                <span>عاجل</span>
+            </span>
+
+            <div class="mawj-marquee-box flex-1 text-sm font-semibold text-[#FCFBF7]">
+                <div class="mawj-marquee-track" id="breakingTickerTrack">
+                    <span class="mx-4"><strong class="text-red-400">🔴 عاجل | السعودية تعلن اعتراض صواريخ ومسيّرات:</strong> أعلنت قوات التحالف اعتراض خمس طائرات مسيّرة وصاروخ باليستي استهدفت المملكة صباح الجمعة، وفق وكالة أسوشيتد برس. وشملت المناطق المستهدفة الرياض، فيما صدرت تنبيهات للسكان في عدد من المناطق الجنوبية.</span>
+                    <span class="mx-3 text-[#D4AF37]">◆</span>
+                    <span class="mx-4"><strong class="text-red-400">🔴 عاجل | اعتراض صاروخ باليستي باتجاه جنوب السعودية:</strong> أفادت رويترز بأن قوات التحالف اعترضت صاروخاً باليستياً أُطلق باتجاه جنوب المملكة، بالتزامن مع اعتراض مسيّرات وإصدار تنبيهات في جازان وأبها وخميس مشيط.</span>
+                    <span class="mx-3 text-[#D4AF37]">◆</span>
+                    <span class="mx-4"><strong class="text-red-400">🔴 عاجل | أضرار في برج بالحي المالي بالرياض:</strong> أفادت تقارير بأن هجوماً حوثياً ألحق أضراراً مادية بأحد أبراج المركز المالي في الرياض، دون تسجيل إصابات وفق الدفاع المدني السعودي. وذكرت مصادر لرويترز أن المبنى هو برج صندوق الاستثمارات العامة.</span>
+                    <span class="mx-3 text-[#D4AF37]">◆</span>
+                    <span class="mx-4"><strong class="text-red-400">🔴 عاجل | تصاعد التوتر بين السعودية والحوثيين:</strong> تأتي الهجمات الأخيرة بعد إعلان الحوثيين استهداف مواقع سعودية، وبعد إطلاق السعودية حملة جوية واسعة على مناطق خاضعة لسيطرة الجماعة في اليمن.</span>
+                    <span class="mx-3 text-[#D4AF37]">◆</span>
+                    <span class="mx-4"><strong class="text-red-400">🔴 عاجل | تنبيهات دفاع مدني في مناطق سعودية:</strong> أصدرت السلطات السعودية تنبيهات احترازية متتالية منذ الخميس بشأن احتمالات سقوط مقذوفات أو حطام عمليات الاعتراض.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-14">
+
+        <!-- 1. الصفحة الرئيسية وقراءة المقدم -->
+        <section id="heroSection">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-5 border-b-2 border-navy-900 pb-2.5">
+                <h2 class="press-headline text-2xl sm:text-3xl font-bold text-navy-900 flex items-center gap-2.5">
+                    <span class="w-2.5 h-7 bg-gold-500 rounded-sm inline-block"></span>
+                    <span>الصفحة الرئيسية وقراءة المقدم</span>
+                </h2>
+                <span class="text-xs font-semibold text-navy-800 bg-cream-100 border border-cream-200 px-3 py-1 rounded-full">
+                    إعداد وتقديم: المقدم زاد الهاجري
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6" id="heroContentGrid"></div>
+        </section>
+
+        <!-- 2. شبكة التحليلات والأخبار + الشريط الجانبي -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div class="lg:col-span-8 space-y-8">
+                <div class="flex flex-wrap items-center justify-between gap-2 border-b border-cream-200 pb-3">
+                    <h3 class="press-headline text-2xl sm:text-3xl font-bold text-navy-900" id="articlesHeading">
+                        ملفات النشرة الإخبارية الشاملة — الجمعة 20 نوفمبر 2026
+                    </h3>
+                    <span class="text-xs bg-navy-900 text-gold-400 font-bold px-3 py-1 rounded-lg" id="articlesCountTag">25 مادة</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="articlesGrid"></div>
+            </div>
+
+            <!-- الشريط الجانبي -->
+            <aside class="lg:col-span-4 space-y-6">
+                <!-- لوحة المؤشرات الاقتصادية -->
+                <div class="bg-navy-900 text-white rounded-2xl p-5 shadow-md border border-navy-800">
+                    <div class="flex items-center justify-between mb-4 pb-3 border-b border-navy-800">
+                        <h3 class="font-bold text-base flex items-center gap-2 text-gold-400">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span>الاقتصاد والأسواق والطاقة</span>
+                        </h3>
+                        <span class="text-[11px] bg-navy-800 text-cream-100 px-2.5 py-0.5 rounded-md">20 نوفمبر 2026</span>
+                    </div>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-navy-800/75 border border-navy-700/50">
+                            <div>
+                                <div class="font-bold text-white">خام برنت (Brent)</div>
+                                <div class="text-xs text-slate-300">نحو ثالث خسارة أسبوعية (~5%)</div>
+                            </div>
+                            <div class="text-left">
+                                <div class="font-bold text-gold-400 text-base">$91.03</div>
+                                <div class="text-xs text-amber-300 font-semibold">سعر وقت النشر</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-navy-800/75 border border-navy-700/50">
+                            <div>
+                                <div class="font-bold text-white">غرب تكساس الوسيط (WTI)</div>
+                                <div class="text-xs text-slate-300">متابعة أسواق الطاقة</div>
+                            </div>
+                            <div class="text-left">
+                                <div class="font-bold text-gold-400 text-base">$81.81</div>
+                                <div class="text-xs text-amber-300 font-semibold">سعر وقت النشر</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-navy-800/75 border border-navy-700/50">
+                            <div>
+                                <div class="font-bold text-white">اجتماع أوبك+ المرتقب</div>
+                                <div class="text-xs text-slate-300">سياسة إنتاج النفط لعام 2027</div>
+                            </div>
+                            <div class="text-left">
+                                <div class="font-bold text-white text-base">29 نوفمبر</div>
+                                <div class="text-xs text-gold-400 font-semibold">ترقب الأسواق</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-navy-800/75 border border-navy-700/50">
+                            <div>
+                                <div class="font-bold text-white">السندات والذكاء الاصطناعي</div>
+                                <div class="text-xs text-slate-300">تحول نحو السندات وتراجع الأسهم</div>
+                            </div>
+                            <div class="text-left">
+                                <div class="font-bold text-white text-base">ملاذ آمن</div>
+                                <div class="text-xs text-emerald-400 font-semibold">طلب متزايد ▲</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الأكثر قراءة -->
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-cream-200">
+                    <h3 class="press-headline text-xl font-bold text-navy-900 mb-4 pb-2 border-b border-cream-100 flex items-center gap-2">
+                        <i class="fa-solid fa-fire text-urgent-600"></i>
+                        <span>أبرز ملفات النشرة اليوم</span>
+                    </h3>
+                    <div class="space-y-4" id="mostReadBox"></div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- 3. قسم الموج TV لمقاطع الفيديو والبث المباشر من يوتيوب -->
+        <section id="almaj-tv" class="bg-navy-950 text-white rounded-3xl p-6 sm:p-10 shadow-xl border border-navy-800">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 pb-5 border-b border-navy-800">
+                <div>
+                    <div class="inline-flex items-center gap-2 bg-urgent-600/20 border border-urgent-500/40 text-red-400 text-xs font-bold px-3 py-1 rounded-full mb-2">
+                        <span class="w-2 h-2 rounded-full bg-urgent-500 animate-ping"></span>
+                        <span>موجز الفيديو والبث المباشر</span>
+                    </div>
+                    <h2 class="press-headline text-3xl sm:text-4xl font-bold text-white">
+                        الموج <span class="text-gold-500">TV</span>
+                    </h2>
+                    <p class="text-slate-300 text-sm mt-1">
+                        مقاطع تحليلية وبث إخباري مباشر من يوتيوب حول التحولات السياسية والاقتصادية والطاقة وسلاسل الإمداد.
+                    </p>
+                </div>
+            </div>
+
+            <!-- مشغل الفيديو المدمج -->
+            <div id="videoStage" class="hidden mb-8 bg-navy-900 border border-gold-500/40 rounded-2xl overflow-hidden shadow-2xl">
+                <div class="flex items-center justify-between px-5 py-3 bg-navy-800 border-b border-navy-700">
+                    <div class="flex items-center gap-2.5">
+                        <span class="w-2.5 h-2.5 rounded-full bg-urgent-500"></span>
+                        <h4 id="stageVideoTitle" class="font-bold text-sm sm:text-base text-white">عنوان الفيديو</h4>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <a id="stageYoutubeUrl" href="#" target="_blank" rel="noopener noreferrer" class="text-xs text-gold-400 hover:underline flex items-center gap-1">
+                            <span>فتح في يوتيوب</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                        <button type="button" onclick="closeVideoStage()" class="text-slate-300 hover:text-white p-1" aria-label="إغلاق المشغل">
+                            <i class="fa-solid fa-xmark text-lg"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="aspect-video w-full max-h-[500px] bg-black">
+                    <iframe id="stageIframe" class="w-full h-full" src="" title="مشغل الموج TV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- شبكة بطاقات الفيديو -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="videosGrid"></div>
+        </section>
+
+    </main>
+
+    <!-- تذييل الصحيفة -->
+    <footer class="bg-navy-950 text-cream-100 border-t-4 border-gold-500 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-6 border-b border-navy-800">
+                <div>
+                    <h3 class="press-headline text-2xl font-bold text-white">
+                        صحيفة <span class="text-gold-500">الموج</span> | <span class="text-lg text-cream-200">AL-MAWJ PRESS</span>
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-300 mt-1">
+                        الخبر أولاً.. والحقيقة دائماً — إعداد وتقديم: <strong>المقدم زاد الهاجري</strong>.
+                    </p>
+                </div>
+            </div>
+            <div class="pt-5 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-2">
+                <p>© 2026 صحيفة الموج — جميع الحقوق محفوظة.</p>
+                <p>صحيفة الموج | AL-MAWJ PRESS — الخبر أولاً.. والحقيقة دائماً</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- نافذة قراءة المقال الكامل -->
+    <div id="articleReaderModal" class="fixed inset-0 bg-navy-950/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-cream-200">
+            <div class="sticky top-0 bg-white/95 backdrop-blur border-b border-cream-200 px-6 py-4 flex items-center justify-between z-10">
+                <div class="flex items-center gap-2">
+                    <span id="readerCatBadge" class="bg-navy-900 text-gold-400 text-xs font-bold px-3 py-1 rounded-md">قسم</span>
+                    <span id="readerDate" class="text-xs text-slate-500">الجمعة 20 نوفمبر 2026</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button type="button" onclick="copyCurrentReaderArticle()" class="text-xs bg-cream-100 hover:bg-cream-200 text-navy-900 px-3 py-1.5 rounded-lg font-bold transition flex items-center gap-1.5">
+                        <i class="fa-regular fa-copy"></i>
+                        <span>نسخ النص</span>
+                    </button>
+                    <button type="button" onclick="closeArticleReaderModal()" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-red-100 text-slate-600 hover:text-urgent-600 flex items-center justify-center transition">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="p-6 sm:p-8">
+                <h2 id="readerTitle" class="press-headline text-2xl sm:text-4xl font-bold text-navy-900 mb-3 leading-snug"></h2>
+                <div class="text-xs font-semibold text-gold-600 pb-4 mb-6 border-b border-cream-200" id="readerAuthor"></div>
+                <div id="readerParagraphs" class="text-navy-900 text-base sm:text-lg leading-8 space-y-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- نافذة دخول المالك -->
+    <div id="ownerAuthModal" class="fixed inset-0 bg-navy-950/85 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-sm w-full shadow-2xl border border-cream-200 overflow-hidden">
+            <div class="bg-navy-900 text-white px-5 py-4 flex items-center justify-between border-b-2 border-gold-500">
+                <h3 class="font-bold text-sm sm:text-base flex items-center gap-2">
+                    <i class="fa-solid fa-shield-halved text-gold-500"></i>
+                    <span>تحقق مالك الحساب</span>
+                </h3>
+                <button type="button" onclick="closeOwnerAuthModal()" class="text-slate-300 hover:text-white">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <form onsubmit="verifyOwnerCode(event)" class="p-5 space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-navy-900 mb-1.5">أدخل رمز المالك لتفعيل التحرير</label>
+                    <input type="password" id="ownerPassInput" required placeholder="رمز المالك..." class="w-full rounded-xl border border-cream-200 px-3.5 py-2.5 text-sm focus:outline-none focus:border-gold-500">
+                </div>
+                <div class="flex justify-end gap-2">
+                    <button type="button" onclick="closeOwnerAuthModal()" class="px-3.5 py-2 text-xs text-slate-600 hover:bg-slate-100 rounded-xl">إلغاء</button>
+                    <button type="submit" class="bg-navy-900 hover:bg-navy-800 text-gold-400 font-bold text-xs px-4 py-2 rounded-xl transition">تفعيل</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- نافذة تحرير وإضافة المواد والفيديوهات للمالك فقط -->
+    <div id="editorModal" class="fixed inset-0 bg-navy-950/85 backdrop-blur-sm z-50 hidden items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl max-w-xl w-full shadow-2xl border border-cream-200 overflow-hidden">
+            <div class="bg-navy-900 text-white px-6 py-4 flex items-center justify-between border-b-2 border-gold-500">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-pen-nib text-gold-500"></i>
+                    <h3 id="editorModalHeading" class="font-bold text-base sm:text-lg">إدارة المواد — مالك الحساب</h3>
+                </div>
+                <button type="button" onclick="closeEditorModal()" class="text-slate-300 hover:text-white">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <div class="p-6">
+                <div class="flex gap-2 mb-5 bg-cream-100 p-1 rounded-xl">
+                    <button type="button" id="modeArticleBtn" onclick="switchEditorMode('article')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg bg-white text-navy-900 shadow-sm transition">
+                        إضافة / تعديل مادة
+                    </button>
+                    <button type="button" id="modeVideoBtn" onclick="switchEditorMode('video')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg text-slate-600 hover:text-navy-900 transition">
+                        إضافة فيديو للموج TV
+                    </button>
+                </div>
+
+                <form id="newArticleForm" onsubmit="submitArticleForm(event)" class="space-y-4">
+                    <input type="hidden" id="editingArticleId" value="">
+                    <div>
+                        <label class="block text-xs font-bold text-navy-900 mb-1">العنوان الرئيسي *</label>
+                        <input type="text" id="artTitleInput" required placeholder="اكتب عنوان المقال أو الخبر..." class="w-full rounded-xl border border-cream-200 px-3.5 py-2.5 text-sm focus:outline-none focus:border-gold-500">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-bold text-navy-900 mb-1">القسم *</label>
+                            <select id="artCatInput" class="w-full rounded-xl border border-cream-200 px-3.5 py-2.5 text-sm focus:outline-none focus:border-gold-500">
+                                <option value="opinion">الافتتاحية والرأي</option>
+                                <option value="politics">سياسة ودولي</option>
+                                <option value="economy">اقتصاد وطاقة</option>
+                                <option value="tech">تكنولوجيا وأسواق</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-navy-900 mb-1">الكاتب / المصدر</label>
+                            <input type="text" id="artAuthorInput" value="زاد الهاجري — رئيس التحرير" class="w-full rounded-xl border border-cream-200 px-3.5 py-2.5 text-sm focus:outline-none focus:border-gold-500">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-navy-900 mb-1">نص المقال أو الخبر (كل سطر فقرة مستقلة) *</label>
+                        <textarea id="artBodyInput" rows="5" required placeholder="اكتب نص المقال أو التقرير هنا..." class="w-full rounded-xl border border-cream-200 px-3.5 py-2.5 text-sm focus:outline-none focus:border-gold-500"></textarea>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <input type="checkbox" id="artBreakingCheck" class="rounded text-urgent-600 focus:ring-urgent-500">
+                        <label for="artBreakingCheck" class="text-xs font-bold text-urgent-600">إضافة العنوان إلى شريط الأخبار العاجلة</label>
+                    </div>
+
+                    <div class="pt-2 flex justify-end gap-2">
+                        <button type="button" onclick="closeEditorModal()" class="px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-xl">إلغاء</button>
+                        <button type="submit" id="saveArticleBtn" class="bg-navy-900 hover:bg-navy-800 text-gold-400 font-bold text-sm px-5 py-2.5 rounded-xl transition">
+                            حفظ المادة
+                        </button>
+
