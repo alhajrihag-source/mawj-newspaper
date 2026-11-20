@@ -50,7 +50,7 @@
           "headline": "قراءة المقدم زاد الهاجري: العالم بين ضغوط الاقتصاد وتوتر السياسة",
           "description": "قراءة المقدم زاد الهاجري في النشرة الإخبارية الشاملة لصحيفة الموج حول تشابك أمن الطاقة والذكاء الاصطناعي والتنافس الدولي والأزمات الإقليمية.",
           "datePublished": "2026-11-20T18:24:00+03:00",
-          "dateModified": "2026-11-20T18:50:00+03:00",
+          "dateModified": "2026-11-20T18:48:00+03:00",
           "inLanguage": "ar",
           "author": {
             "@type": "Person",
@@ -187,28 +187,6 @@
                 <span class="hidden md:inline bg-gold-500/15 text-gold-400 border border-gold-500/30 px-2 py-0.5 rounded-md font-medium">
                     النشرة الإخبارية الشاملة
                 </span>
-            </div>
-
-            <!-- شريط أدوات المالك (يظهر فقط للمالك بعد التحقق) -->
-            <div id="ownerToolbar" class="hidden flex-wrap items-center gap-2">
-                <span class="bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 px-2.5 py-0.5 rounded-md font-semibold">
-                    وضع المالك مفعل
-                </span>
-                <button type="button" onclick="openEditorModal('article')" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-3 py-1 rounded-lg transition flex items-center gap-1">
-                    <i class="fa-solid fa-plus"></i>
-                    <span>إضافة مادة</span>
-                </button>
-                <button type="button" onclick="openEditorModal('video')" class="bg-navy-800 hover:bg-navy-700 text-cream-100 border border-navy-700 font-bold px-3 py-1 rounded-lg transition flex items-center gap-1">
-                    <i class="fa-solid fa-video"></i>
-                    <span>إضافة فيديو</span>
-                </button>
-                <button type="button" onclick="copyUpdatedSourceCode()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-3 py-1 rounded-lg transition flex items-center gap-1">
-                    <i class="fa-solid fa-code"></i>
-                    <span>نسخ كود index.html المحدّث</span>
-                </button>
-                <button type="button" onclick="logoutOwnerMode()" class="bg-urgent-600 hover:bg-urgent-500 text-white font-bold px-2.5 py-1 rounded-lg transition">
-                    خروج
-                </button>
             </div>
         </div>
     </div>
@@ -499,123 +477,6 @@
         </div>
     </div>
 
-    <!-- نافذة دخول المالك -->
-    <div id="ownerAuthModal" class="fixed inset-0 bg-navy-950/85 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-sm w-full shadow-2xl border border-cream-200 overflow-hidden">
-            <div class="bg-navy-900 text-white px-5 py-4 flex items-center justify-between border-b-2 border-gold-500">
-                <h3 class="font-bold text-sm sm:text-base flex items-center gap-2">
-                    <i class="fa-solid fa-shield-halved text-gold-500"></i>
-                    <span>تحقق مالك الحساب</span>
-                </h3>
-                <button type="button" onclick="closeOwnerAuthModal()" class="text-slate-300 hover:text-white">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-            <form onsubmit="verifyOwnerCode(event)" class="p-5 space-y-4">
-                <div>
-                    <label class="block text-xs font-bold text-navy-900 mb-1.5">أدخل رمز المالك لتفعيل التحرير</label>
-                    <input type="password" id="ownerPassInput" required placeholder="رمز المالك..." class="w-full rounded-xl border border-cream-200 px-3.5 py-2.5 text-sm focus:outline-none focus:border-gold-500">
-                </div>
-                <div class="flex justify-end gap-2">
-                    <button type="button" onclick="closeOwnerAuthModal()" class="px-3.5 py-2 text-xs text-slate-600 hover:bg-slate-100 rounded-xl">إلغاء</button>
-                    <button type="submit" class="bg-navy-900 hover:bg-navy-800 text-gold-400 font-bold text-xs px-4 py-2 rounded-xl transition">تفعيل</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- نافذة تحرير وإضافة المواد والفيديوهات للمالك فقط -->
-    <div id="editorModal" class="fixed inset-0 bg-navy-950/85 backdrop-blur-sm z-50 hidden items-center justify-center p-4 overflow-y-auto">
-        <div class="bg-white rounded-2xl max-w-xl w-full shadow-2xl border border-cream-200 overflow-hidden">
-            <div class="bg-navy-900 text-white px-6 py-4 flex items-center justify-between border-b-2 border-gold-500">
-                <div class="flex items-center gap-2">
-                    <i class="fa-solid fa-pen-nib text-gold-500"></i>
-                    <h3 id="editorModalHeading" class="font-bold text-base sm:text-lg">إدارة المواد — مالك الحساب</h3>
-                </div>
-                <button type="button" onclick="closeEditorModal()" class="text-slate-300 hover:text-white">
-                    <i class="fa-solid fa-xmark text-lg"></i>
-                </button>
-            </div>
-
-            <div class="p-6">
-                <div class="flex gap-2 mb-5 bg-cream-100 p-1 rounded-xl">
-                    <button type="button" id="modeArticleBtn" onclick="switchEditorMode('article')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg bg-white text-navy-900 shadow-sm transition">
-                        إضافة / تعديل مادة
-                    </button>
-                    <button type="button" id="modeVideoBtn" onclick="switchEditorMode('video')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg text-slate-600 hover:text-navy-900 transition">
-                        إضافة فيديو للموج TV
-                    </button>
-                </div>
-
-                <form id="newArticleForm" onsubmit="submitArticleForm(event)" class="space-y-4">
-                    <input type="hidden" id="editingArticleId" value="">
-                    <div>
-                        <label class="block text-xs font-bold text-navy-900 mb-1">العنوان الرئيسي *</label>
-                        <input type="text" id="artTitleInput" required placeholder="اكتب عنوان المقال أو الخبر..." class="w-full rounded-xl border border-cream-200 px-3.5 py-2.5 text-sm focus:outline-none focus:border-gold-500">
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <div>
-                            <label class="block text-xs font-bold text-navy-900 mb-1">القسم *</label>
-                            <select id="artCatInput" class="w-full rounded-xl border border-cream-200 px-3.5 py-2.5 text-sm focus:outline-none focus:border-gold-500">
-                                <option value="opinion">الافتتاحية والرأي</option>
-                                <option value="politics">سياسة ودولي</option>
-                                <option value="economy">اقتصاد وطاقة</option>
-                                <option value="tech">تكنولوجيا وأسواق</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-navy-900 mb-1">الكاتب / المصدر</label>
-                            <input type="text" id="artAuthorInput" value="زاد الهاجري — رئيس التحرير" class="w-full rounded-xl border border-cream-200 px-3.5 py-2.5 text-sm focus:outline-none focus:border-gold-500">
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold text-navy-900 mb-1">نص المقال أو الخبر (كل سطر فقرة مستقلة) *</label>
-                        <textarea id="artBodyInput" rows="5" required placeholder="اكتب نص المقال أو التقرير هنا..." class="w-full rounded-xl border border-cream-200 px-3.5 py-2.5 text-sm focus:outline-none focus:border-gold-500"></textarea>
-                    </div>
-
-                    <div class="flex items-center gap-2">
-                        <input type="checkbox" id="artBreakingCheck" class="rounded text-urgent-600 focus:ring-urgent-500">
-                        <label for="artBreakingCheck" class="text-xs font-bold text-urgent-600">إضافة العنوان إلى شريط الأخبار العاجلة</label>
-                    </div>
-
-                    <div class="pt-2 flex justify-end gap-2">
-                        <button type="button" onclick="closeEditorModal()" class="px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-xl">إلغاء</button>
-                        <button type="submit" id="saveArticleBtn" class="bg-navy-900 hover:bg-navy-800 text-gold-400 font-bold text-sm px-5 py-2.5 rounded-xl transition">
-                            حفظ المادة
-                        </button>
-                    </div>
-                </form>
-
-                <form id="newVideoForm" onsubmit="submitNewVideo(event)" class="space-y-4 hidden">
-                    <div>
-                        <label class="block text-xs font-bold text-navy-900 mb-1">عنوان الفيديو *</label>
-                        <input type="text" id="vidTitleInput" required placeholder="عنوان التقرير المرئي أو البث المباشر..." class="w-full rounded-xl border border-cream-200 px-3.5 py-2.5 text-sm focus:outline-none focus:border-gold-500">
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <div>
-                            <label class="block text-xs font-bold text-navy-900 mb-1">رابط يوتيوب أو معرف الفيديو (ID) *</label>
-                            <input type="text" id="vidUrlInput" required placeholder="https://www.youtube.com/watch?v=..." class="w-full rounded-xl border border-cream-200 px-3.5 py-2.5 text-sm focus:outline-none focus:border-gold-500">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-navy-900 mb-1">المصدر / القناة *</label>
-                            <input type="text" id="vidSourceInput" required placeholder="مثال: العربية / سكاي نيوز عربية" class="w-full rounded-xl border border-cream-200 px-3.5 py-2.5 text-sm focus:outline-none focus:border-gold-500">
-                        </div>
-                    </div>
-
-                    <div class="pt-2 flex justify-end gap-2">
-                        <button type="button" onclick="closeEditorModal()" class="px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-xl">إلغاء</button>
-                        <button type="submit" class="bg-urgent-600 hover:bg-urgent-500 text-white font-bold text-sm px-5 py-2.5 rounded-xl transition">
-                            إضافة إلى الموج TV
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
     <!-- رسالة تنبيه سفلية (Toast) -->
     <div id="toastBanner" class="fixed bottom-5 left-5 bg-navy-900 text-white border-r-4 border-gold-500 px-5 py-3.5 rounded-xl shadow-2xl z-50 transform translate-y-24 opacity-0 transition-all duration-300 flex items-center gap-3 text-sm font-semibold">
         <i class="fa-solid fa-circle-check text-gold-500 text-lg"></i>
@@ -623,11 +484,7 @@
     </div>
 
     <script>
-        // رمز دخول المالك — يمكنك تغييره إلى الرمز الخاص بك قبل الرفع
-        const OWNER_ACCESS_CODE = 'ALMAWJ2026';
-        const OWNER_SESSION_KEY = 'almawj_owner_verified_v1';
-
-        const initialArticles = [
+        const articlesData = [
             {
                 id: 'presenter-reading-zad-alhajri',
                 title: 'قراءة المقدم زاد الهاجري: العالم بين ضغوط الاقتصاد وتوتر السياسة',
@@ -961,7 +818,7 @@
             }
         ];
 
-        const initialVideos = [
+        const videosData = [
             {
                 id: 'vid-geopolitics-economy',
                 youtubeId: 'BYF0JfYbNAE',
@@ -1006,9 +863,6 @@
             }
         ];
 
-        let articlesData = [];
-        let videosData = [];
-        let isOwnerMode = false;
         let selectedCategory = 'all';
         let activeReaderArticle = null;
         let toastTimer = null;
@@ -1023,90 +877,6 @@
             toastTimer = setTimeout(() => {
                 toast.classList.add('translate-y-24', 'opacity-0');
             }, 3400);
-        }
-
-        function checkOwnerHashAndSession() {
-            const hash = window.location.hash.toLowerCase();
-            const sessionOk = sessionStorage.getItem(OWNER_SESSION_KEY) === '1';
-
-            if (sessionOk) {
-                setOwnerVerified(true);
-            } else if (hash === '#owner') {
-                openOwnerAuthModal();
-            } else {
-                setOwnerVerified(false);
-            }
-        }
-
-        function setOwnerVerified(verified) {
-            isOwnerMode = verified;
-            const toolbar = document.getElementById('ownerToolbar');
-            if (toolbar) {
-                toolbar.classList.toggle('hidden', !verified);
-                toolbar.classList.toggle('flex', verified);
-            }
-            renderArticlesGrid();
-        }
-
-        function openOwnerAuthModal() {
-            const modal = document.getElementById('ownerAuthModal');
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            setTimeout(() => {
-                const inp = document.getElementById('ownerPassInput');
-                if (inp) inp.focus();
-            }, 80);
-        }
-
-        function closeOwnerAuthModal() {
-            const modal = document.getElementById('ownerAuthModal');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-            const inp = document.getElementById('ownerPassInput');
-            if (inp) inp.value = '';
-        }
-
-        function verifyOwnerCode(e) {
-            e.preventDefault();
-            const code = document.getElementById('ownerPassInput').value.trim();
-            if (code === OWNER_ACCESS_CODE) {
-                sessionStorage.setItem(OWNER_SESSION_KEY, '1');
-                closeOwnerAuthModal();
-                setOwnerVerified(true);
-                showToast('تم تفعيل وضع المالك بنجاح');
-            } else {
-                showToast('رمز المالك غير صحيح');
-            }
-        }
-
-        function logoutOwnerMode() {
-            sessionStorage.removeItem(OWNER_SESSION_KEY);
-            if (window.location.hash.toLowerCase() === '#owner') {
-                history.replaceState(null, '', window.location.pathname + window.location.search);
-            }
-            setOwnerVerified(false);
-            showToast('تم إنهاء وضع المالك');
-        }
-
-        function loadStore() {
-            try {
-                const savedArts = localStorage.getItem('almawj_owner_articles_v1');
-                const savedVids = localStorage.getItem('almawj_owner_videos_v1');
-                articlesData = savedArts ? JSON.parse(savedArts) : initialArticles;
-                videosData = savedVids ? JSON.parse(savedVids) : initialVideos;
-            } catch (err) {
-                articlesData = initialArticles;
-                videosData = initialVideos;
-            }
-        }
-
-        function saveStore() {
-            try {
-                localStorage.setItem('almawj_owner_articles_v1', JSON.stringify(articlesData));
-                localStorage.setItem('almawj_owner_videos_v1', JSON.stringify(videosData));
-            } catch (err) {
-                console.warn('تعذر حفظ البيانات محلياً');
-            }
         }
 
         function renderHeroSection() {
@@ -1214,14 +984,8 @@
                         </div>
                     </div>
                     <div class="px-5 py-3 bg-cream-50 border-t border-cream-100 flex items-center justify-between text-xs">
-                        <span class="font-medium text-navy-800 truncate max-w-[55%]">${art.author}</span>
-                        <div class="flex items-center gap-3" onclick="event.stopPropagation()">
-                            ${isOwnerMode ? `
-                                <button type="button" onclick="startEditArticle('${art.id}')" class="text-blue-700 hover:underline font-bold">تعديل</button>
-                                <button type="button" onclick="deleteArticleItem('${art.id}')" class="text-urgent-600 hover:underline font-bold">حذف</button>
-                            ` : ''}
-                            <button type="button" onclick="openArticleReader('${art.id}')" class="text-gold-600 font-bold">قراءة ←</button>
-                        </div>
+                        <span class="font-medium text-navy-800 truncate max-w-[70%]">${art.author}</span>
+                        <span class="text-gold-600 font-bold">قراءة ←</span>
                     </div>
                 </article>
             `).join('');
@@ -1387,203 +1151,16 @@
             copyToClipboardFallback(text, 'تم نسخ النص بنجاح');
         }
 
-        function openEditorModal(defaultMode = 'article') {
-            if (!isOwnerMode) {
-                openOwnerAuthModal();
-                return;
-            }
-            const modal = document.getElementById('editorModal');
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            switchEditorMode(defaultMode);
-        }
-
-        function closeEditorModal() {
-            const modal = document.getElementById('editorModal');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-            document.getElementById('editingArticleId').value = '';
-            document.getElementById('saveArticleBtn').textContent = 'حفظ المادة';
-            document.getElementById('editorModalHeading').textContent = 'إدارة المواد — مالك الحساب';
-        }
-
-        function switchEditorMode(mode) {
-            const artForm = document.getElementById('newArticleForm');
-            const vidForm = document.getElementById('newVideoForm');
-            const btnArt = document.getElementById('modeArticleBtn');
-            const btnVid = document.getElementById('modeVideoBtn');
-
-            if (mode === 'article') {
-                artForm.classList.remove('hidden');
-                vidForm.classList.add('hidden');
-                btnArt.className = 'flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg bg-white text-navy-900 shadow-sm transition';
-                btnVid.className = 'flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg text-slate-600 hover:text-navy-900 transition';
-            } else {
-                artForm.classList.add('hidden');
-                vidForm.classList.remove('hidden');
-                btnVid.className = 'flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg bg-white text-navy-900 shadow-sm transition';
-                btnArt.className = 'flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg text-slate-600 hover:text-navy-900 transition';
-            }
-        }
-
-        function startEditArticle(id) {
-            if (!isOwnerMode) return;
-            const art = articlesData.find(a => a.id === id);
-            if (!art) return;
-
-            openEditorModal('article');
-            document.getElementById('editingArticleId').value = art.id;
-            document.getElementById('artTitleInput').value = art.title;
-            document.getElementById('artCatInput').value = art.category;
-            document.getElementById('artAuthorInput').value = art.author;
-            document.getElementById('artBodyInput').value = art.paragraphs.join('\n');
-            document.getElementById('saveArticleBtn').textContent = 'تحديث المادة';
-            document.getElementById('editorModalHeading').textContent = 'تعديل مادة — مالك الحساب';
-        }
-
-        function deleteArticleItem(id) {
-            if (!isOwnerMode) return;
-            articlesData = articlesData.filter(a => a.id !== id);
-            saveStore();
-            renderHeroSection();
-            renderArticlesGrid();
-            renderMostRead();
-            showToast('تم حذف المادة');
-        }
-
-        function submitArticleForm(e) {
-            e.preventDefault();
-            if (!isOwnerMode) return;
-
-            const editId = document.getElementById('editingArticleId').value.trim();
-            const title = document.getElementById('artTitleInput').value.trim();
-            const category = document.getElementById('artCatInput').value;
-            const author = document.getElementById('artAuthorInput').value.trim() || 'زاد الهاجري — رئيس التحرير';
-            const rawText = document.getElementById('artBodyInput').value.trim();
-            const isBreaking = document.getElementById('artBreakingCheck').checked;
-
-            const catLabels = {
-                'opinion': 'الافتتاحية والرأي',
-                'politics': 'سياسة ودولي',
-                'economy': 'اقتصاد وطاقة',
-                'tech': 'تكنولوجيا وأسواق'
-            };
-
-            const paragraphs = rawText.split('\n').map(line => line.trim()).filter(Boolean);
-            const summary = paragraphs[0].slice(0, 165) + (paragraphs[0].length > 165 ? '...' : '');
-
-            if (editId) {
-                const idx = articlesData.findIndex(a => a.id === editId);
-                if (idx !== -1) {
-                    articlesData[idx] = {
-                        ...articlesData[idx],
-                        title,
-                        category,
-                        categoryLabel: catLabels[category],
-                        author,
-                        summary,
-                        paragraphs
-                    };
-                }
-                showToast('تم تحديث المادة بنجاح');
-            } else {
-                articlesData.unshift({
-                    id: 'art-' + Date.now(),
-                    title,
-                    category,
-                    categoryLabel: catLabels[category],
-                    author,
-                    date: 'الجمعة 20 نوفمبر 2026',
-                    summary,
-                    paragraphs
-                });
-                showToast('تمت إضافة المادة بنجاح');
-            }
-
-            if (isBreaking) {
-                const track = document.getElementById('breakingTickerTrack');
-                track.innerHTML = `<span class="mx-4"><strong class="text-red-400">🔴 عاجل | ${title}:</strong> ${paragraphs[0]}</span><span class="mx-3 text-[#D4AF37]">◆</span>` + track.innerHTML;
-            }
-
-            saveStore();
-            renderHeroSection();
-            renderArticlesGrid();
-            renderMostRead();
-
-            document.getElementById('newArticleForm').reset();
-            closeEditorModal();
-        }
-
-        function parseYoutubeId(input) {
-            const match = input.match(/^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/);
-            return (match && match[2] && match[2].length === 11) ? match[2] : input.trim();
-        }
-
-        function submitNewVideo(e) {
-            e.preventDefault();
-            if (!isOwnerMode) return;
-
-            const title = document.getElementById('vidTitleInput').value.trim();
-            const rawUrl = document.getElementById('vidUrlInput').value.trim();
-            const channel = document.getElementById('vidSourceInput').value.trim();
-            const youtubeId = parseYoutubeId(rawUrl);
-
-            videosData.unshift({
-                id: 'vid-' + Date.now(),
-                youtubeId,
-                title,
-                channel,
-                badge: 'موج TV'
-            });
-
-            saveStore();
-            renderVideosGrid();
-
-            document.getElementById('newVideoForm').reset();
-            closeEditorModal();
-            showToast('تمت إضافة الفيديو إلى الموج TV');
-        }
-
-        function copyUpdatedSourceCode() {
-            if (!isOwnerMode) return;
-            const serializedArticles = JSON.stringify(articlesData, null, 12);
-            const serializedVideos = JSON.stringify(videosData, null, 12);
-            const tickerHtml = document.getElementById('breakingTickerTrack').innerHTML.trim();
-
-            let htmlOut = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
-            htmlOut = htmlOut.replace(
-                /const articlesData = \[[\s\S]*?\n        \];/,
-                `const articlesData = ${serializedArticles};`
-            );
-            htmlOut = htmlOut.replace(
-                /const videosData = \[[\s\S]*?\n        \];/,
-                `const videosData = ${serializedVideos};`
-            );
-            htmlOut = htmlOut.replace(
-                /<div class="mawj-marquee-track" id="breakingTickerTrack">[\s\S]*?<\/div>/,
-                `<div class="mawj-marquee-track" id="breakingTickerTrack">\n                ${tickerHtml}\n            </div>`
-            );
-
-            copyToClipboardFallback(htmlOut, 'تم نسخ كود index.html المحدّث للرفع إلى GitHub');
-        }
-
-        window.addEventListener('hashchange', checkOwnerHashAndSession);
         window.addEventListener('click', (e) => {
             const readerModal = document.getElementById('articleReaderModal');
-            const authModal = document.getElementById('ownerAuthModal');
-            const editorModal = document.getElementById('editorModal');
             if (e.target === readerModal) closeArticleReaderModal();
-            if (e.target === authModal) closeOwnerAuthModal();
-            if (e.target === editorModal) closeEditorModal();
         });
 
         window.onload = function() {
-            loadStore();
             renderHeroSection();
             renderArticlesGrid();
             renderMostRead();
             renderVideosGrid();
-            checkOwnerHashAndSession();
         };
     </script>
 </body>
