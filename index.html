@@ -322,4 +322,24 @@
         <!-- 2. شبكة التحليلات والأخبار + الشريط الجانبي -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
             <div class="lg:col-span-8 space-y-8">
-                <div class="flex flex-wrap items-center
+                <div class="flex flex-wrap items-center 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    try { localStorage.clear(); } catch (e) {}
+    document.querySelectorAll('button, a, div, section').forEach((el) => {
+      const t = (el.textContent || '').trim();
+      if (
+        t === 'كود HTML ونشر قوقل' ||
+        t.includes('حفظ ملف index.html') ||
+        t.includes('رفع الملف وتفعيل Pages') ||
+        t.includes('الفهرسة في Google Search Console')
+      ) {
+        if (el.tagName === 'BUTTON' || el.tagName === 'A') {
+          el.remove();
+        } else if (t.length < 450) {
+          el.remove();
+        }
+      }
+    });
+  });
+</script>
