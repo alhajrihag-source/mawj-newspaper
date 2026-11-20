@@ -1,357 +1,4 @@
-,padding:24px 15px}.feature{padding:22px}.feature p{font-size:17px}.top{align-items:flex-start}.market iframe{height:70px}}
-</style>
-</head>
-<body>
-<header class="top">
-  <div><strong id="today"></strong> <small> | رئيس التحرير: زاد الهاجري</small></div>
-  <div class="top-actions">
-    <button class="btn gold" id="openEditor">✎ لوحة التحرير</button>
-    <a class="btn" href="#markets">البث والأسواق الحية</a>
-  </div>
-</header>
-<section class="hero">
-  <div class="brandrow">
-    <div class="brand">
-      <div class="logo" aria-label="شعار صحيفة الموج">〰</div>
-      <div><div class="en">AL-MAWJ PRESS</div><h1>صحيفة <span>الموج</span></h1><p class="tagline">« نرصد الحدث.. ونربط الصورة بالسياق » — برئاسة تحرير زاد الهاجري</p></div>
-    </div>
-  </div>
-  <div class="searchrow"><input id="search" type="search" placeholder="ابحث في المقالات والأخبار والعناوين..." aria-label="البحث"><button class="btn gold" id="clearSearch">مسح</button></div>
-  <button class="tv" id="tvButton">الموج TV</button>
-</section>
-<nav class="navwrap">
-  <div class="nav" id="nav">
-    <button class="active" data-cat="الكل">الرئيسية</button>
-    <button data-cat="سياسة دولية">سياسة دولية</button>
-    <button data-cat="اقتصاد وطاقة">اقتصاد وطاقة</button>
-    <button data-cat="الافتتاحية">الافتتاحية</button>
-    <button data-cat="الخليج والعرب">الخليج والعرب</button>
-    <button data-cat="حروب وأمن">حروب وأمن</button>
-    <button data-cat="تقنية وعلوم">تقنية وعلوم</button>
-  </div>
-  <div class="subnav">
-    <button id="headlinesBtn">عناوين الصحف العالمية والعربية</button>
-    <button id="tvNewsBtn">تلفزيون الأخبار والبورصة</button>
-  </div>
-</nav>
-<div class="breaking"><strong>● عاجل</strong><div id="breakingText">يتم جلب أحدث العناوين من المصادر الإخبارية...</div></div>
-<main class="wrap">
-  <h2 class="sectionhead">الصفحة الرئيسية وافتتاحية العدد</h2>
-  <div class="byline">بقلم: زاد الهاجري — رئيس التحرير</div>
-  <section class="market" id="markets">
-    <div class="markethead"><span class="dot"></span> البورصة العالمية (مؤشرات وأسواق مباشرة)</div>
-    <iframe title="مؤشرات الأسواق المالية" src="https://s.tradingview.com/embed-widget/ticker-tape/?locale=ar#%7B%22symbols%22%3A%5B%7B%22proName%22%3A%22FOREXCOM%3ASPXUSD%22%2C%22title%22%3A%22S%26P%20500%22%7D%2C%7B%22proName%22%3A%22NASDAQ%3ANDX%22%2C%22title%22%3A%22ناسداك%22%7D%2C%7B%22proName%22%3A%22FOREXCOM%3ADJI%22%2C%22title%22%3A%22داو%20جونز%22%7D%2C%7B%22proName%22%3A%22TVC%3AGOLD%22%2C%22title%22%3A%22الذهب%22%7D%2C%7B%22proName%22%3A%22NYMEX%3ACL1%21%22%2C%22title%22%3A%22النفط%20الخام%22%7D%2C%7B%22proName%22%3A%22FX%3AEURUSD%22%2C%22title%22%3A%22اليورو%2Fالدولار%22%7D%5D%2C%22showSymbolLogo%22%3Atrue%2C%22colorTheme%22%3A%22light%22%2C%22isTransparent%22%3Atrue%2C%22displayMode%22%3A%22adaptive%22%2C%22width%22%3A%22100%25%22%2C%22height%22%3A85%7D"></iframe>
-    <div class="smallnote">بيانات الأسواق مقدمة من TradingView وقد تتأخر بحسب مزود البيانات. ليست توصية استثمارية.</div>
-  </section>
-  <article class="feature" id="editorial">
-    <div class="featuremeta"><span>بقلم: زاد الهاجري</span><span class="pill">الافتتاحية</span></div>
-    <h2>قمة دون سقف التوقعات: حين تتقدم البروتوكولات على القرار</h2>
-    <p>ليست قيمة القمم في صورها الختامية، بل في القرارات التي تخرج بها، ومدى قدرتها على تحويل الحوار إلى خطوات قابلة للقياس. وحين تتزاحم ملفات الأمن والاستقرار والاقتصاد، يصبح وضوح المخرجات معياراً أساسياً لقياس جدوى أي لقاء سياسي.</p>
-    <p class="smallnote">نص افتتاحي تجريبي قابل للتعديل من لوحة التحرير، وليس خبراً منسوباً إلى مصدر خارجي.</p>
-  </article>
-  <h2 class="sectionhead" id="newsHeading">أحدث الأخبار</h2>
-  <div class="source smallnote">العناوين والملخصات أدناه تُجلب من خلاصات المصادر، ويؤدي الضغط على العنوان إلى صفحة الخبر الأصلية لدى الناشر.</div>
-  <div id="status" class="loading">جارٍ تحميل الأخبار من المصادر...</div>
-  <div id="newsGrid" class="grid"></div>
-  <section id="pressSection" class="hidden"><h2 class="sectionhead">عناوين الصحف العالمية والعربية</h2><p class="smallnote">روابط مباشرة إلى صفحات الأخبار والعناوين لدى المؤسسات الصحفية؛ قد تختلف العناوين حسب تحديث كل ناشر.</p><div id="pressGrid" class="linkgrid"></div></section>
-  <section id="tvSection" class="hidden"><h2 class="sectionhead">تلفزيون الأخبار والبورصة</h2><div class="linkgrid"><a class="linktile" href="https://www.aljazeera.net/live" target="_blank" rel="noopener"><strong>الجزيرة مباشر</strong><span>فتح صفحة البث الرسمية</span></a><a class="linktile" href="https://www.skynewsarabia.com/live" target="_blank" rel="noopener"><strong>سكاي نيوز عربية</strong><span>فتح صفحة البث الرسمية</span></a><a class="linktile" href="https://www.france24.com/ar/%D8%A8%D8%AB-%D9%85%D8%A8%D8%A7%D8%B4%D8%B1" target="_blank" rel="noopener"><strong>فرانس 24 عربي</strong><span>فتح صفحة البث الرسمية</span></a><a class="linktile" href="https://www.tradingview.com/markets/" target="_blank" rel="noopener"><strong>الأسواق العالمية</strong><span>مؤشرات وأسعار الأسواق</span></a></div><p class="smallnote">قد تتطلب بعض خدمات البث فتحها في موقع القناة، بحسب سياسة الناشر والمنطقة.</p></section>
-  <div style="text-align:center;margin-top:24px"><button class="btn gold" id="reload">تحديث الأخبار الآن</button></div>
-</main>
-<footer>
-  <strong>صحيفة الموج — AL-MAWJ PRESS</strong><br>
-  منصة صحفية إلكترونية مستقلة. تُعرض الأخبار مع الإشارة إلى الناشر الأصلي ورابط مادته.<br>
-  <span class="smallnote">تنبيه: هذه النسخة الأولية تستخدم خلاصات RSS عبر خدمة وسيطة عامة. قد تتوقف بعض الخلاصات أو تتأخر؛ وللاستخدام الصحفي المستقر يُنصح بإنشاء وسيط RSS خاص واستضافة آمنة.</span>
-</footer>
 
-
-<script>
-const FEEDS = [
- {name:"الجزيرة نت",url:"https://www.aljazeera.net/rss",cat:"سياسة دولية"},
- {name:"BBC News عربي",url:"https://feeds.bbci.co.uk/arabic/rss.xml",cat:"سياسة دولية"},
- {name:"Reuters عبر Google News",url:"https://news.google.com/rss/search?q=when:24h+site:reuters.com&hl=ar&gl=SA&ceid=SA:ar",cat:"اقتصاد وطاقة"},
- {name:"أخبار الاقتصاد والطاقة",url:"https://news.google.com/rss/search?q=(اقتصاد+OR+طاقة+OR+نفط)&hl=ar&gl=SA&ceid=SA:ar",cat:"اقتصاد وطاقة"},
- {name:"أخبار الخليج والعرب",url:"https://news.google.com/rss/search?q=(الخليج+OR+السعودية+OR+العالم+العربي)&hl=ar&gl=SA&ceid=SA:ar",cat:"الخليج والعرب"},
- {name:"أخبار الحروب والأمن",url:"https://news.google.com/rss/search?q=(حرب+OR+أمن+OR+دفاع)&hl=ar&gl=SA&ceid=SA:ar",cat:"حروب وأمن"},
- {name:"أخبار التقنية والعلوم",url:"https://news.google.com/rss/search?q=(تقنية+OR+علوم)&hl=ar&gl=SA&ceid=SA:ar",cat:"تقنية وعلوم"},
- {name:"New York Times World",url:"https://rss.nytimes.com/services/xml/rss/nyt/World.xml",cat:"سياسة دولية"}
-];
-const RSS_API="https://api.rss2json.com/v1/api.json?rss_url=";
-const PRESS=[
- ["الشرق الأوسط","https://aawsat.com/"],["القدس العربي","https://www.alquds.co.uk/"],["الجزيرة","https://www.aljazeera.net/"],["العربية","https://www.alarabiya.net/"],["BBC عربي","https://www.bbc.com/arabic"],["Reuters","https://www.reuters.com/world/"],["The New York Times","https://www.nytimes.com/section/world"],["The Guardian","https://www.theguardian.com/world"]
-];
-let allNews=[], activeCategory="الكل";
-const $=id=>document.getElementById(id);
-function esc(s=""){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
-function clean(s=""){const d=document.createElement("div");d.innerHTML=s;return (d.textContent||d.innerText||"").trim();}
-function dateLabel(d){const x=new Date(d);return isNaN(x)?"":x.toLocaleString("ar-SA",{dateStyle:"medium",timeStyle:"short"});}
-function setDate(){$("today").textContent=new Date().toLocaleDateString("ar-SA",{weekday:"long",year:"numeric",month:"long",day:"numeric"});}
-function render(){
- const q=$("search").value.trim().toLowerCase();
- let items=allNews.filter(n=>(activeCategory==="الكل"||n.category===activeCategory)&&(!q||(n.title+" "+n.summary+" "+n.source).toLowerCase().includes(q)));
- $("newsGrid").innerHTML=items.length?items.map(n=>`<article class="card">${n.image?`<img loading="lazy" src="${esc(n.image)}" alt="صورة الخبر">`:""}<div class="cardbody"><span class="category">${esc(n.category||"أخبار")} · ${esc(n.source||"المصدر")}</span><h3><a href="${esc(n.link)}" target="_blank" rel="noopener">${esc(n.title)}</a></h3><p>${esc(n.summary||"اقرأ التفاصيل في المصدر الأصلي.")}</p><div class="cardfoot"><span>${esc(dateLabel(n.date))}</span><a href="${esc(n.link)}" target="_blank" rel="noopener">المصدر الأصلي ↗</a></div></div></article>`).join(""):`<div class="empty">لا توجد مواد مطابقة حالياً. جرّب قسماً آخر أو امسح البحث.</div>`;
-}
-async function loadFeed(feed){const res=await fetch(RSS_API+encodeURIComponent(feed.url));if(!res.ok)throw new Error("RSS service error");const data=await res.json();if(data.status!=="ok")throw new Error(data.message||"Feed error");return (data.items||[]).map(item=>({title:clean(item.title),summary:clean(item.description||item.content||"").slice(0,330),link:item.link,date:item.pubDate,source:feed.name,category:feed.cat,image:item.thumbnail||item.enclosure?.link||""}));}
-function showSection(which){$("pressSection").classList.toggle("hidden",which!=="press");$("tvSection").classList.toggle("hidden",which!=="tv");$("newsHeading").classList.toggle("hidden",which!=="news");$("newsGrid").classList.toggle("hidden",which!=="news");$("status").classList.toggle("hidden",which!=="news");$("editorial").classList.toggle("hidden",which==="press"||which==="tv");if(which==="press")$("pressSection").scrollIntoView({behavior:"smooth"});if(which==="tv")$("tvSection").scrollIntoView({behavior:"smooth"});if(which==="news")$("newsHeading").scrollIntoView({behavior:"smooth"});if(which==="editorial")$("editorial").scrollIntoView({behavior:"smooth"});}
-async function loadNews(){
- $("status").style.display="block";$("status").textContent="جارٍ تحديث الأخبار من المصادر...";
- const results=await Promise.allSettled(FEEDS.map(loadFeed));allNews=results.filter(r=>r.status==="fulfilled").flatMap(r=>r.value);allNews.sort((a,b)=>new Date(b.date)-new Date(a.date));
- $("status").style.display=allNews.length?"none":"block";
- if(!allNews.length)$("status").innerHTML='تعذر تحميل الخلاصات الآن. افتح المصادر مباشرة: <a href="https://www.aljazeera.net/" target="_blank">الجزيرة</a> · <a href="https://www.bbc.com/arabic" target="_blank">BBC عربي</a> · <a href="https://www.reuters.com/" target="_blank">Reuters</a>';
- $("breakingText").textContent=allNews.slice(0,5).map(n=>n.title+" — "+n.source).join("  |  ")||"تعذر تحديث العناوين حالياً";render();
-}
-$("pressGrid").innerHTML=PRESS.map(([name,url])=>`<a class="linktile" href="${url}" target="_blank" rel="noopener"><strong>${esc(name)}</strong><span>فتح أحدث العناوين لدى الصحيفة ↗</span></a>`).join("");
-$("nav").addEventListener("click",e=>{const b=e.target.closest("button[data-cat]");if(!b)return;activeCategory=b.dataset.cat;document.querySelectorAll("#nav button[data-cat]").forEach(x=>x.classList.toggle("active",x===b));$("newsHeading").textContent=activeCategory==="الكل"?"أحدث الأخبار":"أخبار "+activeCategory;showSection(activeCategory==="الافتتاحية"?"editorial":"news");render();});
-$("search").addEventListener("input",()=>{showSection("news");render();});$("clearSearch").onclick=()=>{$("search").value="";showSection("news");render();};$("reload").onclick=loadNews;
-$("headlinesBtn").onclick=()=>showSection("press");
-$("tvButton").onclick=()=>showSection("tv");$("tvNewsBtn").onclick=()=>showSection("tv");
-// التحرير المحلي غير متاح للزوار في هذه النسخة؛ النشر العام يحتاج لوحة خاصة موصولة بخدمة خلفية آمنة.
-$("openEditor").onclick=()=>alert("لوحة النشر الخاصة قيد التجهيز. لا تنشر بيانات دخولك داخل ملف الموقع العام.");
-setDate();loadNews();
-</script>
-</body></html>
-      font-family: system-ui, -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;
-      background-color: #f8fafc;
-      color: #0f172a;
-    }
-    .tab-panel {
-      display: none;
-    }
-    .tab-panel.active {
-      display: block;
-    }
-  </style>
-</head>
-<body class="min-h-screen flex flex-col">
-
-  <!-- الشريط العلوي -->
-  <div class="bg-slate-950 text-slate-200 text-xs border-b border-slate-800">
-    <div class="mx-auto max-w-6xl px-4 py-2 flex flex-wrap items-center justify-between gap-2">
-      <div class="flex flex-wrap items-center gap-3">
-        <span>الجمعة، 20 نوفمبر 2026 م</span>
-        <span>•</span>
-        <span>رئيس التحرير: <strong>زاد الهاجري</strong></span>
-      </div>
-      <div class="flex items-center gap-2">
-        <button type="button" onclick="openTab('live-tv-markets')" class="rounded-md bg-amber-500 px-3 py-1 font-bold text-slate-950 hover:bg-amber-400 transition">
-          بث وأسواق حية
-        </button>
-        <button type="button" onclick="openEditorModal()" class="rounded-md bg-slate-800 px-3 py-1 font-bold text-amber-300 border border-slate-700 hover:bg-slate-700 transition">
-          إضافة مقال أو خبر
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ترويسة الصحيفة -->
-  <header class="bg-slate-900 text-white border-b-4 border-amber-500">
-    <div class="mx-auto max-w-6xl px-4 py-6">
-      <div class="flex flex-wrap items-center justify-between gap-4">
-        <div>
-          <span class="inline-block rounded bg-amber-500/20 px-2.5 py-0.5 text-xs font-bold text-amber-300 border border-amber-400/30">
-            AL-MAWJ PRESS • صحيفة إلكترونية عربية
-          </span>
-          <h1 class="mt-2 text-3xl font-extrabold tracking-tight">صحيفة الموج</h1>
-          <p class="mt-1 text-sm text-slate-300">«نرصد الحدث.. ونربط الصورة بالسياق» — برئاسة تحرير زاد الهاجري</p>
-        </div>
-        <div class="flex flex-wrap items-center gap-2">
-          <button type="button" onclick="refreshAllFeedsNow()" class="rounded-lg bg-emerald-600 px-4 py-2 text-xs font-bold text-white hover:bg-emerald-500 transition">
-            تحديث الأخبار والبورصة الآن
-          </button>
-        </div>
-      </div>
-
-      <!-- البحث -->
-      <div class="mt-5">
-        <input id="searchInput" type="search" oninput="filterNewsByQuery()" placeholder="ابحث في المقالات والأخبار والعناوين..."
-               class="w-full rounded-xl bg-slate-800 border border-slate-700 px-4 py-2.5 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-amber-400" />
-      </div>
-
-      <!-- شريط التبويبات والأيقونات -->
-      <nav class="mt-5 flex flex-wrap items-center gap-2 pt-2 border-t border-slate-800">
-        <button data-tab-btn="home" onclick="openTab('home')" class="tab-btn rounded-lg bg-amber-500 px-4 py-2 text-xs font-extrabold text-slate-950">
-          الرئيسية
-        </button>
-        <button data-tab-btn="politics" onclick="openTab('politics')" class="tab-btn rounded-lg bg-slate-800 px-4 py-2 text-xs font-bold text-slate-200 hover:bg-slate-700">
-          سياسة ودولي
-        </button>
-        <button data-tab-btn="economy" onclick="openTab('economy')" class="tab-btn rounded-lg bg-slate-800 px-4 py-2 text-xs font-bold text-slate-200 hover:bg-slate-700">
-          اقتصاد وطاقة
-        </button>
-        <button data-tab-btn="editorial" onclick="openTab('editorial')" class="tab-btn rounded-lg bg-slate-800 px-4 py-2 text-xs font-bold text-slate-200 hover:bg-slate-700">
-          الافتتاحية
-        </button>
-        <button data-tab-btn="press-headlines" onclick="openTab('press-headlines')" class="tab-btn rounded-lg bg-slate-800 px-4 py-2 text-xs font-bold text-amber-300 border border-amber-500/30 hover:bg-slate-700">
-          عناوين الصحف العالمية والعربية
-        </button>
-        <button data-tab-btn="live-tv-markets" onclick="openTab('live-tv-markets')" class="tab-btn rounded-lg bg-slate-800 px-4 py-2 text-xs font-bold text-rose-300 border border-rose-500/30 hover:bg-slate-700">
-          تلفزيون الأخبار والبورصة
-        </button>
-      </nav>
-    </div>
-  </header>
-
-  <!-- المحتوى الرئيسي -->
-  <main class="mx-auto w-full max-w-6xl flex-1 px-4 py-6 space-y-6">
-
-    <!-- شريط البورصة العالمية بتحديث تلقائي (ظاهر في جميع الأقسام) -->
-    <section class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-        <div class="flex items-center gap-2">
-          <span class="h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-          <h2 class="text-sm font-extrabold text-slate-900">البورصة العالمية (تحديث تلقائي كل 60 ثانية)</h2>
-        </div>
-        <span id="marketsTimestamp" class="text-xs text-slate-500">جاري التحديث...</span>
-      </div>
-      <div id="globalMarketsCards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3"></div>
-    </section>
-
-    <!-- 1. تبويب الرئيسية -->
-    <section id="panel-home" class="tab-panel active space-y-6">
-      <!-- الافتتاحية المميزة -->
-      <article class="rounded-2xl border border-amber-200 bg-white p-6 shadow-sm">
-        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3 mb-4">
-          <span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-extrabold text-amber-900">الافتتاحية</span>
-          <span class="text-xs text-slate-500">بقلم: زاد الهاجري</span>
-        </div>
-        <h2 class="text-2xl font-extrabold text-slate-900 leading-snug mb-3">
-          قمة دون سقف التوقعات: حين تتقدّم البروتوكولات على القرار
-        </h2>
-        <div class="space-y-3 text-sm leading-8 text-slate-700">
-          <p>
-            لم تكن القمة الأخيرة بحاجة إلى بيانات ختامية مطوّلة أو صور تذكارية تُتقن الكاميرات التقاطها بقدر ما كانت بحاجة إلى قرار شجاع يردم الفجوة بين حجم التحديات الراهنة ومستوى الاستجابة السياسية. فحين تجتمع الأطراف المعنية تحت وطأة أزمات متلاحقة تمسّ الأمن والاستقرار والاقتصاد، يصبح انتظار المخرجات العملية حقاً مشروعاً لا ترفاً إعلامياً، ومعياراً حقيقياً لقياس جدوى أي لقاء رفيع المستوى.
-          </p>
-          <p>
-            غير أن المتابع لمجريات القمة يلحظ بوضوح أن السقف الذي بُنيت عليه الآمال كان أعلى بكثير مما انتهت إليه الطاولة. فبدلاً من خطوات تنفيذية واضحة، وجداول زمنية ملزمة، وآليات حقيقية لمعالجة الملفات العالقة، غلب الطابع التشاوري العام، وتكررت العبارات الدبلوماسية التي ترحّل الخلافات إلى جولات مقبلة دون أن تحسم جوهرها.
-          </p>
-          <p>
-            إن أخطر ما يواجه القمم الكبرى ليس اختلاف وجهات النظر في حد ذاته، بل أن تتحول المنصة من أداة لصناعة الحلول إلى مساحة لإدارة الوقت وتبادل الرسائل غير المباشرة. فالشعوب والأسواق والمؤسسات لا تبحث عن توصيات إنشائية تُتلى أمام المنابر، بل عن إرادة سياسية تترجم التفاهمات إلى واقع ملموس يخفف من حدة التوتر ويمنح المستقبل قدراً أكبر من اليقين.
-          </p>
-          <p>
-            الرهان الحقيقي اليوم لم يعد على انعقاد القمم وتعدّدها، بل على قدرتها في أن تكون نقطة تحوّل لا مجرد محطة عابرة في سجل البيانات. وحين تغيب الآليات التنفيذية، تبقى التوقعات معلّقة، ويبقى السؤال مطروحاً: إلى متى تسبق الكلمات الفعل؟
-          </p>
-        </div>
-      </article>
-
-      <!-- المقالات والأحداث المضافة والمحدثة -->
-      <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-        <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
-          <h3 class="text-lg font-extrabold text-slate-900">أحدث الأحداث والمقالات المنشورة</h3>
-          <span id="customPostsCount" class="text-xs text-slate-500"></span>
-        </div>
-        <div id="customArticlesList" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
-      </div>
-
-      <!-- ملخص سريع للتلفزيون والأخبار والصحف -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-          <h3 class="text-base font-extrabold text-slate-900 mb-3">تلفزيون الأخبار (كندي • أمريكي • الجزيرة • سكاي نيوز)</h3>
-          <div id="homeTvQuickLinks" class="space-y-2 text-sm"></div>
-        </div>
-        <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-          <h3 class="text-base font-extrabold text-slate-900 mb-3">أبرز عناوين الصحف العالمية والعربية</h3>
-          <div id="homePressQuickList" class="space-y-2 text-sm"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 2. تبويب سياسة ودولي -->
-    <section id="panel-politics" class="tab-panel space-y-4">
-      <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3 mb-4">
-          <div>
-            <span class="rounded-full bg-indigo-50 px-3 py-1 text-xs font-bold text-indigo-800">سياسة ودولي</span>
-            <h2 class="mt-1 text-xl font-extrabold text-slate-900">تغطية أخبار أمريكا وكندا والمشهد الدولي</h2>
-          </div>
-          <span id="politicsUpdatedAt" class="text-xs text-slate-500">تحديث تلقائي</span>
-        </div>
-        <div id="politicsFeedContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
-      </div>
-    </section>
-
-    <!-- 3. تبويب اقتصاد وطاقة -->
-    <section id="panel-economy" class="tab-panel space-y-4">
-      <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3 mb-4">
-          <div>
-            <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-800">اقتصاد وطاقة</span>
-            <h2 class="mt-1 text-xl font-extrabold text-slate-900">أخبار الاقتصاد والطاقة — أمريكا • كندا • الصين • الخليج</h2>
-          </div>
-          <span id="economyUpdatedAt" class="text-xs text-slate-500">تحديث تلقائي</span>
-        </div>
-        <div id="economyFeedContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
-      </div>
-    </section>
-
-    <!-- 4. تبويب الافتتاحية -->
-    <section id="panel-editorial" class="tab-panel space-y-4">
-      <div class="rounded-2xl border border-amber-200 bg-white p-6 shadow-sm">
-        <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
-          <span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-extrabold text-amber-900">الافتتاحية</span>
-          <span class="text-xs text-slate-500">بقلم: زاد الهاجري</span>
-        </div>
-        <h2 class="text-2xl font-extrabold text-slate-900 leading-snug mb-4">
-          قمة دون سقف التوقعات: حين تتقدّم البروتوكولات على القرار
-        </h2>
-        <div class="space-y-4 text-base leading-8 text-slate-700">
-          <p>
-            لم تكن القمة الأخيرة بحاجة إلى بيانات ختامية مطوّلة أو صور تذكارية تُتقن الكاميرات التقاطها بقدر ما كانت بحاجة إلى قرار شجاع يردم الفجوة بين حجم التحديات الراهنة ومستوى الاستجابة السياسية. فحين تجتمع الأطراف المعنية تحت وطأة أزمات متلاحقة تمسّ الأمن والاستقرار والاقتصاد، يصبح انتظار المخرجات العملية حقاً مشروعاً لا ترفاً إعلامياً، ومعياراً حقيقياً لقياس جدوى أي لقاء رفيع المستوى.
-          </p>
-          <p>
-            غير أن المتابع لمجريات القمة يلحظ بوضوح أن السقف الذي بُنيت عليه الآمال كان أعلى بكثير مما انتهت إليه الطاولة. فبدلاً من خطوات تنفيذية واضحة، وجداول زمنية ملزمة، وآليات حقيقية لمعالجة الملفات العالقة، غلب الطابع التشاوري العام، وتكررت العبارات الدبلوماسية التي ترحّل الخلافات إلى جولات مقبلة دون أن تحسم جوهرها.
-          </p>
-          <p>
-            إن أخطر ما يواجه القمم الكبرى ليس اختلاف وجهات النظر في حد ذاته، بل أن تتحول المنصة من أداة لصناعة الحلول إلى مساحة لإدارة الوقت وتبادل الرسائل غير المباشرة. فالشعوب والأسواق والمؤسسات لا تبحث عن توصيات إنشائية تُتلى أمام المنابر، بل عن إرادة سياسية تترجم التفاهمات إلى واقع ملموس يخفف من حدة التوتر ويمنح المستقبل قدراً أكبر من اليقين.
-          </p>
-          <p>
-            الرهان الحقيقي اليوم لم يعد على انعقاد القمم وتعدّدها، بل على قدرتها في أن تكون نقطة تحوّل لا مجرد محطة عابرة في سجل البيانات. وحين تغيب الآليات التنفيذية، تبقى التوقعات معلّقة، ويبقى السؤال مطروحاً: إلى متى تسبق الكلمات الفعل؟
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. تبويب عناوين الصحف العالمية والعربية -->
-    <section id="panel-press-headlines" class="tab-panel space-y-5">
-      <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3 mb-4">
-          <div>
-            <span class="rounded-full bg-amber-50 px-3 py-1 text-xs font-bold text-amber-900">الصحافة الدولية والعربية</span>
-            <h2 class="mt-1 text-xl font-extrabold text-slate-900">عناوين الصحف العالمية والعربية</h2>
-          </div>
-          <span id="pressUpdatedAt" class="text-xs text-slate-500">تحديث تلقائي</span>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div>
-            <h3 class="text-base font-extrabold text-slate-900 mb-3">عناوين الصحف العالمية (أمريكا • كندا • أوروبا)</h3>
-            <div id="worldPressList" class="space-y-3"></div>
-          </div>
-          <div>
-            <h3 class="text-base font-extrabold text-slate-900 mb-3">عناوين الصحف العربية</h3>
-            <div id="arabPressList" class="space-y-3"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6. تبويب تلفزيون الأخبار والبورصة -->
-    <section id="panel-live-tv-markets" class="tab-panel space-y-5">
-      <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3 mb-4">
-          <div>
-            <span class="rounded-full bg-red-50 px-3 py-1 text-xs font-bold text-red-700">تلفزيون الأخبار المباشر</span>
-            <h2 class="mt-1 text-xl font-extrabold text-slate-900">التلفزيون الكندي والأمريكي • الجزيرة • سكاي نيوز</h2>
-          </div>
-          <span id="tvAutoStatus" class="text-xs text-slate-500">تحديث تلقائي مستمر</span>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-          <!-- التلفزيون الكندي -->
-          <div class="rounded-xl border border-slate-200 p-4 bg-slate-50">
-            <div class="text-xs font-extrabold text-red-700 mb-2">تلفزيون الأخبار الكندي</div>
-            <ul class="space-y-2 text-xs font-semibold">
-              <li><a href="https://www.cbc.ca/news/live" target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:underline">CBC News Live (كندا)</a></li>
-              <li><a href="https://www.ctvnews.ca/video" target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:underline">CTV News Video (كندا)</a></li>
-              <li><a href="https://globalnews.ca/live/" target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:underline">Global News Live (كندا)</a></li><!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -610,16 +257,59 @@ setDate();loadNews();
                     </button>
                     <button type="button" onclick="selectSection('politics')" data-sec="politics" class="sec-btn text-cream-100 hover:bg-navy-700 px-4 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition">
                         سياسة ودولي
-                    </button>
+                    </button>قمة تحالف الراغبين في برلين تبحث ضمانات أمنية لأوكرانيا ودور أوروبا في مفاوضات السلام. 
+أهم ثلاثة ملفات سياسية تستحق المتابعة
+مستقبل العلاقات بين ترمب وشي وبوتين بعد القمة الثلاثية.
+احتمالات تجدد المواجهة الأمريكية الإيرانية.
+مستقبل الحرب الأوكرانية وموقع أوروبا في مفاوضات السلام.
+قراءة المقدم زاد الهاجري:
+العالم أمام مشهد دبلوماسي جديد؛ القوى الكبرى تتحدث عن السلام وتقليل مخاطر الحرب النووية، لكنها لم تحسم الملفات الأكثر اشتعالاً. السؤال ليس من جلس إلى طاولة القمة، بل من خرج منها بمكاسب سياسية حقيقية.
+*جميع العناوين مرتبطة بتقارير منشورة اليوم أو التطورات القريبة منه، وليست جميعها أخباراً عاجلة بالمعنى الزمني.
                     <button type="button" onclick="selectSection('economy')" data-sec="economy" class="sec-btn text-cream-100 hover:bg-navy-700 px-4 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition">
                         اقتصاد وطاقة
-                    </button>
+                    </button>● تقارير عن اضطرابات في حركة ناقلات النفط بمضيق هرمز تعيد مخاطر الإمدادات إلى الأسواق.
+● وكالة الطاقة الدولية تحذر من اضطراب غير مسبوق في تجارة النفط والغاز العالمية.
+● وزراء أوبك+ يستعدون لاجتماعات 29 نوفمبر لمناقشة سياسة الإنتاج لعام 2027.
+● مخاوف التضخم الأوروبي تتزايد مع ارتفاع أسعار الغاز الطبيعي والطاقة.
+● عضو بالمركزي الأوروبي يحذر من انتقال ارتفاع أسعار الطاقة إلى بقية قطاعات الاقتصاد.
+● الأسهم البريطانية تتجه إلى أكبر خسارة أسبوعية منذ ثمانية أشهر.
+● صناديق الأسهم العالمية تستقطب 59.23 مليار دولار خلال أسبوع، وفق بيانات LSEG.
+● أسهم التكنولوجيا تتعرض لضغوط وسط مخاوف من الإنفاق الضخم على الذكاء الاصطناعي.
+● الذهب يواصل التراجع مع تغير توقعات أسعار الفائدة الأمريكية.
+● الأسواق تترقب بيانات التضخم في اليابان وأستراليا وقرار الفائدة في كوريا الجنوبية.
                     <button type="button" onclick="selectSection('opinion')" data-sec="opinion" class="sec-btn text-cream-100 hover:bg-navy-700 px-4 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition">
                         الافتتاحية والرأي
                     </button>
                     <button type="button" onclick="selectSection('tech')" data-sec="tech" class="sec-btn text-cream-100 hover:bg-navy-700 px-4 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition">
                         تكنولوجيا وأسواق
-                    </button>
+                    </button>عاجل | التكنولوجيا والأسواق العالمية
+
+- موجة بيع تضرب أسهم التكنولوجيا العالمية مع تصاعد المخاوف بشأن استثمارات الذكاء الاصطناعي.
+- الأسواق الآسيوية تتجه إلى أداء أسبوعي ضعيف وسط تراجع أسهم تايوان واليابان.
+- تايوان تسجل هبوطاً أسبوعياً حاداً في سوق الأسهم وسط ضغوط قطاع أشباه الموصلات.
+- إدراج شركة أنثروبيك في ناسداك يثير اهتمام المستثمرين بقطاع الذكاء الاصطناعي.
+- أسهم شركات الذكاء الاصطناعي تواجه تقلبات بعد موجة ارتفاعات قوية.
+- إنفيديا تواجه ضغوطاً وسط تساؤلات عن استدامة طفرة الذكاء الاصطناعي.
+- واشنطن تشدد القيود على وصول الشركات الصينية إلى رقائق الذكاء الاصطناعي المتقدمة.
+- علي بابا تحذر من تأثير قيود الرقائق على توسع مراكز البيانات.
+- تينسنت تواجه تحديات في الوصول إلى قدرات الحوسبة المتقدمة.
+- بكين تسرّع جهود تطوير صناعة الرقائق المحلية وتقليل الاعتماد على التكنولوجيا الأمريكية.
+- شركات مراكز البيانات الأوروبية تتعرض لضغوط بيع.
+- مؤشر ناسداك يواجه ضغوطاً مع تراجع الثقة في تقييمات شركات التكنولوجيا.
+- المستثمرون يتجهون إلى السندات الحكومية والأصول الأكثر أماناً.
+- الدولار يحافظ على قوته وسط ترقب قرارات السياسة النقدية الأمريكية.
+- الذهب والفضة يتعرضان لضغوط مع إعادة ترتيب المحافظ الاستثمارية.
+- بيتكوين يتحرك وسط تقلبات أسواق الأصول الرقمية.
+
+قراءة المقدم زاد الهاجري
+
+هل دخل الذكاء الاصطناعي مرحلة إعادة تقييم؟
+
+ما يحدث في الأسواق يتجاوز مجرد تراجع أسهم شركات التكنولوجيا؛ فالمستثمرون بدأوا يطرحون سؤالاً جوهرياً: هل ستتحول الاستثمارات الضخمة في الذكاء الاصطناعي إلى أرباح فعلية تتناسب مع قيم الشركات؟
+
+وفي المقابل، تتحول المنافسة الأمريكية الصينية إلى معركة على الرقائق والحوسبة ومراكز البيانات، وهي عناصر ستحدد موازين القوة الاقتصادية والتكنولوجية خلال السنوات المقبلة.
+
+صحيفة الموج | الخبر أولاً.. والحقيقة دائماً.
                     <a href="#almaj-tv" class="text-gold-400 hover:bg-navy-700 px-4 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap transition flex items-center gap-1.5">
                         <i class="fa-solid fa-play-circle"></i>
                         <span>الموج TV</span>
@@ -634,7 +324,23 @@ setDate();loadNews();
     </header>
 
     <!-- شريط الأخبار العاجلة -->
-    <div class="bg-cream-100 border-b border-cream-200 shadow-sm">
+    <div class="bg-cream-100 border-b border-cream-200 shadow-sm">● واشنطن وبكين تجريان محادثات بشأن السلامة العسكرية البحرية.
+● تقارير عن تطورات جديدة في صادرات الرقائق الأمريكية إلى الصين.آخر الأخبار والتطورات الدولية
+● السعودية تعلن اعتراض خمس طائرات مسيّرة وصاروخ باليستي استهدف المملكة.
+● تقارير عن أضرار مادية في برج تابع لصندوق الاستثمارات العامة بالرياض.
+● ولي العهد السعودي يستقبل قائد القيادة المركزية الأمريكية لبحث التعاون العسكري والتطورات الإقليمية.
+● تصاعد التوترات في مضيق هرمز وسط تقارير عن حوادث لناقلات وسفن تجارية.
+● تحذيرات من ارتفاع تكاليف التأمين والشحن البحري في الخليج.
+● خام برنت يرتفع خلال تداولات الجمعة إلى مستويات تتجاوز 92 دولاراً للبرميل.
+● النفط يتجه رغم المكاسب اليومية إلى تسجيل خسارة أسبوعية ثالثة.
+● وكالة الطاقة الدولية تشير إلى عودة فائض المعروض النفطي.
+● العراق ينشئ مقراً أمنياً قرب جرف الصخر وسط توترات مع فصيل مسلح.
+● أنثروبيك تسجل ارتفاعاً في أولى تداولات أسهمها.
+● كوريا الجنوبية تعلن تسجيل أول إصابة بالكوليرا منذ عشر سنوات.
+● تقارير عن تطورات عسكرية أوكرانية تتعلق بجسر القرم.
+● تقارير عن حكم لمحكمة العدل الدولية بشأن قضية الروهينغا في ميانمار.
+صحيفة الموج | الخبر أولاً.. والحقيقة دائماً
+المصدر: رويترز، أسوشيتد برس، وتقارير صحفية أخرى. بعض العناوين تحتاج إلى استكمال التحقق من نصوصها الأصلية قبل البث.
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center gap-3">
             <span class="bg-urgent-600 text-white text-xs font-bold px-3 py-1 rounded-lg flex items-center gap-1.5 shrink-0 shadow-sm">
                 <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
@@ -642,15 +348,7 @@ setDate();loadNews();
             </span>
             <div class="ticker-box flex-1 text-sm font-semibold text-navy-900">
                 <div class="ticker-track" id="breakingTickerTrack">
-                    <span class="mx-5">• تحولات جيوسياسية متسارعة تعيد رسم خرائط الطاقة وسلاسل الإمداد العالمية   ● العراق ينشئ مقراً أمنياً قرب جرف الصخر وسط توترات مع فصيل مسلح.
-● بريطانيا والاتحاد الأوروبي يبحثان إعادة ضبط العلاقات التجارية.
-● بولندا تحتج على انتهاكات مجالها الجوي.
-● واشنطن وبكين تجريان محادثات بشأن السلامة العسكرية البحرية.
-● تقارير عن تطورات جديدة في صادرات الرقائق الأمريكية إلى الصين.
-● أنثروبيك تسجل ارتفاعاً في أولى تداولات أسهمها.
-● كوريا الجنوبية تعلن تسجيل أول إصابة بالكوليرا منذ عشر سنوات.
-● تقارير عن تطورات عسكرية أوكرانية تتعلق بجسر القرم.
-● تقارير عن حكم لمحكمة العدل الدولية بشأن قضية الروهينغا في ميانمار.وسط متابعة مكثفة من صحيفة الموج</span>
+                    <span class="mx-5">• تحولات جيوسياسية متسارعة تعيد رسم خرائط الطاقة وسلاسل الإمداد العالمية وسط متابعة مكثفة من صحيفة الموج</span>
                     <span class="mx-4 text-gold-600">◆</span>
                     <span class="mx-5">• أسواق النفط والممرات البحرية تترقب موازين القوى وإعادة تموضع سلاسل التوريد نحو المرونة وأمن الإمداد</span>
                     <span class="mx-4 text-gold-600">◆</span>
@@ -771,7 +469,8 @@ setDate();loadNews();
                         الموج <span class="text-gold-500">TV</span>
                     </h2>
                     <p class="text-slate-300 text-sm mt-1">
-                        مقاطع تحليلية وبث إخباري مباشر من يوتيوب https://youtube.com/@almoujnewspaper?si=p4js7nZEpB34VivD                  </p>
+                        مقاطع تحليلية وبث إخباري مباشر من يوتيوب حول التحولات السياسية والاقتصادية والطاقة وسلاسل الإمداد.
+                    </p>
                 </div>
                 <button type="button" onclick="openEditorModal('video')" class="self-start md:self-auto bg-navy-800 hover:bg-gold-500 text-cream-100 hover:text-navy-950 border border-navy-700 px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
                     <i class="fa-solid fa-plus"></i>
@@ -805,14 +504,16 @@ setDate();loadNews();
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="videosGrid"></div>
         </section>
 
-       الكامل وخطوات النشر والفهرسة في Google Search Console -->
+        <!-- 4. قسم نسخ كود HTML الكامل وخطوات النشر والفهرسة في Google Search Console -->
         <section id="publish-google-guide" class="bg-white rounded-3xl p-6 sm:p-10 shadow-md border-2 border-gold-500/40">
             <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-6 pb-5 border-b border-cream-200">
                 <div>
                     <div class="inline-flex items-center gap-2 bg-gold-100 text-gold-600 border border-gold-500/30 text-xs font-bold px-3 py-1 rounded-full mb-2">
                         <i class="fa-solid fa-code"></i>
                         <span>تصدير الكود والظهور في بحث قوقل</span>
-                    </div الكامل وخطوات النشر في 
+                    </div>
+                    <h2 class="press-headline text-2xl sm:text-4xl font-bold text-navy-900">
+                        نسخ كود HTML الكامل وخطوات النشر في قوقل
                     </h2>
                     <p class="text-slate-600 text-sm mt-1">
                         احفظ الملف باسم <code class="bg-cream-100 px-1.5 py-0.5 rounded text-navy-900 font-bold">index.html</code> وارفعه إلى مستودعك على GitHub ثم فعّله عبر GitHub Pages وGoogle Search Console.
@@ -820,10 +521,25 @@ setDate();loadNews();
                 </div>
 
                 <div class="flex flex-wrap items-center gap-3">
-                    <button type="button" id="copyHtmlBtn" onclick="copyFullPageHtml()" class="bg-navy-900 hover:bg-navy-800 text-gold-400 font-bold text-sm px-5 py-3 rounded-xl transition shadow-md flex items-center gap</span>
+                    <button type="button" id="copyHtmlBtn" onclick="copyFullPageHtml()" class="bg-navy-900 hover:bg-navy-800 text-gold-400 font-bold text-sm px-5 py-3 rounded-xl transition shadow-md flex items-center gap-2">
+                        <i class="fa-regular fa-copy"></i>
+                        <span>نسخ كامل كود HTML</span>
                     </button>
                     <button type="button" onclick="toggleHtmlPreviewBox()" class="bg-cream-100 hover:bg-cream-200 text-navy-900 border border-cream-200 font-bold text-sm px-4 py-3 rounded-xl transition flex items-center gap-2">
-                        <i class="fa-solid fa-eye"</ class="bg-white px-1.5 py-0.5 rounded border text-navy-900">index.html</code> بترميز <strong>UTF-8</strong>.
+                        <i class="fa-solid fa-eye"></i>
+                        <span id="toggleCodeBtnLabel">عرض / إخفاء الكود</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
+                <div class="bg-cream-50 border border-cream-200 rounded-2xl p-5">
+                    <div class="flex items-center gap-2.5 mb-2">
+                        <span class="w-7 h-7 rounded-full bg-navy-900 text-gold-400 font-bold text-xs flex items-center justify-center">1</span>
+                        <h3 class="font-bold text-navy-900 text-base">حفظ ملف index.html</h3>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        انسخ الكود واحفظه باسم <code class="bg-white px-1.5 py-0.5 rounded border text-navy-900">index.html</code> بترميز <strong>UTF-8</strong>.
                     </p>
                 </div>
 
@@ -968,7 +684,7 @@ setDate();loadNews();
 
                     <div>
                         <label class="block text-xs font-bold text-navy-900 mb-1">نص المقال أو الخبر (كل سطر فقرة مستقلة) *</label>
-                        <textarea id="artBodyInput" rows="5" required placeholder=" اكتب نص المقال أو التقرير هنا..." class="w-full rounded-xl border border-cream-200 px-3.5 py-2.5 text-sm focus:outline-none focus:border-gold-500"></textarea>
+                        <textarea id="artBodyInput" rows="5" required placeholder="اكتب نص المقال أو التقرير هنا..." class="w-full rounded-xl border border-cream-200 px-3.5 py-2.5 text-sm focus:outline-none focus:border-gold-500"></textarea>
                     </div>
 
                     <div class="flex items-center gap-2">
@@ -1542,95 +1258,4 @@ setDate();loadNews();
 
             document.getElementById('newVideoForm').reset();
             closeEditorModal();
-            showToast('تمت إضافة الفيديو إلى الموج TV');
-        }
-
-        function getCompleteHtmlDocument() {
-            return '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
-        }
-
-        function refreshHtmlSourcePreview() {
-            const pre = document.getElementById('fullHtmlSourceText');
-            if (pre) {
-                pre.textContent = getCompleteHtmlDocument();
-            }
-        }
-
-        
-        }
-
-        window.addEventListener('click', (e) => {
-            const readerModal = document.getElementById('articleReaderModal');
-            const editorModal = document.getElementById('editorModal');
-            if (e.target === readerModal) closeArticleReaderModal();
-            if (e.target === editorModal) closeEditorModal();
-        });
-
-        window.onload = function() {
-            loadStore();
-            renderHeroSection();
-            renderArticlesGrid();
-            renderMostRead();
-            renderVideosGrid();
-            refreshHtmlSourcePreview();
-        };
-    </script><script>
-(function () {
-  function ensureFallbackContent() {
-    const marketsBox = document.getElementById('globalMarketsCards');
-    const stamp = document.getElementById('marketsTimestamp');
-    if (marketsBox && (!marketsBox.innerHTML || marketsBox.innerHTML.trim() === '')) {
-      const sampleMarkets = [
-        { n: 'S&P 500', p: '5,948.70', c: '+0.64%', ok: true },
-        { n: 'Dow Jones', p: '43,890.20', c: '+0.42%', ok: true },
-        { n: 'NASDAQ', p: '19,120.55', c: '+0.91%', ok: true },
-        { n: 'S&P/TSX (كندا)', p: '24,610.80', c: '-0.18%', ok: false }
-      ];
-      marketsBox.innerHTML = sampleMarkets.map(m => `
-        <div class="rounded-xl border border-slate-200 bg-slate-50 p-3">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-extrabold text-slate-900">${m.n}</span>
-            <span class="text-xs font-bold ${m.ok ? 'text-emerald-600' : 'text-rose-600'}">${m.c}</span>
-          </div>
-          <div class="mt-1 text-base font-extrabold text-slate-800">${m.p}</div>
-        </div>
-      `).join('');
-    }
-    if (stamp && stamp.textContent.includes('جاري التحديث')) {
-      stamp.textContent = 'تحديث تلقائي: ' + new Date().toLocaleTimeString('ar-SA');
-    }
-
-    const fillList = (id, rows) => {
-      const el = document.getElementById(id);
-      if (el && (!el.innerHTML || el.innerHTML.trim() === '')) {
-        el.innerHTML = rows.map(r => `
-          <div class="rounded-xl border border-slate-200 bg-slate-50 p-3.5">
-            <div class="text-[11px] font-bold text-slate-500 mb-1">${r.tag}</div>
-            <a href="${r.url}" target="_blank" rel="noopener noreferrer" class="text-sm font-extrabold text-slate-900 hover:underline">${r.title}</a>
-          </div>
-        `).join('');
-      }
-    };
-
-    fillList('politicsFeedContainer', [
-      { tag: 'أمريكا وكندا • سياسة ودولي', title: 'ملفات العلاقات الأمريكية الكندية والمواقف الدولية', url: 'https://www.cbc.ca/news' },
-      { tag: 'دولي • سياسة ودولي', title: 'متابعة التحركات السياسية والدبلوماسية العالمية', url: 'https://www.cnn.com/world' }
-    ]);
-
-    fillList('economyFeedContainer', [
-      { tag: 'أمريكا • اقتصاد وطاقة', title: 'الأسواق الأمريكية وأسعار الفائدة والطلب على الطاقة', url: 'https://www.cnn.com/business' },
-      { tag: 'كندا • اقتصاد وطاقة', title: 'إمدادات الطاقة والموارد الطبيعية والتجارة في كندا', url: 'https://www.cbc.ca/news/business' },
-      { tag: 'الصين • اقتصاد وطاقة', title: 'النشاط الصناعي الصيني وحركة السلع والطاقة', url: 'https://www.bbc.com/news/business' },
-      { tag: 'الخليج • اقتصاد وطاقة', title: 'أسواق الطاقة الخليجية والاستثمارات الإقليمية', url: 'https://www.skynewsarabia.com/business' }
-    ]);
-
-    fillList('worldPressList', [
-      { tag: 'الولايات المتحدة', title: 'The New York Times — متابعة السياسة والاقتصاد الدولي', url: 'https://www.nytimes.com/' },
-      { tag: 'كندا', title: 'The Globe and Mail — الشؤون الكندية والدولية', url: 'https://www.theglobeandmail.com/' }
-    ]);
-
-    fillList('arabPressList', [
-      { tag: 'صحافة عربية', title: 'الشرق الأوسط — أخبار وتحليلات عربية ودولية', url: 'https://aawsat.com/' },
-      { tag: 'صحافة عربية', title: 'الجزيرة نت / سكاي نيوز عربية — تغطية الأخبار', url: 'https://www.aljazeera.net/' }
-    ]);
-  ("postUrl").value=
+            showToast
