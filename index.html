@@ -12,16 +12,16 @@
     </header>
 
     <!-- شريط الأخبار العاجلة المتحرك -->
-    <!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="pageDocTitle">صحيفة الموج | AL-MAWJ PRESS — أبرز أخبار العالم</title>
+    <title id="pageDocTitle">صحيفة الموج | AL-MAWJ PRESS — أبرز أخبار العالم والبورصات</title>
 
     <!-- وسوم SEO الأساسية للظهور في محركات البحث -->
     <meta name="description" content="صحيفة الموج (AL-MAWJ PRESS)، صحيفة إلكترونية خاصة باللغة العربية برئاسة تحرير زاد الهاجري. أبرز أخبار العالم والعواجل والبورصات.">
-    <meta name="keywords" content="صحيفة الموج, AL-MAWJ PRESS, زاد الهاجري, أبرز أخبار العالم, عاجل, البورصات, بركان ساكوراجيما, مضيق هرمز, السعودية, اليمن, الموج TV">
+    <meta name="keywords" content="صحيفة الموج, AL-MAWJ PRESS, زاد الهاجري, أبرز أخبار العالم, عاجل, البورصات, ناسداك, داو جونز, خام برنت, أنثروبيك, الموج TV">
     <meta name="author" content="زاد الهاجري - رئيس التحرير">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://alhajrihag-source.github.io/mawj-newspaper/">
@@ -30,9 +30,175 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ar_AR">
     <meta property="og:site_name" content="صحيفة الموج">
-    <meta property="og:title" content="صحيفة الموج | AL-MAWJ PRESS — أبرز أخبار العالم والعواجل">
+    <meta property="og:title" content="صحيفة الموج | AL-MAWJ PRESS — أبرز أخبار العالم والبورصات">
     <meta property="og:description" content="أبرز أخبار العالم والعواجل والبورصات | إعداد وتقديم: زاد الهاجري رئيس التحرير.">
     <meta property="og:url" content="https://alhajrihag-source.github.io/mawj-newspaper/">
+
+    <!-- وسوم Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="صحيفة الموج | AL-MAWJ PRESS">
+    <meta name="twitter:description" content="أبرز أخبار العالم والعواجل والبورصات — برئاسة تحرير زاد الهاجري.">
+
+    <!-- بيانات مهيكلة JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "NewsMediaOrganization",
+          "@id": "https://alhajrihag-source.github.io/mawj-newspaper/#organization",
+          "name": "صحيفة الموج",
+          "alternateName": "Al-Mawj Press",
+          "description": "صحيفة إلكترونية خاصة باللغة العربية برئاسة تحرير زاد الهاجري",
+          "url": "https://alhajrihag-source.github.io/mawj-newspaper/",
+          "inLanguage": "ar",
+          "editor": {
+            "@type": "Person",
+            "name": "زاد الهاجري",
+            "jobTitle": "رئيس التحرير"
+          }
+        },
+        {
+          "@type": "Article",
+          "@id": "https://alhajrihag-source.github.io/mawj-newspaper/#editorial-article",
+          "headline": "افتتاحية صحيفة الموج: العالم بين تحديات الأمن والتحولات السياسية وموسم الأعياد",
+          "description": "افتتاحية صحيفة الموج بقلم رئيس التحرير زاد الهاجري.",
+          "datePublished": "2026-11-22T08:15:00+03:00",
+          "dateModified": "2026-11-22T08:15:00+03:00",
+          "inLanguage": "ar",
+          "author": {
+            "@type": "Person",
+            "name": "زاد الهاجري"
+          },
+          "publisher": {
+            "@id": "https://alhajrihag-source.github.io/mawj-newspaper/#organization"
+          },
+          "isPartOf": {
+            "@id": "https://alhajrihag-source.github.io/mawj-newspaper/#organization"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- تحميل Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- تحميل الخطوط العربية: Amiri و IBM Plex Sans Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            950: '#060B17',
+                            900: '#0B132B',
+                            800: '#1C2541',
+                            700: '#2E3B5E',
+                        },
+                        cream: {
+                            50: '#FCFBF7',
+                            100: '#F6F3EA',
+                            200: '#EAE4D3',
+                        },
+                        gold: {
+                            600: '#A88224',
+                            500: '#D4AF37',
+                            400: '#E5C76B',
+                            100: '#FDF8E7',
+                        },
+                        urgent: {
+                            600: '#B91C1C',
+                            500: '#DC2626',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Amiri', 'Georgia', 'serif'],
+                        sans: ['IBM Plex Sans Arabic', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FCFBF7;
+            color: #0B132B;
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .press-headline {
+            font-family: 'Amiri', serif;
+            line-height: 1.35;
+        }
+
+        @keyframes mawjMarqueeSlide {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100vw);
+            }
+        }
+
+        .mawj-marquee-box {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+            position: relative;
+        }
+
+        .mawj-marquee-track {
+            display: inline-block;
+            white-space: nowrap;
+            animation: mawjMarqueeSlide 85s linear infinite;
+            will-change: transform;
+        }
+
+        .mawj-marquee-box:hover .mawj-marquee-track {
+            animation-play-state: paused;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .video-tile:hover .play-badge {
+            transform: scale(1.1);
+            background-color: #D4AF37;
+            color: #0B132B;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold-500 selection:text-navy-900">
+
+    <!-- الشريط العلوي للتاريخ التلقائي وهيئة التحرير -->
+    <div class="bg-navy-950 text-cream-100 text-xs border-b border-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-wrap items-center justify-between gap-2">
+            <div class="flex flex-wrap items-center gap-3 sm:gap-4">
+                <span class="flex items-center gap-1.5 text-gold-400 font-semibold">
+                    <i class="fa-regular fa-calendar-check"></i>
+                    <span id="liveDateDisplay"></span>
+                </span>
+                <span class="hidden sm:inline text-navy-700">|</span>
+                <span class="text-cream-200/80">
+                    إعداد وتقديم: <strong class="text-white font-bold">زاد الهاجري رئيس التحرير</strong>
+                </span>
+                <span class="hidden md:inline text-navy-700">|</span>
+                <span class="hidden md:
 
     <!-- وسوم Twitter Card -->
     <meta name="twitter:card" content="summary">
