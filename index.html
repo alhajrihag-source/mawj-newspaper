@@ -12,9 +12,1276 @@
     </header>
 
     <!-- شريط الأخبار العاجلة المتحرك -->
-   <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageDocTitle">صحيفة الموج | AL-MAWJ PRESS — أبرز أخبار العالم والبورصات</title>
+
+    <!-- وسوم SEO الأساسية للظهور في محركات البحث -->
+    <meta name="description" content="صحيفة الموج (AL-MAWJ PRESS)، صحيفة إلكترونية خاصة باللغة العربية برئاسة تحرير زاد الهاجري. أبرز أخبار العالم والعواجل والبورصات.">
+    <meta name="keywords" content="صحيفة الموج, AL-MAWJ PRESS, زاد الهاجري, أبرز أخبار العالم, عاجل, البورصات, ناسداك, داو جونز, خام برنت, أنثروبيك, الموج TV">
+    <meta name="author" content="زاد الهاجري - رئيس التحرير">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://alhajrihag-source.github.io/mawj-newspaper/">
+
+    <!-- وسوم Open Graph للمشاركة على المنصات الاجتماعية -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:site_name" content="صحيفة الموج">
+    <meta property="og:title" content="صحيفة الموج | AL-MAWJ PRESS — أبرز أخبار العالم والبورصات">
+    <meta property="og:description" content="أبرز أخبار العالم والعواجل والبورصات | إعداد وتقديم: زاد الهاجري رئيس التحرير.">
+    <meta property="og:url" content="https://alhajrihag-source.github.io/mawj-newspaper/">
+
+    <!-- وسوم Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="صحيفة الموج | AL-MAWJ PRESS">
+    <meta name="twitter:description" content="أبرز أخبار العالم والعواجل والبورصات — برئاسة تحرير زاد الهاجري.">
+
+    <!-- بيانات مهيكلة JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "NewsMediaOrganization",
+          "@id": "https://alhajrihag-source.github.io/mawj-newspaper/#organization",
+          "name": "صحيفة الموج",
+          "alternateName": "Al-Mawj Press",
+          "description": "صحيفة إلكترونية خاصة باللغة العربية برئاسة تحرير زاد الهاجري",
+          "url": "https://alhajrihag-source.github.io/mawj-newspaper/",
+          "inLanguage": "ar",
+          "editor": {
+            "@type": "Person",
+            "name": "زاد الهاجري",
+            "jobTitle": "رئيس التحرير"
+          }
+        },
+        {
+          "@type": "Article",
+          "@id": "https://alhajrihag-source.github.io/mawj-newspaper/#editorial-article",
+          "headline": "افتتاحية صحيفة الموج: العالم بين تحديات الأمن والتحولات السياسية وموسم الأعياد",
+          "description": "افتتاحية صحيفة الموج بقلم رئيس التحرير زاد الهاجري.",
+          "datePublished": "2026-11-22T08:15:00+03:00",
+          "dateModified": "2026-11-22T08:15:00+03:00",
+          "inLanguage": "ar",
+          "author": {
+            "@type": "Person",
+            "name": "زاد الهاجري"
+          },
+          "publisher": {
+            "@id": "https://alhajrihag-source.github.io/mawj-newspaper/#organization"
+          },
+          "isPartOf": {
+            "@id": "https://alhajrihag-source.github.io/mawj-newspaper/#organization"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- تحميل Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- تحميل الخطوط العربية: Amiri و IBM Plex Sans Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            950: '#060B17',
+                            900: '#0B132B',
+                            800: '#1C2541',
+                            700: '#2E3B5E',
+                        },
+                        cream: {
+                            50: '#FCFBF7',
+                            100: '#F6F3EA',
+                            200: '#EAE4D3',
+                        },
+                        gold: {
+                            600: '#A88224',
+                            500: '#D4AF37',
+                            400: '#E5C76B',
+                            100: '#FDF8E7',
+                        },
+                        urgent: {
+                            600: '#B91C1C',
+                            500: '#DC2626',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Amiri', 'Georgia', 'serif'],
+                        sans: ['IBM Plex Sans Arabic', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FCFBF7;
+            color: #0B132B;
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .press-headline {
+            font-family: 'Amiri', serif;
+            line-height: 1.35;
+        }
+
+        @keyframes mawjMarqueeSlide {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100vw);
+            }
+        }
+
+        .mawj-marquee-box {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+            position: relative;
+        }
+
+        .mawj-marquee-track {
+            display: inline-block;
+            white-space: nowrap;
+            animation: mawjMarqueeSlide 85s linear infinite;
+            will-change: transform;
+        }
+
+        .mawj-marquee-box:hover .mawj-marquee-track {
+            animation-play-state: paused;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .video-tile:hover .play-badge {
+            transform: scale(1.1);
+            background-color: #D4AF37;
+            color: #0B132B;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold-500 selection:text-navy-900">
+
+    <!-- الشريط العلوي للتاريخ التلقائي وهيئة التحرير -->
+    <div class="bg-navy-950 text-cream-100 text-xs border-b border-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-wrap items-center justify-between gap-2">
+            <div class="flex flex-wrap items-center gap-3 sm:gap-4">
+                <span class="flex items-center gap-1.5 text-gold-400 font-semibold">
+                    <i class="fa-regular fa-calendar-check"></i>
+                    <span id="liveDateDisplay"></span>
+                </span>
+                <span class="hidden sm:inline text-navy-700">|</span>
+                <span class="text-cream-200/80">
+                    إعداد وتقديم: <strong class="text-white font-bold">زاد الهاجري رئيس التحرير</strong>
+                </span>
+                <span class="hidden md:inline text-navy-700">|</span>
+                <span class="hidden md:inline bg-gold-500/15 text-gold-400 border border-gold-500/30 px-2 py-0.5 rounded-md font-medium">
+                    أبرز أخبار العالم والبورصات
+                </span>
+            </div>
+            <div id="marketFeedStatus" class="text-[11px] text-emerald-400 font-medium">
+                ● شريط العاجل والبورصات نشط وتلقائي
+            </div>
+        </div>
+    </div>
+
+    <!-- ترويسة الصحيفة الرئيسية -->
+    <header class="bg-navy-900 text-white border-b-4 border-gold-500 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
+                <!-- الشعار والهوية -->
+                <div class="flex items-center gap-4 text-center lg:text-right">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-gold-400 to-gold-600 p-0.5 shadow-xl shrink-0">
+                        <div class="w-full h-full bg-navy-900 rounded-[14px] flex items-center justify-center">
+                            <svg class="w-11 h-11 text-gold-500" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="شعار صحيفة الموج">
+                                <path d="M6 39C14 27 22 27 30 39C38 51 46 51 58 35" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"></path>
+                                <path d="M10 26C17 17 24 17 31 26C38 35 45 35 54 23" stroke="#FCFBF7" stroke-width="3" stroke-linecap="round" opacity="0.85"></path>
+                                <circle cx="50" cy="14" r="3.5" fill="#D4AF37"></circle>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-center lg:justify-start gap-2 mb-1">
+                            <span id="headerAutoDateBadge" class="px-2.5 py-0.5 text-[11px] font-bold bg-gold-500 text-navy-950 rounded-md"></span>
+                            <span class="text-xs text-cream-200/70 tracking-wider">AL-MAWJ PRESS</span>
+                        </div>
+                        <h1 class="press-headline text-3xl sm:text-5xl font-bold text-white">
+                            صحيفة <span class="text-gold-500">الموج</span>
+                        </h1>
+                        <p class="text-cream-100/85 text-sm sm:text-base mt-1 font-light">
+                            أبرز أخبار العالم – <span id="headerSubtitleDate"></span> • رئيس التحرير: زاد الهاجري
+                        </p>
+                    </div>
+                </div>
+
+                <!-- البحث والانتقال للموج TV -->
+                <div class="w-full lg:w-auto flex flex-col sm:flex-row items-center gap-3">
+                    <div class="relative w-full sm:w-72">
+                        <input type="text" id="searchBox" onkeyup="renderArticlesGrid()" placeholder="ابحث في أبرز أخبار العالم..." class="w-full bg-navy-800 text-white placeholder-slate-400 text-sm rounded-xl pr-10 pl-4 py-2.5 border border-navy-700 focus:outline-none focus:border-gold-500 transition">
+                        <i class="fa-solid fa-magnifying-glass absolute right-3.5 top-3 text-gold-400 text-sm"></i>
+                    </div>
+                    <a href="#almaj-tv" class="w-full sm:w-auto justify-center bg-urgent-600 hover:bg-urgent-500 text-white text-sm font-bold px-4 py-2.5 rounded-xl flex items-center gap-2 transition shadow-md">
+                        <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
+                        <span>الموج TV</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- شريط التنقل بين الأقسام -->
+        <nav class="bg-navy-800/95 border-t border-navy-700 sticky top-0 z-30 backdrop-blur-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center overflow-x-auto py-2.5 gap-2 no-scrollbar" id="sectionNav">
+                    <button type="button" onclick="selectSection('all')" data-sec="all" class="sec-btn bg-gold-500 text-navy-950 font-bold px-4 py-1.5 rounded-lg text-sm whitespace-nowrap transition">
+                        جميع الأقسام
+                    </button>
+                    <button type="button" onclick="selectSection('usa')" data-sec="usa" class="sec-btn text-cream-100 hover:bg-navy-700 px-4 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition">
+                        أولاً: الولايات المتحدة
+                    </button>
+                    <button type="button" onclick="selectSection('japan')" data-sec="japan" class="sec-btn text-cream-100 hover:bg-navy-700 px-4 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition">
+                        ثانياً: اليابان
+                    </button>
+                    <button type="button" onclick="selectSection('humanitarian')" data-sec="humanitarian" class="sec-btn text-cream-100 hover:bg-navy-700 px-4 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition">
+                        ثالثاً: أخبار إنسانية
+                    </button>
+                    <button type="button" onclick="selectSection('canada')" data-sec="canada" class="sec-btn text-cream-100 hover:bg-navy-700 px-4 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition">
+                        رابعاً: كندا وأعياد الميلاد
+                    </button>
+                    <button type="button" onclick="selectSection('saudi')" data-sec="saudi" class="sec-btn text-cream-100 hover:bg-navy-700 px-4 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition">
+                        خامساً: السعودية
+                    </button>
+                    <button type="button" onclick="selectSection('yemen')" data-sec="yemen" class="sec-btn text-cream-100 hover:bg-navy-700 px-4 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition">
+                        سادساً: اليمن
+                    </button>
+                    <a href="#tv-sources" class="text-cream-100 hover:bg-navy-700 px-4 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition">
+                        سابعاً: مصادر القنوات
+                    </a>
+                    <a href="#almaj-tv" class="text-gold-400 hover:bg-navy-700 px-4 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-play-circle"></i>
+                        <span>الموج TV</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- شريط العاجل والبورصات المتحرك والتلقائي -->
+    <div class="bg-[#060B17] text-white border-b-2 border-[#B91C1C] shadow-md" dir="rtl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center gap-3">
+            <span class="bg-[#B91C1C] text-white text-xs font-bold px-3 py-1 rounded-lg flex items-center gap-1.5 shrink-0 z-10">
+                <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
+                <span>عاجل وبورصات</span>
+            </span>
+
+            <div class="mawj-marquee-box flex-1 text-sm font-semibold text-[#FCFBF7]">
+                <div class="mawj-marquee-track" id="breakingTickerTrack"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-14">
+
+        <!-- 1. افتتاحية صحيفة الموج وأبرز عناوين اليوم -->
+        <section id="heroSection">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-5 border-b-2 border-navy-900 pb-2.5">
+                <h2 class="press-headline text-2xl sm:text-3xl font-bold text-navy-900 flex items-center gap-2.5">
+                    <span class="w-2.5 h-7 bg-gold-500 rounded-sm inline-block"></span>
+                    <span>افتتاحية صحيفة الموج وأبرز أخبار العالم</span>
+                </h2>
+                <span id="heroAutoDateTag" class="text-xs font-semibold text-navy-800 bg-cream-100 border border-cream-200 px-3 py-1 rounded-full"></span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6" id="heroContentGrid"></div>
+        </section>
+
+        <!-- 2. شبكة الأخبار والتغطيات + الشريط الجانبي -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div class="lg:col-span-8 space-y-8">
+                <div class="flex flex-wrap items-center justify-between gap-2 border-b border-cream-200 pb-3">
+                    <h3 class="press-headline text-2xl sm:text-3xl font-bold text-navy-900" id="articlesHeading">
+                        أبرز أخبار العالم
+                    </h3>
+                    <span class="text-xs bg-navy-900 text-gold-400 font-bold px-3 py-1 rounded-lg" id="articlesCountTag">16 مادة</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="articlesGrid"></div>
+            </div>
+
+            <!-- الشريط الجانبي -->
+            <aside class="lg:col-span-4 space-y-6">
+                <!-- لوحة مؤشرات البورصات والنفط -->
+                <div class="bg-navy-900 text-white rounded-2xl p-5 shadow-md border border-navy-800">
+                    <div class="flex items-center justify-between mb-4 pb-3 border-b border-navy-800">
+                        <h3 class="font-bold text-base flex items-center gap-2 text-gold-400">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span>مؤشرات البورصات والنفط</span>
+                        </h3>
+                        <span class="text-[11px] bg-navy-800 text-cream-100 px-2.5 py-0.5 rounded-md">محدث</span>
+                    </div>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-navy-800/75 border border-navy-700/50">
+                            <div>
+                                <div class="font-bold text-white">خام برنت (Brent)</div>
+                                <div class="text-xs text-slate-300">إغلاق الجمعة 92.57$ (توقعات 2027: 88$)</div>
+                            </div>
+                            <div class="text-left">
+                                <div class="font-bold text-gold-400 text-base">$92.57</div>
+                                <div class="text-xs text-emerald-400 font-semibold">+0.64%</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-navy-800/75 border border-navy-700/50">
+                            <div>
+                                <div class="font-bold text-white">ناسداك (Nasdaq)</div>
+                                <div class="text-xs text-slate-300">محو مكاسب 2026 وإغلاق 22,617.73</div>
+                            </div>
+                            <div class="text-left">
+                                <div class="font-bold text-red-400 text-base">-5.28%</div>
+                                <div class="text-xs text-slate-300 font-semibold">-1,261.47</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-navy-800/75 border border-navy-700/50">
+                            <div>
+                                <div class="font-bold text-white">S&amp;P 500</div>
+                                <div class="text-xs text-slate-300">إغلاق 6,910.39 نقطة (7 جلسات تراجع)</div>
+                            </div>
+                            <div class="text-left">
+                                <div class="font-bold text-red-400 text-base">-3.70%</div>
+                                <div class="text-xs text-slate-300 font-semibold">-265.44</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-navy-800/75 border border-navy-700/50">
+                            <div>
+                                <div class="font-bold text-white">داو جونز وVIX</div>
+                                <div class="text-xs text-slate-300">إغلاق داو 48,147.33 • مؤشر الخوف VIX</div>
+                            </div>
+                            <div class="text-left">
+                                <div class="font-bold text-gold-400 text-base">VIX 35.89</div>
+                                <div class="text-xs text-red-400 font-semibold">داو -949.73</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- سابعاً: مصادر القنوات والتغطية التلفزيونية -->
+                <div id="tv-sources" class="bg-white rounded-2xl p-5 shadow-sm border border-cream-200">
+                    <h3 class="press-headline text-xl font-bold text-navy-900 mb-4 pb-2 border-b border-cream-100 flex items-center gap-2">
+                        <i class="fa-solid fa-satellite-dish text-gold-600"></i>
+                        <span>سابعاً: مصادر القنوات والتغطية التلفزيونية</span>
+                    </h3>
+
+                    <div class="space-y-4 text-xs sm:text-sm">
+                        <div>
+                            <div class="font-bold text-navy-900 mb-1.5">وكالات ومؤسسات دولية:</div>
+                            <div class="flex flex-wrap gap-1.5">
+                                <a href="https://www.reuters.com/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-cream-100 hover:bg-gold-500 hover:text-navy-950 text-navy-900 font-medium transition">رويترز</a>
+                                <a href="https://apnews.com/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-cream-100 hover:bg-gold-500 hover:text-navy-950 text-navy-900 font-medium transition">أسوشيتد برس</a>
+                                <a href="https://abcnews.com/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-cream-100 hover:bg-gold-500 hover:text-navy-950 text-navy-900 font-medium transition">ABC News</a>
+                                <a href="https://www.cbsnews.com/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-cream-100 hover:bg-gold-500 hover:text-navy-950 text-navy-900 font-medium transition">CBS News</a>
+                                <a href="https://www.bbc.com/news" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-cream-100 hover:bg-gold-500 hover:text-navy-950 text-navy-900 font-medium transition">BBC</a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="font-bold text-navy-900 mb-1.5">كندا:</div>
+                            <div class="flex flex-wrap gap-1.5">
+                                <a href="https://www.cbc.ca/news" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-cream-100 hover:bg-gold-500 hover:text-navy-950 text-navy-900 font-medium transition">CBC</a>
+                                <a href="https://toronto.citynews.ca/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-cream-100 hover:bg-gold-500 hover:text-navy-950 text-navy-900 font-medium transition">CityNews</a>
+                                <a href="https://www.citytv.com/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-cream-100 hover:bg-gold-500 hover:text-navy-950 text-navy-900 font-medium transition">Citytv</a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="font-bold text-navy-900 mb-1.5">السعودية والخليج:</div>
+                            <div class="flex flex-wrap gap-1.5">
+                                <a href="https://www.spa.gov.sa/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-cream-100 hover:bg-gold-500 hover:text-navy-950 text-navy-900 font-medium transition">وكالة الأنباء السعودية</a>
+                                <a href="https://www.alarabiya.net/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-cream-100 hover:bg-gold-500 hover:text-navy-950 text-navy-900 font-medium transition">العربية</a>
+                                <a href="https://www.alekhbariya.net/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-cream-100 hover:bg-gold-500 hover:text-navy-950 text-navy-900 font-medium transition">الإخبارية السعودية</a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="font-bold text-navy-900 mb-1.5">اليمن والشرق الأوسط:</div>
+                            <div class="flex flex-wrap gap-1.5">
+                                <a href="https://www.aljazeera.net/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-cream-100 hover:bg-gold-500 hover:text-navy-950 text-navy-900 font-medium transition">الجزيرة</a>
+                                <a href="https://www.reuters.com/world/middle-east/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-cream-100 hover:bg-gold-500 hover:text-navy-950 text-navy-900 font-medium transition">رويترز الشرق الأوسط</a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="font-bold text-navy-900 mb-1.5">اليابان:</div>
+                            <div class="flex flex-wrap gap-1.5">
+                                <a href="https://www3.nhk.or.jp/nhkworld/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-cream-100 hover:bg-gold-500 hover:text-navy-950 text-navy-900 font-medium transition">NHK World</a>
+                                <a href="https://www.jma.go.jp/jma/en/Activities/volcano.html" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-cream-100 hover:bg-gold-500 hover:text-navy-950 text-navy-900 font-medium transition">وكالة الأرصاد اليابانية</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الأكثر متابعة -->
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-cream-200">
+                    <h3 class="press-headline text-xl font-bold text-navy-900 mb-4 pb-2 border-b border-cream-100 flex items-center gap-2">
+                        <i class="fa-solid fa-fire text-urgent-600"></i>
+                        <span>الأكثر متابعة اليوم</span>
+                    </h3>
+                    <div class="space-y-4" id="mostReadBox"></div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- 3. قسم الموج TV لمقاطع الفيديو والبث المباشر من يوتيوب -->
+        <section id="almaj-tv" class="bg-navy-950 text-white rounded-3xl p-6 sm:p-10 shadow-xl border border-navy-800">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 pb-5 border-b border-navy-800">
+                <div>
+                    <div class="inline-flex items-center gap-2 bg-urgent-600/20 border border-urgent-500/40 text-red-400 text-xs font-bold px-3 py-1 rounded-full mb-2">
+                        <span class="w-2 h-2 rounded-full bg-urgent-500 animate-ping"></span>
+                        <span>موجز الفيديو والبث المباشر</span>
+                    </div>
+                    <h2 class="press-headline text-3xl sm:text-4xl font-bold text-white">
+                        الموج <span class="text-gold-500">TV</span>
+                    </h2>
+                    <p class="text-slate-300 text-sm mt-1">
+                        مقاطع تحليلية وبث إخباري مباشر من يوتيوب حول التحولات السياسية والاقتصادية والطاقة وسلاسل الإمداد.
+                    </p>
+                </div>
+            </div>
+
+            <!-- مشغل الفيديو المدمج -->
+            <div id="videoStage" class="hidden mb-8 bg-navy-900 border border-gold-500/40 rounded-2xl overflow-hidden shadow-2xl">
+                <div class="flex items-center justify-between px-5 py-3 bg-navy-800 border-b border-navy-700">
+                    <div class="flex items-center gap-2.5">
+                        <span class="w-2.5 h-2.5 rounded-full bg-urgent-500"></span>
+                        <h4 id="stageVideoTitle" class="font-bold text-sm sm:text-base text-white">عنوان الفيديو</h4>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <a id="stageYoutubeUrl" href="#" target="_blank" rel="noopener noreferrer" class="text-xs text-gold-400 hover:underline flex items-center gap-1">
+                            <span>فتح في يوتيوب</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                        <button type="button" onclick="closeVideoStage()" class="text-slate-300 hover:text-white p-1" aria-label="إغلاق المشغل">
+                            <i class="fa-solid fa-xmark text-lg"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="aspect-video w-full max-h-[500px] bg-black">
+                    <iframe id="stageIframe" class="w-full h-full" src="" title="مشغل الموج TV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- شبكة بطاقات الفيديو -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="videosGrid"></div>
+        </section>
+
+    </main>
+
+    <!-- تذييل الصحيفة -->
+    <footer class="bg-navy-950 text-cream-100 border-t-4 border-gold-500 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-6 border-b border-navy-800">
+                <div>
+                    <h3 class="press-headline text-2xl font-bold text-white">
+                        صحيفة <span class="text-gold-500">الموج</span> | <span class="text-lg text-cream-200">AL-MAWJ PRESS</span>
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-300 mt-1">
+                        <span id="footerAutoDateText"></span> • إعداد وتقديم: <strong>زاد الهاجري رئيس التحرير – صحيفة الموج | AL-MAWJ PRESS</strong>.
+                    </p>
+                </div>
+            </div>
+            <div class="pt-5 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-2">
+                <p>© <span id="footerAutoYear"></span> صحيفة الموج — جميع الحقوق محفوظة.</p>
+                <p>صحيفة الموج | AL-MAWJ PRESS — أبرز أخبار العالم</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- نافذة قراءة الخبر الكامل -->
+    <div id="articleReaderModal" class="fixed inset-0 bg-navy-950/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-cream-200">
+            <div class="sticky top-0 bg-white/95 backdrop-blur border-b border-cream-200 px-6 py-4 flex items-center justify-between z-10">
+                <div class="flex items-center gap-2">
+                    <span id="readerCatBadge" class="bg-navy-900 text-gold-400 text-xs font-bold px-3 py-1 rounded-md">قسم</span>
+                    <span id="readerDate" class="text-xs text-slate-500"></span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button type="button" onclick="copyCurrentReaderArticle()" class="text-xs bg-cream-100 hover:bg-cream-200 text-navy-900 px-3 py-1.5 rounded-lg font-bold transition flex items-center gap-1.5">
+                        <i class="fa-regular fa-copy"></i>
+                        <span>نسخ النص</span>
+                    </button>
+                    <button type="button" onclick="closeArticleReaderModal()" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-red-100 text-slate-600 hover:text-urgent-600 flex items-center justify-center transition">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="p-6 sm:p-8">
+                <h2 id="readerTitle" class="press-headline text-2xl sm:text-4xl font-bold text-navy-900 mb-3 leading-snug"></h2>
+                <div class="text-xs font-semibold text-gold-600 pb-4 mb-6 border-b border-cream-200" id="readerAuthor"></div>
+                <div id="readerParagraphs" class="text-navy-900 text-base sm:text-lg leading-8 space-y-4"></div>
+                <div id="readerSourcesBox" class="hidden mt-6 p-4 rounded-xl bg-cream-100 border border-cream-200 text-xs sm:text-sm text-navy-900 space-y-1.5"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- رسالة تنبيه سفلية (Toast) -->
+    <div id="toastBanner" class="fixed bottom-5 left-5 bg-navy-900 text-white border-r-4 border-gold-500 px-5 py-3.5 rounded-xl shadow-2xl z-50 transform translate-y-24 opacity-0 transition-all duration-300 flex items-center gap-3 text-sm font-semibold">
+        <i class="fa-solid fa-circle-check text-gold-500 text-lg"></i>
+        <span id="toastText">تم التنفيذ</span>
+    </div>
+
+    <script>
+        function getFormattedArabicDate() {
+            const now = new Date();
+            const days = ['الأحد', 'الإثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'];
+            const months = [
+                'يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو',
+                'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'
+            ];
+            return {
+                full: `${days[now.getDay()]} ${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()}`,
+                year: String(now.getFullYear())
+            };
+        }
+
+        function applyAutomaticDailyDate() {
+            const dt = getFormattedArabicDate();
+            const ids = [
+                'liveDateDisplay',
+                'headerAutoDateBadge',
+                'headerSubtitleDate',
+                'heroAutoDateTag',
+                'footerAutoDateText'
+            ];
+            ids.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.textContent = dt.full;
+            });
+            const footerYear = document.getElementById('footerAutoYear');
+            if (footerYear) footerYear.textContent = dt.year;
+
+            const articlesHeading = document.getElementById('articlesHeading');
+            if (articlesHeading && selectedCategory === 'all') {
+                articlesHeading.textContent = `أبرز أخبار العالم – ${dt.full}`;
+            }
+
+            document.title = `صحيفة الموج | AL-MAWJ PRESS — أبرز أخبار العالم والبورصات – ${dt.full}`;
+        }
+
+        const marketsAndBreakingTickerItems = [
+            { tag: '📈 البورصات والأسواق:', text: 'موجة بيع حادة تضرب الأسهم الأمريكية: ناسداك يهبط 5.28% (-1,261.47 نقطة) إلى 22,617.73 ليمحو مكاسب 2026، وS&P 500 يتراجع 3.70% إلى 6,910.39، وداو جونز ينخفض 949.73 نقطة إلى 48,147.33.' },
+            { tag: '📉 قطاع الذكاء الاصطناعي والرقائق:', text: 'تراجع أسهم الذكاء الاصطناعي والرقائق يضغط على البورصات مع هبوط إنفيديا Nvidia نحو 14% وAMD نحو 13.25% وبرودكوم 12.19% وتراجع سهم أنثروبيك بعد الإدراج.' },
+            { tag: '🛢️ النفط والطاقة:', text: 'خام برنت يغلق عند 92.57 دولاراً للبرميل (+0.64%)، وغولدمان ساكس يتوقع متوسط 88 دولاراً لبرنت في 2027 وسط تزايد الشحنات عبر مضيق هرمز وقناة السويس.' },
+            { tag: '📊 الأسواق العالمية والسلع:', text: 'مؤشر الخوف VIX يقفز إلى 35.89، والذهب يتراجع قرب 3,517.90 دولاراً للأونصة، وبيتكوين تهبط دون 60 ألف دولار، وغولدمان ساكس يرفع تصنيف أسهم H الصينية إلى وزن زائد.' },
+            { tag: '🔴 عاجل | اليابان:', text: 'وكالة الأرصاد اليابانية تسجل ثوراناً انفجارياً لبركان ساكوراجيما بمحافظة كاغوشيما عند الساعة 2:35 بعد الظهر بالتوقيت المحلي السبت.' },
+            { tag: '🔴 عاجل | إيران:', text: 'وفد قطري يجري محادثات في طهران وسط مساعٍ دبلوماسية لإنهاء الحرب.' },
+            { tag: '🔴 عاجل | الولايات المتحدة:', text: 'ترامب يقول إن إيران تريد اتفاقاً، لكنه يرفض الشروط المطروحة حتى الآن.' },
+            { tag: '🔴 عاجل | مضيق هرمز:', text: 'تقارير عن تعرض ثلاث ناقلات نفط على الأقل للضرب أو الأضرار قرب المضيق.' },
+            { tag: '🔴 عاجل | غزة:', text: 'مقتل ثلاثة فلسطينيين في غارة إسرائيلية على شاحنة بمدينة غزة، وفق وزارة الصحة الفلسطينية.' },
+            { tag: '🔴 عاجل | السعودية:', text: 'تقارير عن اعتراض ثلاثة صواريخ باليستية استهدفت الرياض السبت.' },
+            { tag: '🔴 عاجل | اليمن:', text: 'قوات الحكومة اليمنية تعزز انتشارها قرب عدن وسط مخاوف من تصعيد عسكري.' },
+            { tag: '🔴 عاجل | كندا:', text: 'تورونتو تستضيف النسخة 122 من موكب سانتا كلوز مع إغلاقات مرورية واسعة.' }
+        ];
+
+        function renderTickerItems(items) {
+            const track = document.getElementById('breakingTickerTrack');
+            if (!track) return;
+            const safeItems = Array.isArray(items) && items.length > 0 ? items : marketsAndBreakingTickerItems;
+            track.innerHTML = safeItems.map((item, idx) => `
+                <span class="mx-4"><strong class="text-red-400">${item.tag}</strong> ${item.text}</span>
+                ${idx < safeItems.length - 1 ? '<span class="mx-3 text-[#D4AF37]">◆</span>' : ''}
+            `).join('');
+        }
+
+        async function refreshLiveMarketAndBreakingFeed() {
+            renderTickerItems(marketsAndBreakingTickerItems);
+            const statusEl = document.getElementById('marketFeedStatus');
+            const rssTargets = [
+                'https://feeds.reuters.com/reuters/businessNews',
+                'https://sa.investing.com/rss/news_25.rss'
+            ];
+
+            for (const target of rssTargets) {
+                try {
+                    const resp = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(target)}`);
+                    if (!resp.ok) continue;
+                    const data = await resp.json();
+                    if (data && data.status === 'ok' && Array.isArray(data.items) && data.items.length > 0) {
+                        const extraMarketItems = data.items.slice(0, 4).map(entry => ({
+                            tag: '📈 الأسواق والبورصات:',
+                            text: entry.title
+                        }));
+                        renderTickerItems([...extraMarketItems, ...marketsAndBreakingTickerItems]);
+                        if (statusEl) {
+                            statusEl.textContent = '● شريط العاجل والبورصات نشط وتلقائي';
+                        }
+                        break;
+                    }
+                } catch (err) {
+                    if (statusEl) {
+                        statusEl.textContent = '● شريط العاجل والبورصات نشط وتلقائي';
+                    }
+                }
+            }
+        }
+
+        const articlesData = [
+            {
+                id: 'editorial-mawj-press',
+                title: 'افتتاحية صحيفة الموج: العالم بين تحديات الأمن والتحولات السياسية وموسم الأعياد',
+                category: 'editorial',
+                categoryLabel: 'افتتاحية صحيفة الموج',
+                author: 'إعداد وتقديم: زاد الهاجري رئيس التحرير – صحيفة الموج | AL-MAWJ PRESS',
+                heroMain: true,
+                summary: 'تشهد الساحة الدولية تطورات متسارعة تتداخل فيها التحديات الأمنية مع التحولات السياسية والاقتصادية؛ ففي الولايات المتحدة تبرز قضية اختراق قاعدة بيانات FBI، فيما تتواصل التوترات في الشرق الأوسط، وتستعد المدن الكندية لاستقبال موسم أعياد الميلاد.',
+                paragraphs: [
+                    'تشهد الساحة الدولية تطورات متسارعة تتداخل فيها التحديات الأمنية مع التحولات السياسية والاقتصادية. ففي الولايات المتحدة تبرز قضية اختراق قاعدة بيانات FBI باعتبارها اختباراً لأمن المعلومات الحكومية، فيما تتواصل التوترات في الشرق الأوسط مع انعكاساتها على أمن الملاحة والطاقة.',
+                    'وفي المقابل، تستعد المدن الكندية لاستقبال موسم أعياد الميلاد، في مشهد يعكس جانباً اجتماعياً واقتصادياً مختلفاً من المشهد العالمي.',
+                    'ويبقى التحدي الأهم أمام المجتمع الدولي هو احتواء الأزمات الأمنية والإنسانية، والحفاظ على الاستقرار والتعاون بين الدول.',
+                    'إعداد وتقديم: زاد الهاجري رئيس التحرير – صحيفة الموج | AL-MAWJ PRESS'
+                ]
+            },
+            {
+                id: 'usa-1-fbi-ncic-hack',
+                title: '1- اختراق إلكتروني يستهدف قاعدة بيانات مكتب التحقيقات الفيدرالي FBI',
+                category: 'usa',
+                categoryLabel: 'أولاً: الولايات المتحدة الأمريكية',
+                author: 'AP News • ABC News',
+                heroSide: true,
+                summary: 'يحقق مكتب التحقيقات الفيدرالي الأمريكي في اختراق محتمل لقاعدة بيانات المركز الوطني لمعلومات الجرائم (NCIC)، التي تضم معلومات تستخدمها أجهزة إنفاذ القانون بشأن المطلوبين والمفقودين والسجلات الجنائية والممتلكات المسروقة.',
+                paragraphs: [
+                    'يحقق مكتب التحقيقات الفيدرالي الأمريكي في اختراق محتمل لقاعدة بيانات المركز الوطني لمعلومات الجرائم (NCIC)، التي تضم معلومات تستخدمها أجهزة إنفاذ القانون بشأن المطلوبين والمفقودين والسجلات الجنائية والممتلكات المسروقة.',
+                    'وقال الرئيس الأمريكي دونالد ترامب إنه علم بالحادث، واصفاً الأنباء بأنها غير جيدة. ولم تُعلن بعد هوية الجهة المسؤولة أو حجم البيانات المتأثرة.'
+                ],
+                sources: [
+                    'https://apnews.com/article/d066cff87a64a564db0a00172c124972',
+                    'https://abcnews.com/US/fbis-national-crime-database-targeted-hack-trump/story?id=138347810'
+                ]
+            },
+            {
+                id: 'saudi-11-ballistic-missile-interception',
+                title: '11- اعتراض صاروخ باليستي استهدف جنوب المملكة',
+                category: 'saudi',
+                categoryLabel: 'خامساً: المملكة العربية السعودية',
+                author: 'رويترز • صحيفة الموج',
+                heroSide: true,
+                summary: 'أفادت وكالة رويترز بأن الدفاعات الجوية السعودية اعترضت ودمرت صاروخاً باليستياً أُطلق باتجاه جنوب المملكة يوم الجمعة 20 نوفمبر، مع صدور تنبيهات أمنية في مناطق جازان وأبها وخميس مشيط قبل إعلان انتهاء حالة الخطر.',
+                paragraphs: [
+                    'أفادت وكالة رويترز بأن الدفاعات الجوية السعودية اعترضت ودمرت صاروخاً باليستياً أُطلق باتجاه جنوب المملكة يوم الجمعة 20 نوفمبر.',
+                    'كما أُصدرت تنبيهات أمنية في مناطق جازان وأبها وخميس مشيط، قبل إعلان انتهاء حالة الخطر.'
+                ],
+                sources: [
+                    'https://www.reuters.com/world/middle-east/saudi-led-coalition-says-it-intercepted-houthi-missile-targeting-southern-region-2026-11-20/'
+                ]
+            },
+            {
+                id: 'usa-2-trump-comments-fbi-hack',
+                title: '2- دونالد ترامب يعلّق على الاختراق الأمني',
+                category: 'usa',
+                categoryLabel: 'أولاً: الولايات المتحدة الأمريكية',
+                author: 'ABC News • صحيفة الموج',
+                summary: 'علّق الرئيس الأمريكي دونالد ترامب على التقارير المتعلقة باختراق قاعدة بيانات FBI، وقال إنه علم بالحادث للتو، مشيراً إلى أن الأمر ليس جيداً.',
+                paragraphs: [
+                    'علّق الرئيس الأمريكي دونالد ترامب على التقارير المتعلقة باختراق قاعدة بيانات FBI، وقال إنه علم بالحادث للتو، مشيراً إلى أن الأمر ليس جيداً.'
+                ],
+                sources: [
+                    'https://abcnews.com/US/fbis-national-crime-database-targeted-hack-trump/story?id=138347810'
+                ]
+            },
+            {
+                id: 'japan-3-sakurajima-volcano-eruption',
+                title: '3- ثوران بركان ساكوراجيما عند الساعة 2:35 بعد الظهر',
+                category: 'japan',
+                categoryLabel: 'ثانياً: اليابان',
+                author: 'وكالة الأرصاد اليابانية • صحيفة الموج',
+                summary: 'شهد بركان ساكوراجيما في محافظة كاغوشيما اليابانية ثوراناً يوم السبت 21 نوفمبر عند الساعة 2:35 بعد الظهر بالتوقيت المحلي لليابان، وارتفع عمود الرماد البركاني إلى نحو 1200 متر فوق فوهة البركان.',
+                paragraphs: [
+                    'شهد بركان ساكوراجيما في محافظة كاغوشيما اليابانية ثوراناً يوم السبت 21 نوفمبر، عند الساعة 2:35 بعد الظهر بالتوقيت المحلي لليابان.',
+                    'وأفادت التقارير بارتفاع عمود الرماد البركاني إلى نحو 1200 متر فوق فوهة البركان.',
+                    'ملاحظة: المقصود انفجار بركاني وليس انفجاراً صناعياً.'
+                ],
+                sources: [
+                    'https://todaynewsbrief.com/article/world-sakurajima-explosion-kagoshima-v20261121'
+                ]
+            },
+            {
+                id: 'humanitarian-4-javits-frimpong-funeral',
+                title: '4- تشييع الفتى الغاني جافيتس فريمبونغ في نيويورك',
+                category: 'humanitarian',
+                categoryLabel: 'ثالثاً: أخبار إنسانية – الولايات المتحدة',
+                author: 'CBS News • Daily Graphic',
+                summary: 'شُيّع جثمان الفتى الغاني جافيتس فريمبونغ، البالغ من العمر 15 عاماً، في منطقة برونكس بمدينة نيويورك بعد مقتله بإطلاق نار في 29 أكتوبر، وأعلنت الشرطة توقيف مشتبه به يبلغ 17 عاماً واستمرار البحث عن اثنين آخرين.',
+                paragraphs: [
+                    'شُيّع جثمان الفتى الغاني جافيتس فريمبونغ، البالغ من العمر 15 عاماً، في منطقة برونكس بمدينة نيويورك، بعد مقتله بإطلاق نار في 29 أكتوبر.',
+                    'وكان جافيتس قد انتقل إلى الولايات المتحدة مع والده عام 2025، وكان يحلم بأن يصبح طبيباً.',
+                    'وأعلنت الشرطة توقيف مشتبه به يبلغ 17 عاماً وتوجيه تهمة القتل إليه، فيما لا يزال البحث جارياً عن مشتبه بهما آخرين.'
+                ],
+                sources: [
+                    'https://www.cbsnews.com/newyork/news/javits-frimpong-funeral-bronx-shooting/',
+                    'https://www.graphic.com.gh/news/general-news/ghana-news-javits-frimpong-laid-to-rest-in-the-bronx.html'
+                ]
+            },
+            {
+                id: 'humanitarian-5-fiona-hippo-cincinnati-zoo',
+                title: '5- وفاة فرس النهر الشهيرة فيونا في حديقة سينسيناتي',
+                category: 'humanitarian',
+                categoryLabel: 'ثالثاً: أخبار إنسانية – الولايات المتحدة',
+                author: 'حديقة حيوان سينسيناتي • صحيفة الموج',
+                summary: 'أعلنت حديقة حيوان سينسيناتي وفاة فرس النهر الشهيرة فيونا يوم 19 نوفمبر بعد ابتلاع قبعة زائر وصلت إلى حظيرتها، رغم محاولات الفريق البيطري إنقاذها.',
+                paragraphs: [
+                    'أعلنت حديقة حيوان سينسيناتي وفاة فرس النهر الشهيرة فيونا يوم 19 نوفمبر، بعد ابتلاع قبعة زائر وصلت إلى حظيرتها.',
+                    'وحاول الفريق البيطري إنقاذها، لكن محاولات العلاج لم تنجح. وكانت فيونا قد وُلدت في يناير 2017، وكان من المقرر أن تحتفل بعيد ميلادها العاشر في يناير 2027.'
+                ],
+                sources: [
+                    'https://cincinnatizoo.org/beloved-hippo-fiona-has-passed-away/'
+                ]
+            },
+            {
+                id: 'humanitarian-6-us-senate-honors-fiona',
+                title: '6- مجلس الشيوخ الأمريكي يكرّم إرث فيونا',
+                category: 'humanitarian',
+                categoryLabel: 'ثالثاً: أخبار إنسانية – الولايات المتحدة',
+                author: 'مجلس الشيوخ الأمريكي • WHIO',
+                summary: 'وافق مجلس الشيوخ الأمريكي بالإجماع على قرار يكرّم حياة فرس النهر فيونا، ويشيد بجهود العاملين والأطباء البيطريين في حديقة سينسيناتي.',
+                paragraphs: [
+                    'وافق مجلس الشيوخ الأمريكي بالإجماع على قرار يكرّم حياة فرس النهر فيونا، ويشيد بجهود العاملين والأطباء البيطريين في حديقة سينسيناتي.'
+                ],
+                sources: [
+                    'https://www.moreno.senate.gov/wp-content/uploads/2026/11/Fiona-Resolution.pdf',
+                    'https://www.whio.com/news/local/resolution-honoring-fiona-hippo-passes-us-senate/GHBQF5KHIJCIRKQDD54GZHQUSE/'
+                ]
+            },
+            {
+                id: 'canada-7-toronto-santa-claus-parade',
+                title: '7- تورونتو تستضيف موكب سانتا كلوز السنوي',
+                category: 'canada',
+                categoryLabel: 'رابعاً: كندا – استعدادات أعياد الميلاد',
+                author: 'CityNews • The Santa Claus Parade',
+                summary: 'تستضيف مدينة تورونتو يوم الأحد 22 نوفمبر النسخة الـ122 من موكب سانتا كلوز بمشاركة العربات الاحتفالية والفرق الموسيقية والعروض العائلية، وينطلق الساعة 12:30 ظهراً ويُنقل عبر Citytv.',
+                paragraphs: [
+                    'تستضيف مدينة تورونتو يوم الأحد 22 نوفمبر النسخة الـ122 من موكب سانتا كلوز، بمشاركة العربات الاحتفالية والفرق الموسيقية والعروض العائلية.',
+                    'ينطلق الموكب الساعة 12:30 ظهراً، ويُنقل تلفزيونياً عبر Citytv ابتداءً من الساعة الثانية ظهراً.'
+                ],
+                sources: [
+                    'https://www.thesantaclausparade.com/the-parade',
+                    'https://toronto.citynews.ca/2026/11/12/toronto-santa-claus-parade-new-route/'
+                ]
+            },
+            {
+                id: 'canada-8-toronto-road-closures-parade',
+                title: '8- إغلاقات مرورية واسعة في تورونتو بسبب الموكب',
+                category: 'canada',
+                categoryLabel: 'رابعاً: كندا – استعدادات أعياد الميلاد',
+                author: 'شرطة تورونتو • صحيفة الموج',
+                summary: 'أعلنت شرطة تورونتو إغلاقات لعدد من الشوارع في وسط المدينة، ودعت السكان إلى استخدام المواصلات العامة وتجنب مسار الموكب.',
+                paragraphs: [
+                    'أعلنت شرطة تورونتو إغلاقات لعدد من الشوارع في وسط المدينة، ودعت السكان إلى استخدام المواصلات العامة وتجنب مسار الموكب.'
+                ],
+                sources: [
+                    'https://www.tps.ca/media-centre/news-releases/santa-claus-parade-and-5k-holly-jolly-fun-run-su/'
+                ]
+            },
+            {
+                id: 'canada-9-king-street-west-construction-2027',
+                title: '9- أعمال بناء كبيرة في شارع كينغ ويست حتى عام 2027',
+                category: 'canada',
+                categoryLabel: 'رابعاً: كندا – استعدادات أعياد الميلاد',
+                author: 'مدينة تورونتو وهيئة النقل TTC',
+                summary: 'تبدأ مدينة تورونتو وهيئة النقل TTC أعمال تطوير البنية التحتية في شارع كينغ ويست اعتباراً من 23 نوفمبر، وتشمل تجديد خطوط الترام واستبدال شبكات المياه على مراحل تمتد إلى عام 2027.',
+                paragraphs: [
+                    'تبدأ مدينة تورونتو وهيئة النقل TTC أعمال تطوير البنية التحتية في شارع كينغ ويست اعتباراً من 23 نوفمبر، وتشمل تجديد خطوط الترام واستبدال شبكات المياه.',
+                    'ومن المقرر تنفيذ الأعمال على مراحل تمتد إلى عام 2027، مع تحويلات مرورية وتغييرات في خدمات الترام.'
+                ],
+                sources: [
+                    'https://www.toronto.ca/news/city-of-toronto-and-ttc-begin-major-infrastructure-improvements-on-king-street-west/',
+                    'https://www.ttc.ca/about-the-ttc/projects-and-plans/King-Street-West-Track-Renewal'
+                ]
+            },
+            {
+                id: 'canada-10-calgary-christmas-zoolights',
+                title: '10- كالغاري تستقبل موسم أعياد الميلاد بالأضواء والفعاليات',
+                category: 'canada',
+                categoryLabel: 'رابعاً: كندا – استعدادات أعياد الميلاد',
+                author: 'Visit Calgary • Calgary Zoo',
+                summary: 'تستعد مدينة كالغاري في مقاطعة ألبرتا لاستقبال موسم الأعياد من خلال مهرجانات الأضواء والأسواق الشتوية، وأبرزها فعالية ZOOLIGHTS في حديقة حيوان كالغاري بأكثر من مليون مصباح.',
+                paragraphs: [
+                    'تستعد مدينة كالغاري في مقاطعة ألبرتا لاستقبال موسم الأعياد من خلال مهرجانات الأضواء والأسواق الشتوية والفعاليات العائلية.',
+                    'ومن أبرز الفعاليات ZOOLIGHTS في حديقة حيوان كالغاري، المستمرة من 13 نوفمبر 2026 حتى 3 يناير 2027، بمشاركة عروض إضاءة تتجاوز مليون مصباح.'
+                ],
+                sources: [
+                    'https://www.visitcalgary.com/plan-and-stay/itineraries-and-travel-inspiration/christmas-in-calgary',
+                    'https://www.calgaryzoo.com/zoolights/'
+                ]
+            },
+            {
+                id: 'saudi-12-crown-prince-meets-centcom-chief',
+                title: '12- ولي العهد السعودي يستقبل قائد القيادة المركزية الأمريكية',
+                category: 'saudi',
+                categoryLabel: 'خامساً: المملكة العربية السعودية',
+                author: 'رويترز • صحيفة الموج',
+                summary: 'التقى ولي العهد الأمير محمد بن سلمان قائد القيادة المركزية الأمريكية الأدميرال براد كوبر في الرياض يوم 19 نوفمبر، وتناولت المباحثات العلاقات الثنائية والتعاون العسكري والتطورات الإقليمية والأمن والاستقرار.',
+                paragraphs: [
+                    'التقى ولي العهد الأمير محمد بن سلمان قائد القيادة المركزية الأمريكية الأدميرال براد كوبر في الرياض يوم 19 نوفمبر.',
+                    'وتناولت المباحثات العلاقات الثنائية والتعاون العسكري والتطورات الإقليمية والأمن والاستقرار.'
+                ],
+                sources: [
+                    'https://www.reuters.com/world/middle-east/saudi-crown-prince-meets-us-centcom-chief-amid-escalating-houthi-hostilities-2026-11-19/'
+                ]
+            },
+            {
+                id: 'yemen-13-escalating-clashes-red-sea',
+                title: '13- تصاعد المواجهة بين الحوثيين والقوات الحكومية',
+                category: 'yemen',
+                categoryLabel: 'سادساً: اليمن',
+                author: 'رويترز • صحيفة الموج',
+                summary: 'أفادت رويترز بتجدد المواجهات في اليمن، مع تقدم قوات الحوثيين في عدد من المناطق، وتصاعد التوتر على امتداد الساحل المطل على البحر الأحمر ومخاوف من تأثير ذلك على الملاحة ومضيق باب المندب.',
+                paragraphs: [
+                    'أفادت رويترز بتجدد المواجهات في اليمن، مع تقدم قوات الحوثيين في عدد من المناطق، وتصاعد التوتر على امتداد الساحل المطل على البحر الأحمر.',
+                    'وتشير التقارير إلى مخاوف من تأثير التطورات العسكرية على الملاحة الدولية ومضيق باب المندب والأوضاع الإنسانية.'
+                ],
+                sources: [
+                    'https://www.reuters.com/world/asia-pacific/untangling-yemens-complex-civil-war-2026-11-18/'
+                ]
+            },
+            {
+                id: 'yemen-14-houthi-attacks-distinction',
+                title: '14- تصاعد الهجمات الحوثية على السعودية',
+                category: 'yemen',
+                categoryLabel: 'سادساً: اليمن',
+                author: 'رويترز • صحيفة الموج',
+                summary: 'أفادت رويترز بأن جماعة الحوثيين أعلنت تنفيذ هجمات بطائرات مسيّرة وصواريخ استهدفت مواقع داخل السعودية، وتؤكد التقارير ضرورة التمييز بين الهجمات التي أعلنت عنها الجماعة وتلك التي أكدت السلطات السعودية وقوعها أو اعتراضها.',
+                paragraphs: [
+                    'أفادت رويترز بأن جماعة الحوثيين أعلنت تنفيذ هجمات بطائرات مسيّرة وصواريخ استهدفت مواقع داخل السعودية، بينها منشآت ومواقع مرتبطة بالطاقة.',
+                    'وتؤكد التقارير ضرورة التمييز بين الهجمات التي أعلنت عنها الجماعة وتلك التي أكدت السلطات السعودية وقوعها أو اعتراضها.'
+                ],
+                sources: [
+                    'https://www.reuters.com/world/middle-east/houthi-attacks-saudi-arabia-2026-11-19/'
+                ]
+            },
+            {
+                id: 'yemen-15-saudi-humanitarian-aid-ksrelief',
+                title: '15- السعودية تواصل المساعدات الإنسانية لليمن',
+                category: 'yemen',
+                categoryLabel: 'سادساً: اليمن',
+                author: 'وكالة الأنباء السعودية (واس) • صحيفة الموج',
+                summary: 'أعلنت وكالة الأنباء السعودية استمرار جهود مركز الملك سلمان للإغاثة والأعمال الإنسانية في اليمن، بما يشمل مشروعات صحية وغذائية ومساعدات للنازحين.',
+                paragraphs: [
+                    'أعلنت وكالة الأنباء السعودية استمرار جهود مركز الملك سلمان للإغاثة والأعمال الإنسانية في اليمن، بما يشمل مشروعات صحية وغذائية ومساعدات للنازحين.'
+                ],
+                sources: [
+                    'https://www.spa.gov.sa/en'
+                ]
+            }
+        ];
+
+        const videosData = [
+            {
+                id: 'vid-geopolitics-economy',
+                youtubeId: 'BYF0JfYbNAE',
+                title: 'هل تعيد الحروب رسم خريطة الاقتصاد العالمي وأسواق الطاقة؟',
+                channel: 'إيكونوميك — تحليل اقتصادي',
+                badge: 'اقتصاد وطاقة'
+            },
+            {
+                id: 'vid-strait-hormuz-energy',
+                youtubeId: 'wQoFCkkzaNM',
+                title: 'مضيق هرمز.. الممر الذي قد يشعل حرب الطاقة ويخنق الاقتصاد العالمي',
+                channel: 'فكرة ورأي — قضايا الطاقة',
+                badge: 'سلاسل الإمداد'
+            },
+            {
+                id: 'vid-international-talks',
+                youtubeId: 'KR66MhRCuYU',
+                title: 'إيران على طاولة الصين وروسيا وأميركا.. صفقة كبرى تنهي الحرب؟',
+                channel: 'سكاي نيوز عربية',
+                badge: 'سياسة ودولي'
+            },
+            {
+                id: 'vid-news-bulletin',
+                youtubeId: '0EaNN87GnHc',
+                title: 'نشرة إخبارية شاملة وتطورات المشهد الإقليمي والدولي',
+                channel: 'قناة العربية',
+                badge: 'نشرة إخبارية'
+            },
+            {
+                id: 'vid-alarabiya-live',
+                youtubeId: 'n7eQejkXbnM',
+                title: 'البث المباشر — تغطية متواصلة للأحداث العربية والعالمية',
+                channel: 'العربية مباشر',
+                badge: 'بث مباشر LIVE'
+            },
+            {
+                id: 'vid-alhadath-live',
+                youtubeId: 'au8t81S0tag',
+                title: 'البث المباشر — متابعة لحظية للعواجل والتطورات الميدانية',
+                channel: 'الحدث مباشر',
+                badge: 'بث مباشر LIVE'
+            }
+        ];
+
+        let selectedCategory = 'all';
+        let activeReaderArticle = null;
+        let toastTimer = null;
+
+        function showToast(msg) {
+            const toast = document.getElementById('toastBanner');
+            const textEl = document.getElementById('toastText');
+            if (!toast || !textEl) return;
+            textEl.textContent = msg;
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 3400);
+        }
+
+        function renderHeroSection() {
+            const container = document.getElementById('heroContentGrid');
+            const dt = getFormattedArabicDate();
+            const mainEditorial = articlesData.find(a => a.heroMain) || articlesData[0];
+            const sideItems = articlesData.filter(a => a.heroSide).slice(0, 2);
+
+            if (!mainEditorial) return;
+
+            container.innerHTML = `
+                <article onclick="openArticleReader('${mainEditorial.id}')" class="lg:col-span-7 bg-white rounded-2xl overflow-hidden shadow-md border border-cream-200 hover:border-gold-500 transition cursor-pointer group flex flex-col justify-between">
+                    <div class="p-6 sm:p-8 bg-navy-900 text-white">
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="bg-gold-500 text-navy-950 text-xs font-bold px-3 py-1 rounded-md shadow">
+                                ${mainEditorial.categoryLabel}
+                            </span>
+                            <span class="text-xs text-gold-400 font-semibold">${dt.full}</span>
+                        </div>
+                        <h3 class="press-headline text-2xl sm:text-3xl font-bold leading-snug group-hover:text-gold-400 transition mb-2">
+                            ${mainEditorial.title}
+                        </h3>
+                        <div class="text-xs text-cream-200/80 font-semibold">${mainEditorial.author}</div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <p class="text-slate-700 text-sm sm:text-base leading-relaxed mb-4">
+                            ${mainEditorial.summary}
+                        </p>
+                        <div class="flex items-center justify-between text-xs font-bold text-navy-900 pt-3 border-t border-cream-100">
+                            <span>قراءة الافتتاحية كاملة</span>
+                            <span class="text-gold-600 group-hover:-translate-x-1 transition">←</span>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="lg:col-span-5 flex flex-col gap-6">
+                    ${sideItems.map(item => `
+                        <article onclick="openArticleReader('${item.id}')" class="bg-white rounded-2xl p-5 shadow-sm border border-cream-200 hover:border-gold-500 transition cursor-pointer group flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-2.5">
+                                    <span class="bg-navy-900 text-gold-400 text-[11px] font-bold px-2.5 py-0.5 rounded">
+                                        ${item.categoryLabel}
+                                    </span>
+                                    <span class="text-[11px] text-slate-400">${dt.full}</span>
+                                </div>
+                                <h3 class="press-headline text-xl font-bold text-navy-900 group-hover:text-gold-600 transition mb-2 leading-snug">
+                                    ${item.title}
+                                </h3>
+                                <p class="text-slate-600 text-sm line-clamp-3 leading-relaxed">
+                                    ${item.summary}
+                                </p>
+                            </div>
+                            <div class="flex items-center justify-between text-xs pt-3 mt-4 border-t border-cream-100">
+                                <span class="font-semibold text-navy-800">${item.author}</span>
+                                <span class="text-gold-600 font-bold">اقرأ التفاصيل والمصادر ←</span>
+                            </div>
+                        </article>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function renderArticlesGrid() {
+            const grid = document.getElementById('articlesGrid');
+            const query = document.getElementById('searchBox').value.trim().toLowerCase();
+
+            const filtered = articlesData.filter(art => {
+                const matchCat = selectedCategory === 'all' || art.category === selectedCategory;
+                const matchSearch = !query ||
+                    art.title.toLowerCase().includes(query) ||
+                    art.summary.toLowerCase().includes(query) ||
+                    art.author.toLowerCase().includes(query) ||
+                    art.paragraphs.some(p => p.toLowerCase().includes(query));
+                return matchCat && matchSearch;
+            });
+
+            document.getElementById('articlesCountTag').textContent = `${filtered.length} مادة`;
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full bg-white rounded-2xl p-8 text-center border border-cream-200 text-slate-600 text-sm">
+                        لا توجد مواد مطابقة للبحث أو القسم المحدد حالياً.
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = filtered.map(art => `
+                <article onclick="openArticleReader('${art.id}')" class="bg-white rounded-2xl overflow-hidden shadow-sm border border-cream-200 hover:border-gold-500 transition cursor-pointer group flex flex-col justify-between">
+                    <div>
+                        <div class="p-5 bg-navy-900 text-white border-b-2 border-gold-500/60">
+                            <div class="flex items-center justify-between gap-2 mb-2">
+                                <span class="bg-gold-500 text-navy-950 text-[11px] font-bold px-2.5 py-0.5 rounded-md">
+                                    ${art.categoryLabel}
+                                </span>
+                                ${art.sources && art.sources.length ? `<span class="text-[10px] bg-navy-800 text-gold-400 border border-gold-500/40 px-2 py-0.5 rounded">${art.sources.length} مصدر</span>` : ''}
+                            </div>
+                            <h4 class="press-headline text-xl font-bold text-white group-hover:text-gold-400 transition leading-snug">
+                                ${art.title}
+                            </h4>
+                        </div>
+                        <div class="p-5">
+                            <p class="text-slate-600 text-sm line-clamp-3 leading-relaxed">
+                                ${art.summary}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-5 py-3 bg-cream-50 border-t border-cream-100 flex items-center justify-between text-xs">
+                        <span class="font-medium text-navy-800 truncate max-w-[70%]">${art.author}</span>
+                        <span class="text-gold-600 font-bold">قراءة ←</span>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        function renderMostRead() {
+            const box = document.getElementById('mostReadBox');
+            const featuredIds = [
+                'usa-1-fbi-ncic-hack',
+                'saudi-11-ballistic-missile-interception',
+                'saudi-12-crown-prince-meets-centcom-chief',
+                'japan-3-sakurajima-volcano-eruption',
+                'canada-7-toronto-santa-claus-parade'
+            ];
+            const items = featuredIds
+                .map(id => articlesData.find(a => a.id === id))
+                .filter(Boolean);
+
+            box.innerHTML = items.map((art, idx) => `
+                <div onclick="openArticleReader('${art.id}')" class="flex items-start gap-3 cursor-pointer group">
+                    <span class="w-7 h-7 rounded-lg bg-navy-900 text-gold-400 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-gold-500 group-hover:text-navy-950 transition">
+                        ${idx + 1}
+                    </span>
+                    <div>
+                        <h5 class="text-sm font-bold text-navy-900 group-hover:text-gold-600 transition leading-snug">
+                            ${art.title}
+                        </h5>
+                        <span class="text-[11px] text-slate-400">${art.categoryLabel}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderVideosGrid() {
+            const grid = document.getElementById('videosGrid');
+            grid.innerHTML = videosData.map(vid => {
+                const isLive = vid.badge.toUpperCase().includes('LIVE');
+                const safeTitle = vid.title.replace(/'/g, "\\'");
+                return `
+                    <div class="video-tile bg-navy-900 rounded-2xl overflow-hidden border border-navy-800 hover:border-gold-500/60 transition flex flex-col justify-between group">
+                        <div>
+                            <div onclick="launchVideo('${vid.youtubeId}', '${safeTitle}')" class="relative aspect-video bg-navy-950 cursor-pointer flex flex-col items-center justify-center p-5 text-center border-b border-navy-800">
+                                <span class="mb-3 ${isLive ? 'bg-urgent-600 text-white' : 'bg-navy-800 text-gold-400 border border-gold-500/30'} text-[11px] font-bold px-3 py-1 rounded-full">
+                                    ${vid.badge}
+                                </span>
+                                <div class="play-badge w-12 h-12 rounded-full bg-navy-800 text-gold-500 border-2 border-gold-500 flex items-center justify-center transition duration-300 shadow-lg">
+                                    <i class="fa-solid fa-play mr-[-2px]"></i>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <div class="text-xs text-gold-400 font-semibold mb-1">${vid.channel}</div>
+                                <h4 onclick="launchVideo('${vid.youtubeId}', '${safeTitle}')" class="font-bold text-white text-sm sm:text-base leading-snug cursor-pointer hover:text-gold-400 transition">
+                                    ${vid.title}
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="px-4 py-3 bg-navy-950/60 border-t border-navy-800 flex items-center justify-between text-xs">
+                            <button type="button" onclick="launchVideo('${vid.youtubeId}', '${safeTitle}')" class="text-gold-400 hover:text-gold-300 font-bold flex items-center gap-1.5">
+                                <i class="fa-solid fa-tv"></i>
+                                <span>تشغيل هنا</span>
+                            </button>
+                            <a href="https://www.youtube.com/watch?v=${vid.youtubeId}" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-white flex items-center gap-1">
+                                <span>يوتيوب</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function launchVideo(youtubeId, title) {
+            const stage = document.getElementById('videoStage');
+            const iframe = document.getElementById('stageIframe');
+            document.getElementById('stageVideoTitle').textContent = title;
+            document.getElementById('stageYoutubeUrl').href = `https://www.youtube.com/watch?v=${youtubeId}`;
+            iframe.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1`;
+            stage.classList.remove('hidden');
+            stage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function closeVideoStage() {
+            const stage = document.getElementById('videoStage');
+            document.getElementById('stageIframe').src = '';
+            stage.classList.add('hidden');
+        }
+
+        function selectSection(sec) {
+            selectedCategory = sec;
+            const dt = getFormattedArabicDate();
+            document.querySelectorAll('.sec-btn').forEach(btn => {
+                if (btn.dataset.sec === sec) {
+                    btn.className = 'sec-btn bg-gold-500 text-navy-950 font-bold px-4 py-1.5 rounded-lg text-sm whitespace-nowrap transition';
+                } else {
+                    btn.className = 'sec-btn text-cream-100 hover:bg-navy-700 px-4 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition';
+                }
+            });
+
+            const titles = {
+                'all': `أبرز أخبار العالم – ${dt.full}`,
+                'usa': 'أولاً: الولايات المتحدة الأمريكية',
+                'japan': 'ثانياً: اليابان',
+                'humanitarian': 'ثالثاً: أخبار إنسانية – الولايات المتحدة',
+                'canada': 'رابعاً: كندا – استعدادات أعياد الميلاد',
+                'saudi': 'خامساً: المملكة العربية السعودية',
+                'yemen': 'سادساً: اليمن'
+            };
+            document.getElementById('articlesHeading').textContent = titles[sec] || titles['all'];
+
+            const heroSection = document.getElementById('heroSection');
+            if (sec === 'all') {
+                heroSection.classList.remove('hidden');
+            } else {
+                heroSection.classList.add('hidden');
+            }
+
+            renderArticlesGrid();
+        }
+
+        function openArticleReader(id) {
+            const art = articlesData.find(a => a.id === id);
+            if (!art) return;
+            activeReaderArticle = art;
+            const dt = getFormattedArabicDate();
+
+            document.getElementById('readerCatBadge').textContent = art.categoryLabel;
+            document.getElementById('readerDate').textContent = dt.full;
+            document.getElementById('readerTitle').textContent = art.title;
+            document.getElementById('readerAuthor').textContent = art.author;
+
+            document.getElementById('readerParagraphs').innerHTML = art.paragraphs
+                .map(p => `<p>${p}</p>`)
+                .join('');
+
+            const sourcesBox = document.getElementById('readerSourcesBox');
+            if (art.sources && art.sources.length > 0) {
+                sourcesBox.innerHTML = `
+                    <div class="font-bold text-navy-900 mb-1">المصادر الرسمية والمعتمدة:</div>
+                    ${art.sources.map(url => `
+                        <div>
+                            <a href="${url}" target="_blank" rel="noopener noreferrer" class="text-gold-600 hover:underline font-semibold break-all">
+                                ${url} <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+                            </a>
+                        </div>
+                    `).join('')}
+                `;
+                sourcesBox.classList.remove('hidden');
+            } else {
+                sourcesBox.classList.add('hidden');
+                sourcesBox.innerHTML = '';
+            }
+
+            const modal = document.getElementById('articleReaderModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeArticleReaderModal() {
+            const modal = document.getElementById('articleReaderModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        function copyToClipboardFallback(text, successMsg) {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.setAttribute('readonly', '');
+            ta.style.position = 'absolute';
+            ta.style.left = '-9999px';
+            document.body.appendChild(ta);
+            ta.select();
+            try {
+                document.execCommand('copy');
+                showToast(successMsg);
+            } catch (e) {
+                showToast('تعذر النسخ، يرجى النسخ يدوياً');
+            }
+            document.body.removeChild(ta);
+        }
+
+        function copyCurrentReaderArticle() {
+            if (!activeReaderArticle) return;
+            const sourcesText = activeReaderArticle.sources && activeReaderArticle.sources.length
+                ? `\n\nالمصادر:\n${activeReaderArticle.sources.join('\n')}`
+                : '';
+            const text = `${activeReaderArticle.title}\n${activeReaderArticle.author}\n\n${activeReaderArticle.paragraphs.join('\n\n')}${sourcesText}\n\n— صحيفة الموج | AL-MAWJ PRESS`;
+            copyToClipboardFallback(text, 'تم نسخ النص بنجاح');
+        }
+
+        window.addEventListener('click', (e) => {
+            const readerModal = document.getElementById('articleReaderModal');
+            if (e.target === readerModal) closeArticleReaderModal();
+        });
+
+        function initMawjNewspaper() {
+            applyAutomaticDailyDate();
+            renderTickerItems(marketsAndBreakingTickerItems);
+            renderHeroSection();
+            renderArticlesGrid();
+            renderMostRead();
+            renderVideosGrid();
+            refreshLiveMarketAndBreakingFeed();
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initMawjNewspaper);
+        } else {
+            initMawjNewspaper();
+        }
+
+        setInterval(applyAutomaticDailyDate, 60000);
+        setInterval(refreshLiveMarketAndBreakingFeed, 300000);
+    </script>
+</body>
+</html>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="pageDocTitle">صحيفة الموج | AL-MAWJ PRESS — أبرز أخبار العالم والبورصات</title>
