@@ -6401,5 +6401,610 @@ type": "NewsMediaOrganization",
     </footer>
 
 </body>
+</html>DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صحيفة الموج | AL-MAWJ PRESS - النشرة الدولية اليومية</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-navy: #0f172a;
+            --secondary-navy: #1e293b;
+            --accent-gold: #c59b27;
+            --accent-red: #dc2626;
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Tajawal', 'Cairo', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.75;
+        }
+
+        /* Header & Brand */
+        header {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-navy) 100%);
+            color: #ffffff;
+            border-bottom: 4px solid var(--accent-gold);
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+
+        .header-top {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            padding-bottom: 1.25rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .brand-title h1 {
+            font-family: 'Cairo', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+        }
+
+        .brand-title span {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--accent-gold);
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .meta-info {
+            text-align: left;
+            font-size: 0.95rem;
+            color: #cbd5e1;
+        }
+
+        .meta-info strong {
+            color: #ffffff;
+            display: block;
+        }
+
+        .slogan-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.05rem;
+            color: #e2e8f0;
+        }
+
+        .slogan-badge {
+            background-color: rgba(197, 155, 39, 0.18);
+            border: 1px solid var(--accent-gold);
+            color: #fde68a;
+            padding: 0.25rem 0.85rem;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        /* Breaking Ticker */
+        .ticker-wrap {
+            background-color: var(--accent-red);
+            color: #ffffff;
+            padding: 0.6rem 0;
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+
+        .ticker-content {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .ticker-label {
+            background-color: #991b1b;
+            padding: 0.15rem 0.65rem;
+            border-radius: 3px;
+            white-space: nowrap;
+        }
+
+        /* Main Layout */
+        main {
+            padding: 2.5rem 0;
+        }
+
+        /* Editorial Card */
+        .editorial-box {
+            background-color: var(--card-bg);
+            border-right: 6px solid var(--accent-gold);
+            border-radius: 8px;
+            padding: 2.25rem;
+            box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+            margin-bottom: 2.5rem;
+        }
+
+        .editorial-tag {
+            color: var(--accent-gold);
+            font-weight: 800;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            margin-bottom: 0.4rem;
+            display: block;
+        }
+
+        .editorial-box h2 {
+            font-family: 'Cairo', sans-serif;
+            font-size: 1.75rem;
+            color: var(--primary-navy);
+            margin-bottom: 1.25rem;
+        }
+
+        .editorial-box p {
+            margin-bottom: 1rem;
+            font-size: 1.08rem;
+            color: #334155;
+        }
+
+        .editorial-box p:last-child {
+            margin-bottom: 0;
+            font-weight: 600;
+            color: var(--primary-navy);
+        }
+
+        /* Sections Grid */
+        .section-block {
+            margin-bottom: 2.75rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.6rem;
+        }
+
+        .section-header h3 {
+            font-family: 'Cairo', sans-serif;
+            font-size: 1.45rem;
+            color: var(--primary-navy);
+        }
+
+        .section-dot {
+            width: 12px;
+            height: 12px;
+            background-color: var(--accent-red);
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.4rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.07);
+        }
+
+        .news-region {
+            display: inline-block;
+            background-color: #f1f5f9;
+            color: var(--primary-navy);
+            font-weight: 700;
+            font-size: 0.88rem;
+            padding: 0.2rem 0.7rem;
+            border-radius: 4px;
+            margin-bottom: 0.75rem;
+            border-right: 3px solid var(--accent-red);
+        }
+
+        .news-card p {
+            font-size: 1rem;
+            color: #334155;
+        }
+
+        /* Markets Table */
+        .table-wrapper {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+            margin-top: 1.25rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: right;
+        }
+
+        th {
+            background-color: var(--primary-navy);
+            color: #ffffff;
+            font-family: 'Cairo', sans-serif;
+            padding: 0.9rem 1.2rem;
+            font-size: 0.98rem;
+        }
+
+        td {
+            padding: 0.95rem 1.2rem;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.98rem;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        /* Analysis Box */
+        .analysis-panel {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #f8fafc;
+            border-radius: 10px;
+            padding: 2.25rem;
+            margin-bottom: 2.75rem;
+            border-top: 4px solid var(--accent-gold);
+        }
+
+        .analysis-panel h3 {
+            font-family: 'Cairo', sans-serif;
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.25rem;
+        }
+
+        .analysis-item {
+            background-color: rgba(255, 255, 255, 0.06);
+            padding: 1.25rem;
+            border-radius: 6px;
+            border-right: 3px solid var(--accent-gold);
+        }
+
+        .analysis-item h4 {
+            color: #fde68a;
+            margin-bottom: 0.5rem;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        /* Sports Section */
+        .sports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .sports-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.4rem;
+        }
+
+        .sports-card h4 {
+            font-family: 'Cairo', sans-serif;
+            color: var(--primary-navy);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.85rem;
+            font-size: 1.1rem;
+        }
+
+        .sports-list {
+            list-style: none;
+        }
+
+        .sports-list li {
+            padding: 0.45rem 0;
+            border-bottom: 1px dashed #e2e8f0;
+            font-size: 0.96rem;
+        }
+
+        .sports-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-navy);
+            color: #cbd5e1;
+            text-align: center;
+            padding: 2.25rem 1rem;
+            border-top: 4px solid var(--accent-gold);
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-brand {
+            color: #ffffff;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 800;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 640px) {
+            .meta-info {
+                text-align: right;
+            }
+            .brand-title h1 {
+                font-size: 1.75rem;
+            }
+            .editorial-box {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="brand-title">
+                    <h1>صحيفة الموج</h1>
+                    <span>AL-MAWJ PRESS</span>
+                </div>
+                <div class="meta-info">
+                    <strong>النشرة الدولية اليومية</strong>
+                    <span>الاثنين 23 نوفمبر 2026 | إعداد وتقديم: زاد الهاجري</span>
+                </div>
+            </div>
+            <div class="slogan-bar">
+                <span class="slogan-badge">نرصد الحدث.. ونربط الصورة بالسياق</span>
+                <span>تغطية شاملة لأبرز التطورات السياسية والاقتصادية والرياضية</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="ticker-wrap">
+        <div class="container ticker-content">
+            <span class="ticker-label">ملخص النشرة</span>
+            <span>تصاعد التوتر في الخليج وممرات الطاقة | الأسواق العالمية تترقب بيانات التضخم الأمريكية | قمم مرتقبة في دوري أبطال أوروبا غدا الثلاثاء</span>
+        </div>
+    </div>
+
+    <main class="container">
+
+        <!-- الافتتاحية -->
+        <article class="editorial-box">
+            <span class="editorial-tag">الافتتاحية</span>
+            <h2>العالم بين تصعيد السياسة واختبار الاقتصاد</h2>
+            <p>أهلا بكم مشاهدينا ومتابعينا الكرام في هذه النشرة الدولية اليومية من صحيفة الموج.. حيث نرصد الحدث، ونربط الصورة بالسياق.</p>
+            <p>لم يعد المشهد الدولي مجرد سلسلة من الأحداث المتفرقة؛ فالحروب والتوترات السياسية باتت تتداخل مع الاقتصاد والطاقة وأمن التجارة العالمية. وفي وقت تتزايد فيه المخاوف من اتساع رقعة المواجهات، تراقب الأسواق كل إشارة سياسية باعتبارها عاملا مؤثرا في أسعار النفط والاستثمار وحركة التجارة.</p>
+            <p>وفي الشرق الأوسط، تظل التحديات الأمنية حاضرة بقوة، من الخليج إلى البحر الأحمر، فيما تستمر الحرب في أوكرانيا في فرض أثمانها السياسية والاقتصادية على أوروبا والعالم. أما الاقتصاد العالمي، فيواجه اختبارا مزدوجا: حماية استقرار الأسواق من جهة، والتكيف مع التحولات التكنولوجية وتحديات الطاقة من جهة أخرى.</p>
+            <p>وترى صحيفة الموج أن المرحلة الراهنة لا تحتاج إلى سباق في نقل العناوين، بل إلى قراءة ما وراءها؛ فالقيمة الحقيقية للخبر ليست في سرعة وصوله وحدها، وإنما في فهم أسبابه وتداعياته وما قد يتركه من أثر على مستقبل المنطقة والعالم.</p>
+        </article>
+
+        <!-- أولا: الخليج والشرق الأوسط -->
+        <section class="section-block">
+            <div class="section-header">
+                <span class="section-dot"></span>
+                <h3>أولا: الخليج والشرق الأوسط</h3>
+            </div>
+            <div class="news-grid">
+                <div class="news-card">
+                    <span class="news-region">السعودية</span>
+                    <p>تداولت تقارير إعلامية أنباء عن اعتراض طائرة مسيرة أطلقت باتجاه منطقة الرياض، وسط ادعاءات من أطراف النزاع حول استهداف منشآت حيوية، في انتظار البيانات الرسمية الموثقة.</p>
+                </div>
+                <div class="news-card">
+                    <span class="news-region">البحرين</span>
+                    <p>أفادت تقارير بتعرض منشأة صناعية لهجوم إيراني، بينما أعلنت الدفاعات الجوية التصدي للهجمات واعتراضها.</p>
+                </div>
+                <div class="news-card">
+                    <span class="news-region">التوتر الأمريكي الإيراني</span>
+                    <p>يستمر التصعيد المحتدم بين واشنطن وطهران، وسط ضغوط إسرائيلية تدفع باتجاه استئناف العمليات العسكرية.</p>
+                </div>
+                <div class="news-card">
+                    <span class="news-region">اليمن</span>
+                    <p>تتجدد التحذيرات الدولية من تهديد الحوثيين لحركة التجارة العالمية عبر البحر الأحمر وخليج عدن.</p>
+                </div>
+                <div class="news-card">
+                    <span class="news-region">فلسطين ولبنان</span>
+                    <p>أدانت الخارجية الفلسطينية اعتداءات المستوطنين في الضفة الغربية بالتزامن مع تواصل التطورات الميدانية والإنسانية في غزة، فيما لا يزال جنوب لبنان يشهد توترات ميدانية وسط تقارير عن انتهاكات إسرائيلية متكررة.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ثانيا: الشأن الدولي وأوروبا -->
+        <section class="section-block">
+            <div class="section-header">
+                <span class="section-dot"></span>
+                <h3>ثانيا: الشأن الدولي وأوروبا</h3>
+            </div>
+            <div class="news-grid">
+                <div class="news-card">
+                    <span class="news-region">أوكرانيا</span>
+                    <p>أفادت وكالة فرانس برس بمقتل 11 شخصا على الأقل جراء ضربات روسية استهدفت منطقة كييف.</p>
+                </div>
+                <div class="news-card">
+                    <span class="news-region">بحر البلطيق</span>
+                    <p>أعلنت فنلندا أن روسيا بدأت عملية سحب إحدى سفنها التي تضررت مؤخرا في هجوم بطائرات مسيرة.</p>
+                </div>
+                <div class="news-card">
+                    <span class="news-region">السودان</span>
+                    <p>أطلقت الولايات المتحدة تحذيرات مؤكدة أن استمرار تدفق الأسلحة والطائرات المسيرة يطيل أمد الصراع، مجددة الدعوة لوقفها فورا.</p>
+                </div>
+                <div class="news-card">
+                    <span class="news-region">ليبيا</span>
+                    <p>طالبت الحكومة المكلفة من مجلس النواب بفتح تحقيق دولي عاجل في الهجمات التي استهدفت مدينة بنغازي وميناءها.</p>
+                </div>
+                <div class="news-card">
+                    <span class="news-region">بريطانيا</span>
+                    <p>يستعد رئيس الوزراء أندي بورنهام لعرض الاتفاق الجديد مع الاتحاد الأوروبي أمام مجلس العموم، والذي يشمل ملفات الغذاء والزراعة وتنقل الشباب. وتقدر الحكومة أن يضيف الاتفاق 17 مليار جنيه إسترليني للاقتصاد بحلول عام 2030، في وقت يتعهد فيه حزب المحافظين بإلغائه مطالبين بنشر تفاصيله كاملة.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ثالثا: أمريكا الشمالية -->
+        <section class="section-block">
+            <div class="section-header">
+                <span class="section-dot"></span>
+                <h3>ثالثا: أمريكا الشمالية.. سياسة وتجارة</h3>
+            </div>
+            <div class="news-grid">
+                <div class="news-card">
+                    <span class="news-region">الكونغرس الأمريكي</span>
+                    <p>عزز الديمقراطيون أغلبيتهم في مجلس النواب بعد فوز انتخابي حاسم في ولاية نورث كارولاينا، وفق وكالة أسوشيتد برس.</p>
+                </div>
+                <div class="news-card">
+                    <span class="news-region">الشأن الداخلي الأمريكي</span>
+                    <p>يعتزم الجيش الأمريكي استخدام صلاحيات الطوارئ للتعامل مع مواد كيميائية خطرة في ولاية آيوا، مما أثار نزاعا قانونيا واسعا. كما تشهد المطارات الأمريكية اضطرابات وتأخيرات في الرحلات، أبرزها في شركة دلتا بسبب خلل في نظام التشغيل، بالتزامن مع ذروة السفر استعدادا لعطلة عيد الشكر.</p>
+                </div>
+                <div class="news-card">
+                    <span class="news-region">كندا والتجارة</span>
+                    <p>كشف الممثل التجاري الأمريكي جيميسون غرير عن اقتراب واشنطن وأوتاوا من إبرام اتفاق تجاري ينهي تعثر المفاوضات منذ أغسطس الماضي، رغم استمرار الخلاف حول الرسوم الجمركية على السيارات الكندية، في وقت يواجه فيه الدولار الكندي ضغوطا نحو ثالث تراجع أسبوعي له متأثرا بانخفاض مبيعات التجزئة الأولية بنسبة 1.5%.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- رابعا: الاقتصاد والطاقة والتكنولوجيا -->
+        <section class="section-block">
+            <div class="section-header">
+                <span class="section-dot"></span>
+                <h3>رابعا: الاقتصاد والطاقة والتكنولوجيا</h3>
+            </div>
+            <p>تدخل الأسواق العالمية أسبوعا حساسا بعد موجة بيع حادة يوم الجمعة دفعت مؤشر S&amp;P 500 للدخول في نطاق التصحيح بخسائر فاقت 10% عن قمته في أكتوبر، وتراجع ناسداك بنسبة 5.3%، وداو جونز بنسبة 1.9%.</p>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>القطاع / المؤشر</th>
+                            <th>الأداء والتفاصيل الرئيسية</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>الأسواق الآسيوية والأوروبية</strong></td>
+                            <td>تراجع مؤشر كوسبي الكوري الجنوبي بنحو 3.3%، وارتفاع مؤشر تايوان 2.2% مع إغلاق اليابان لعطلة رسمية. أوروبيا، أغلقت جلسة الجمعة على تراجع داكس الألماني 2.6% وفاينانشال تايمز 1%.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>التكنولوجيا والذكاء الاصطناعي</strong></td>
+                            <td>مخاوف المستثمرين بشأن التقييمات المرتفعة وحجم الإنفاق على مراكز البيانات تضغط على أسهم التكنولوجيا، وعلى رأسها سهم إنفيديا وسط تساؤلات أمريكية حول صادرات الرقائق إلى الصين.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>أسواق النفط والطاقة</strong></td>
+                            <td>سجل خام برنت نحو 92.67 دولارا للبرميل والخام الأمريكي WTI نحو 83.57 دولارا في التعاملات المبكرة، وسط ترقب اجتماع أوبك+ في 29 نوفمبر، وبعد انتهاء مؤتمر المناخ COP31 دون اتفاق للتخلص من الوقود الأحفوري.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>المعادن والفائدة</strong></td>
+                            <td>ارتفاعات ملحوظة للذهب (3,576.10 دولارا) والفضة (42.11 دولارا) كملاذات آمنة، وسط ترقب بيانات التضخم الأمريكية يوم الأربعاء لتحديد مسار الفائدة الفيدرالية.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- قراءة صحيفة الموج -->
+        <section class="analysis-panel">
+            <h3>قراءة صحيفة الموج: المشهد العالمي</h3>
+            <p>تتجه بوصلة العالم نحو ثلاثة ملفات مترابطة: تصاعد التوتر في الخليج وممرات الطاقة، استمرار الحرب في أوكرانيا، والضغوط التي تواجه الأسواق مع تراجع أسهم التكنولوجيا.</p>
+            <div class="analysis-grid">
+                <div class="analysis-item">
+                    <h4>اقتصاديا</h4>
+                    <p>يكشف تذبذب النفط عن صراع بين مخاوف ضعف الطلب من جهة، ومخاطر الإمدادات والملاحة من جهة أخرى.</p>
+                </div>
+                <div class="analysis-item">
+                    <h4>سياسيا</h4>
+                    <p>استمرار المواجهة الأمريكية الإيرانية يضع أمن المنطقة والتجارة الدولية أمام اختبار جديد.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- خامسا: الرياضة الأوروبية -->
+        <section class="section-block">
+            <div class="section-header">
+                <span class="section-dot"></span>
+                <h3>خامسا: الرياضة الأوروبية</h3>
+            </div>
+            <div class="sports-grid">
+                <div class="sports-card">
+                    <h4>نتائج مباريات الأحد 22 نوفمبر 2026</h4>
+                    <ul class="sports-list">
+                        <li><strong>الدوري الإنجليزي:</strong> ليفربول (4 - 0) مانشستر يونايتد | هال سيتي (2 - 0) برايتون</li>
+                        <li><strong>الدوري الإسباني:</strong> برشلونة (3 - 2) فياريال | أتلتيكو مدريد (3 - 0) خيتافي</li>
+                        <li><strong>الدوري الإيطالي:</strong> أتالانتا (4 - 4) إنتر ميلان | ميلان (5 - 1) فروزينوني | يوفنتوس (4 - 0) فينيزيا</li>
+                        <li><strong>الدوري الألماني:</strong> فيردر بريمن (4 - 0) هامبورغ | أوغسبورغ (3 - 1) ماينز</li>
+                        <li><strong>الدوري الفرنسي:</strong> مارسيليا (2 - 3) لومان | باريس إف سي (4 - 0) أنجيه</li>
+                    </ul>
+                </div>
+                <div class="sports-card">
+                    <h4>مواجهات الاثنين 23 نوفمبر 2026</h4>
+                    <ul class="sports-list">
+                        <li><strong>إنجلترا:</strong> برينتفورد × إيفرتون</li>
+                        <li><strong>إسبانيا:</strong> ليفانتي × إلتشي</li>
+                        <li><strong>إيطاليا:</strong> مونزا × فيورنتينا</li>
+                        <li><strong>تركيا:</strong> باشاك شهير × تشوروم</li>
+                    </ul>
+                </div>
+                <div class="sports-card">
+                    <h4>قمم دوري أبطال أوروبا (الثلاثاء 24 نوفمبر)</h4>
+                    <ul class="sports-list">
+                        <li>أرسنال × بوروسيا دورتموند</li>
+                        <li>مانشستر سيتي × نابولي</li>
+                        <li>ريال مدريد × آيندهوفن</li>
+                        <li>غلطة سراي × أستون فيلا</li>
+                        <li>لايبزيغ × لانس</li>
+                        <li>فينورد × بورتو</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="footer-brand">صحيفة الموج | AL-MAWJ PRESS</p>
+            <p>نرصد الحدث.. ونربط الصورة بالسياق</p>
+            <p>كان معكم في الإعداد والتقديم: <strong>زاد الهاجري</strong> &copy; 2026</p>
+        </div>
+    </footer>
+
+</body>
 </html>
 
