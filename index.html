@@ -1,3 +1,484 @@
+            text-align: right;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: var(--primary);
+            color: #fff;
+            font-weight: 700;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        .sports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Closing & Footer */
+        .closing-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-right: 5px solid var(--primary);
+            border-radius: 10px;
+            padding: 1.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .closing-box h3 {
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .cta-banner {
+            margin-top: 1.25rem;
+            padding: 1rem;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 700;
+            color: var(--primary);
+            border: 1px dashed var(--accent);
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: #cbd5e1;
+            text-align: center;
+            padding: 2rem 1rem;
+            border-top: 4px solid var(--accent);
+        }
+
+        footer strong {
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 600px) {
+            .brand-title { font-size: 1.9rem; }
+            .news-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <span>📅 الثلاثاء 24 نوفمبر 2026</span>
+            <span>🔭 نافذة الرصد: أبرز التطورات المنشورة يومي 23 و24 نوفمبر 2026</span>
+        </div>
+    </div>
+
+    <!-- Masthead -->
+    <header class="masthead">
+        <div class="brand-title">صحيفة الموج</div>
+        <span class="brand-en">AL-MAWJ PRESS</span>
+        <p class="slogan">«نرصد الحدث.. ونربط الصورة بالسياق»</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#editorial">الافتتاحية</a></li>
+            <li><a href="#international">موجز دولي</a></li>
+            <li><a href="#gulf-yemen">الخليج واليمن</a></li>
+            <li><a href="#world-press">الصحافة العالمية</a></li>
+            <li><a href="#economy">الاقتصاد والأسواق</a></li>
+            <li><a href="#sports">الرياضة</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+
+        <!-- Editorial -->
+        <section id="editorial" class="editorial-box">
+            <span class="editorial-tag">الافتتاحية</span>
+            <p>
+                يتحرك المشهد الدولي على أكثر من جبهة؛ فالحرب الروسية الأوكرانية تواصل الضغط على الأمن الأوروبي، والتوتر الأمريكي الإيراني يبقي مضيق هرمز والطاقة في دائرة الاهتمام، فيما تتجه الأنظار إلى تحركات الاتحاد الأوروبي الاقتصادية والسياسية تجاه موسكو. وفي الأسواق، يراقب المستثمرون تراجع أسعار النفط، بينما تتصدر تطورات الذكاء الاصطناعي والعلاقة بين البيت الأبيض وشركة إنفيديا عناوين الصحافة الأمريكية.
+            </p>
+        </section>
+
+        <!-- Section 1: International -->
+        <section id="international">
+            <div class="section-header">
+                <h2>أولاً: موجز إخباري دولي</h2>
+            </div>
+
+            <div class="news-grid">
+                <article class="news-card">
+                    <div>
+                        <span class="news-badge">عاجل / تطورات ميدانية</span>
+                        <h3>أوكرانيا: قتيلان و22 مصاباً في هجوم روسي على زابوريجيا</h3>
+                        <p>أعلن مسؤول إقليمي أوكراني مقتل شخصين وإصابة 22 آخرين، بينهم طفلان، في هجوم روسي استهدف مدينة زابوريجيا خلال الليل، مع تضرر مبانٍ سكنية ومرافق للنقل. ونقلت رويترز رواية روسية عن استهداف مواقع عسكرية أوكرانية في منطقة سومي، مشيرة إلى عدم التمكن من التحقق المستقل من التقرير.</p>
+                    </div>
+                    <div class="news-source">
+                        <span>المصدر: رويترز</span>
+                        <a href="https://www.reuters.com/world/russian-attack-kills-2-people-wounds-22-ukraines-zaporizhzhia-official-says-2026-11-24/" target="_blank" rel="noopener">رابط الخبر ↗</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <span class="news-badge">سياسة وعقوبات</span>
+                        <h3>الاتحاد الأوروبي يقترح حزمة عقوبات جديدة على روسيا</h3>
+                        <p>طرحت المفوضية الأوروبية الحزمة الثانية والعشرين من العقوبات على موسكو، وتشمل توسيع القيود المالية لتطال نحو 60 مصرفاً روسياً، وتشديد الرقابة على منصات العملات المشفرة، واستهداف سفن إضافية من «أسطول الظل»، وقيوداً رياضية. ويحتاج المقترح لموافقة الدول الأعضاء.</p>
+                    </div>
+                    <div class="news-source">
+                        <span>المفوضية الأوروبية / AP</span>
+                        <a href="https://ec.europa.eu/commission/presscorner/api/files/document/print/en/statement_26_2563/STATEMENT_26_2563_EN.pdf" target="_blank" rel="noopener">البيان الرسمي ↗</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <span class="news-badge">الشرق الأوسط</span>
+                        <h3>إيران تتوعد بمواجهة الحصار البحري الأمريكي</h3>
+                        <p>قال المتحدث باسم الخارجية الإيرانية إن بلاده ستستخدم الوسائل المتاحة لمواجهة الحصار البحري الأمريكي، واصفاً إياه بالعمل العدائي، ورابطاً التوتر بالخلاف حول العقوبات وحرية الملاحة في مضيق هرمز وسط تعثر المفاوضات بين واشنطن وطهران.</p>
+                    </div>
+                    <div class="news-source">
+                        <span>المصدر: رويترز</span>
+                        <a href="https://www.reuters.com/world/middle-east/iran-says-it-will-use-all-available-tools-confront-us-naval-blockade-2026-11-23/" target="_blank" rel="noopener">رابط الخبر ↗</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <span class="news-badge">اقتصاد وعقوبات</span>
+                        <h3>واشنطن تفرض عقوبات على شبكات مالية مرتبطة بإيران</h3>
+                        <p>أعلنت الولايات المتحدة إجراءات عقابية تستهدف قرابة 30 شركة صرافة ومسؤولين، متهمةً هذه الشبكات بالمساعدة في الالتفاف على القيود المالية، وسط استمرار التوتر والجهود الدبلوماسية التي تشارك فيها قطر.</p>
+                    </div>
+                    <div class="news-source">
+                        <span>المصدر: أسوشيتد برس</span>
+                        <a href="https://apnews.com/article/c2cb6de3515f887a5786c1147e918489" target="_blank" rel="noopener">رابط الخبر ↗</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <span class="news-badge">غزة</span>
+                        <h3>تقارير عن مقتل ثلاثة أشخاص في ضربات إسرائيلية</h3>
+                        <p>أفادت وكالة الأونروا ومسؤولون صحيون محليون بمقتل ثلاثة أشخاص في ضربات إسرائيلية في قطاع غزة، بينهم موظف تابع للأونروا وفق ما أوردته الوكالة. ونقلت أسوشيتد برس أن الجيش الإسرائيلي قال إنه استهدف عنصراً من حماس.</p>
+                    </div>
+                    <div class="news-source">
+                        <span>المصدر: أسوشيتد برس</span>
+                        <a href="https://apnews.com/article/c2cb6de3515f887a5786c1147e918489" target="_blank" rel="noopener">رابط الخبر ↗</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <span class="news-badge">ليبيا / طاقة</span>
+                        <h3>توقف خطوط أنابيب نفطية وخفض الإنتاج</h3>
+                        <p>أفادت تقارير بأن مجموعات مسلحة أغلقت خطّي أنابيب نفطيين في ليبيا، ما أدى إلى خفض الإنتاج بنحو ربع الإنتاج الوطني وفق أسوشيتد برس، مما يضع تدفق النفط الليبي تحت مجهر مراقبي إمدادات السوق.</p>
+                    </div>
+                    <div class="news-source">
+                        <span>المصدر: أسوشيتد برس</span>
+                        <a href="https://apnews.com/article/c2cb6de3515f887a5786c1147e918489" target="_blank" rel="noopener">رابط الخبر ↗</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <span class="news-badge">تطورات أمنية</span>
+                        <h3>أوكرانيا تعلن استهداف سفينة روسية في ليبيا</h3>
+                        <p>قال الرئيس الأوكراني فولوديمير زيلينسكي إن مسيّرات بحرية أوكرانية استهدفت سفينة حربية روسية في ميناء بنغازي. في المقابل، قال مسؤولون ليبيون إن السفينة تعرضت لأضرار كبيرة دون تأكيد غرقها، ما يبقي النتيجة النهائية محل تباين.</p>
+                    </div>
+                    <div class="news-source">
+                        <span>المصدر: أسوشيتد برس</span>
+                        <a href="https://apnews.com/article/c2cb6de3515f887a5786c1147e918489" target="_blank" rel="noopener">رابط الخبر ↗</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section: Gulf & Yemen -->
+        <section id="gulf-yemen">
+            <div class="section-header">
+                <h2>ملف الخليج واليمن</h2>
+            </div>
+
+            <h3 class="sub-section-title">أخبار الخليج</h3>
+            <div class="news-grid">
+                <article class="news-card">
+                    <div>
+                        <span class="news-badge">الإمارات</span>
+                        <h3>مقتل 11 شخصاً في تصادم حافلة وشاحنة برأس الخيمة</h3>
+                        <p>أعلنت وزارة الداخلية الإماراتية مقتل 11 شخصاً إثر تصادم حافلة ركاب وشاحنة على طريق الوطن في إمارة رأس الخيمة، مؤكدة مباشرة فرق الإسعاف والدفاع المدني للحادث وفتح تحقيق لتحديد أسبابه.</p>
+                    </div>
+                    <div class="news-source">
+                        <span>رويترز – 24 نوفمبر 2026</span>
+                        <a href="https://www.reuters.com/world/bus-truck-collision-kills-11-uaes-ras-al-khaimah-2026-11-24/" target="_blank" rel="noopener">رابط الخبر ↗</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <span class="news-badge">قطر</span>
+                        <h3>مباحثات مع الولايات المتحدة بشأن الوساطة الإقليمية</h3>
+                        <p>التقى رئيس الوزراء ووزير الخارجية القطري الشيخ محمد بن عبدالرحمن آل ثاني وزير الخارجية الأمريكي ماركو روبيو في إطار الحوار الاستراتيجي، حيث شكر روبيو قطر على جهود الوساطة وشدد على التنسيق لأمن المنطقة.</p>
+                    </div>
+                    <div class="news-source">
+                        <span>أسوشيتد برس – 23 نوفمبر 2026</span>
+                        <a href="https://apnews.com/article/mideast-iran-gaza-israel-houthis-libya-november-23-2026-c2cb6de3515f887a5786c1147e918489" target="_blank" rel="noopener">رابط الخبر ↗</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <span class="news-badge">قطر وكندا</span>
+                        <h3>اتفاق لحماية وتشجيع الاستثمارات</h3>
+                        <p>أفادت رويترز بأن قطر وكندا تستعدان لتوقيع اتفاق لتشجيع وحماية الاستثمار بهدف وضع قواعد قانونية لحماية المستثمرين وتسهيل الأعمال بين البلدين، والمقرر توقيعه الثلاثاء 24 نوفمبر.</p>
+                    </div>
+                    <div class="news-source">
+                        <span>رويترز – 23 نوفمبر 2026</span>
+                        <a href="https://www.reuters.com/world/middle-east/canada-qatar-sign-investment-pact-tuesday-source-says-2026-11-23/" target="_blank" rel="noopener">رابط الخبر ↗</a>
+                    </div>
+                </article>
+            </div>
+
+            <h3 class="sub-section-title">أخبار اليمن</h3>
+            <div class="news-grid">
+                <article class="news-card">
+                    <div>
+                        <span class="news-badge">اليمن</span>
+                        <h3>الحوثيون يتحدثون عن قتلى وجرحى في الحديدة ولحج</h3>
+                        <p>قال مسؤول في وزارة الصحة التابعة للحوثيين إن ضربة وقعت الاثنين في الحديدة أدت لمقتل 11 شخصاً وإصابة 19، مضيفاً أن غارات أخرى في لحج أوقعت 25 قتيلاً أو مصاباً.</p>
+                        <div class="verification-note">
+                            <strong>تنبيه توثيقي:</strong> لم تتمكن وكالة أسوشيتد برس من التحقق بصورة مستقلة من هذه الأرقام، وقالت إن الحوثيين لم يقدموا أدلة على روايتهم، ولم يصدر تعليق سعودي فوري عليها.
+                        </div>
+                    </div>
+                    <div class="news-source">
+                        <span>أسوشيتد برس – 23 نوفمبر 2026</span>
+                        <a href="https://apnews.com/article/mideast-iran-gaza-israel-houthis-libya-november-23-2026-c2cb6de3515f887a5786c1147e918489" target="_blank" rel="noopener">رابط الخبر ↗</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <span class="news-badge">السعودية</span>
+                        <h3>الحوثيون يعلنون استهداف مصفاة رابغ</h3>
+                        <p>قال الحوثيون الأحد إنهم نفذوا عملية استهدفت مصفاة رابغ على ساحل البحر الأحمر. ولم تؤكد رويترز وقوع إصابة في المصفاة؛ كما أشار التقرير إلى ارتفاع سهم شركة رابغ للتكرير والبتروكيماويات في جلسة الاثنين.</p>
+                    </div>
+                    <div class="news-source">
+                        <span>رويترز – 23 نوفمبر 2026</span>
+                        <a href="https://www.reuters.com/world/middle-east/gulf-bourses-open-higher-buoyed-by-diplomatic-momentum-2026-11-23/" target="_blank" rel="noopener">رابط الخبر ↗</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section 2: World Press -->
+        <section id="world-press">
+            <div class="section-header">
+                <h2>ثانياً: عناوين الصحف والوكالات الدولية</h2>
+            </div>
+
+            <div class="press-grid">
+                <div class="press-box">
+                    <h3>🇺🇸 الصحافة الأمريكية</h3>
+                    <ul class="press-list">
+                        <li>
+                            <span class="outlet-name">The Wall Street Journal</span>
+                            «التحرك المكثف للبيت الأبيض لإعادة جنسن هوانغ» (دور ترامب ونائبه لإقناع مجلس إدارة إنفيديا).
+                            <br><a href="https://www.wsj.com/business/nvidia-jensen-huang-white-house-9ad03961" target="_blank" rel="noopener">المصدر ↗</a>
+                        </li>
+                        <li>
+                            <span class="outlet-name">The New York Times</span>
+                            «الجمهوريون يعارضون ترامب بشأن إعادة جنسن هوانغ إلى إنفيديا».
+                            <br><a href="https://veramundi.com/2026-11-24?lang=en" target="_blank" rel="noopener">المصدر ↗</a>
+                        </li>
+                        <li>
+                            <span class="outlet-name">The New York Times</span>
+                            «تدخل ترامب الاستثنائي في إنفيديا يثير مخاوف تتعلق بالأمن القومي».
+                            <br><a href="https://veramundi.com/united-states/2026-11-24?lang=en" target="_blank" rel="noopener">المصدر ↗</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="press-box">
+                    <h3>🇨🇦 الصحافة الكندية</h3>
+                    <ul class="press-list">
+                        <li>
+                            <span class="outlet-name">The Globe and Mail</span>
+                            «كندا وقطر تتجهان لتوقيع اتفاق استثماري يوم الثلاثاء، وفق مصدر».
+                            <br><a href="https://web-production-d4d45.up.railway.app/?sort=newest&source=globeandmail" target="_blank" rel="noopener">المصدر ↗</a>
+                        </li>
+                        <li>
+                            <span class="outlet-name">The Globe and Mail</span>
+                            «مريضَان بالسرطان يقاضيان أونتاريو بعد رفض طلبات العلاج في الولايات المتحدة».
+                            <br><a href="https://web-production-d4d45.up.railway.app/?sort=newest&source=globeandmail" target="_blank" rel="noopener">المصدر ↗</a>
+                        </li>
+                        <li>
+                            <span class="outlet-name">Toronto Star</span>
+                            «رسم كاريكاتيري عن تحركات مارك كارني بين الصين وترامب».
+                            <br><a href="https://web-production-d4d45.up.railway.app/" target="_blank" rel="noopener">المصدر ↗</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="press-box">
+                    <h3>🇬🇧 الصحافة البريطانية</h3>
+                    <ul class="press-list">
+                        <li>
+                            <span class="outlet-name">The Guardian</span>
+                            «زاك بولانسكي يؤيد تقريراً يدعم عضوية الناتو والإبقاء على الأسلحة النووية».
+                            <br><a href="https://veramundi.com/pais/uk?lang=en" target="_blank" rel="noopener">المصدر ↗</a>
+                        </li>
+                        <li>
+                            <span class="outlet-name">The Guardian</span>
+                            تناولت العناوين تعثر التوصل إلى اتفاق في مؤتمر المناخ COP31، والخلاف بشأن الإشارة إلى الوقود الأحفوري.
+                            <br><a href="https://news.sky.com/story/sundays-national-newspaper-front-pages-12427754" target="_blank" rel="noopener">المصدر ↗</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="press-box">
+                    <h3>🌐 وكالات الأنباء والمؤسسات</h3>
+                    <ul class="press-list">
+                        <li>
+                            <span class="outlet-name">Reuters</span>
+                            الهجوم الروسي على زابوريجيا وتطورات المواجهة الأمريكية الإيرانية وأسواق النفط.
+                            <br><a href="https://www.reuters.com/" target="_blank" rel="noopener">الموقع ↗</a>
+                        </li>
+                        <li>
+                            <span class="outlet-name">Associated Press</span>
+                            العقوبات الأوروبية على روسيا والتطورات في غزة وليبيا والشرق الأوسط.
+                            <br><a href="https://apnews.com/" target="_blank" rel="noopener">الموقع ↗</a>
+                        </li>
+                        <li>
+                            <span class="outlet-name">European Commission</span>
+                            البيان الرسمي بشأن الحزمة الثانية والعشرين من العقوبات على روسيا.
+                            <br><a href="https://ec.europa.eu/commission/presscorner/api/files/document/print/en/statement_26_2563/STATEMENT_26_2563_EN.pdf" target="_blank" rel="noopener">البيان ↗</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Economy -->
+        <section id="economy">
+            <div class="section-header">
+                <h2>ثالثاً: الاقتصاد والأسواق العالمية</h2>
+            </div>
+
+            <div class="data-card">
+                <span class="news-badge">أسواق الطاقة</span>
+                <h3>النفط يقترب من أدنى مستوياته في ثلاثة أشهر</h3>
+                <p style="margin: 0.75rem 0;">
+                    تراجعت أسعار النفط مع تقييم الأسواق لاحتمالات زيادة المعروض العالمي، واستمرار تدفق الإمدادات من بعض مناطق الشرق الأوسط، إلى جانب المخاوف المرتبطة بالملاحة في مضيق هرمز. وبحسب تقرير رويترز، سجل خام برنت نحو <strong>88.71 دولاراً</strong> للبرميل، وغرب تكساس نحو <strong>79.57 دولاراً</strong>، عند الساعة 05:10 بتوقيت غرينتش يوم الثلاثاء.
+                    (<a href="https://www.marketscreener.com/news/oil-prices-near-three-month-lows-as-rising-supply-offsets-hormuz-threat-ce7851dad189f523" target="_blank" rel="noopener">المصدر: رويترز ↗</a>)
+                </p>
+
+                <h4 style="margin-top: 1.5rem; color: var(--primary);">مؤشرات وأسعار صباح الثلاثاء 24 نوفمبر (تقرير الساعة 09:31)</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>المؤشر / السلعة</th>
+                            <th>السعر / النقاط</th>
+                            <th>الوحدة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>خام برنت</td><td><strong>88.77</strong></td><td>دولار / برميل</td></tr>
+                        <tr><td>خام غرب تكساس</td><td><strong>79.65</strong></td><td>دولار / برميل</td></tr>
+                        <tr><td>الذهب</td><td><strong>3,659.70</strong></td><td>دولار / أونصة</td></tr>
+                        <tr><td>داو جونز</td><td><strong>49,595.31</strong></td><td>نقطة</td></tr>
+                        <tr><td>S&amp;P 500</td><td><strong>7,237.17</strong></td><td>نقطة</td></tr>
+                        <tr><td>ناسداك</td><td><strong>24,089.56</strong></td><td>نقطة</td></tr>
+                        <tr><td>نيكاي الياباني</td><td><strong>56,436.65</strong></td><td>نقطة</td></tr>
+                        <tr><td>داكس الألماني</td><td><strong>25,337.27</strong></td><td>نقطة</td></tr>
+                        <tr><td>فوتسي 100 البريطاني</td><td><strong>10,480.82</strong></td><td>نقطة</td></tr>
+                        <tr><td>كاك 40 الفرنسي</td><td><strong>8,044.84</strong></td><td>نقطة</td></tr>
+                    </tbody>
+                </table>
+                <div class="news-source" style="margin-top: 1rem;">
+                    <span>المصدر: Report.az – بيانات 24 نوفمبر 2026</span>
+                    <a href="https://api.report.az/en/finance/key-indicators-of-international-commodity-stock-and-currency-markets-24-11-2026" target="_blank" rel="noopener">رابط البيانات ↗</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Sports -->
+        <section id="sports">
+            <div class="section-header">
+                <h2>رابعاً: الرياضة الأوروبية والأمريكية</h2>
+            </div>
+
+            <div class="sports-grid">
+                <div class="data-card">
+                    <h3>⚽ دوري أبطال أوروبا – الثلاثاء 24 نوفمبر</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>المباراة</th>
+                                <th>التوقيت (CET)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>بودو/غليمت × لاسك</td><td>18:45</td></tr>
+                            <tr><td>غلطة سراي × أستون فيلا</td><td>18:45</td></tr>
+                            <tr><td>أرسنال × بوروسيا دورتموند</td><td>21:00</td></tr>
+                            <tr><td>كومو × آيك أثينا</td><td>21:00</td></tr>
+                            <tr><td>فينورد × بورتو</td><td>21:00</td></tr>
+                            <tr><td>مانشستر سيتي × نابولي</td><td>21:00</td></tr>
+                            <tr><td>لايبزيغ × لانس</td><td>21:00</td></tr>
+                            <tr><td>ريال مدريد × آيندهوفن</td><td>21:00</td></tr>
+                            <tr><td>سلوفان براتيسلافا × ريال بيتيس</td><td>21:00</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="news-source" style="margin-top: 1rem;">
+                        <span>المصدر: الاتحاد الأوروبي لكرة القدم UEFA</span>
+                        <a href="https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-champions-league-all-the-league-phase-fix/" target="_blank" rel="noopener">الجدول الرسمي ↗</a>
+                    </div>
+                </div>
+
+                <div class="data-card">
+                    <h3>🏀 كرة السلة الأمريكية NBA – روزنامة الثلاثاء</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>المواجهة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>ديترويت بيستونز × أورلاندو ماجيك</td></tr>
+                            <tr><td>بوسطن سيلتكس × واشنطن ويزاردز</td></tr>
+                            <tr><td>دالاس مافريكس × دنفر ناغتس</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="news-source" style="margin-top: 1rem;">
+                        <span>المصدر: الموقع الرسمي للرابطة NBA</span>
+                        <a href="https://www.nba.com/games" target="_blank" rel="noopener">روزنامة المباريات ↗</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Closing -->
+        <section class="closing-box">
+            <h3>الخاتمة</h3>
+            <p>
+                يبقى المشهد الدولي مفتوحاً على ثلاثة ملفات رئيسية: مسار الحرب في أوكرانيا، ومستقبل المواجهة الأمريكية الإيرانية وانعكاساتها على الملاحة والطاقة، ثم قدرة الأسواق على استيعاب تغيرات الإمدادات والتوترات السياسية. وفي أوروبا، تظل العقوبات الجديدة على روسيا ومباريات دوري الأبطال من أبرز ملفات المتابعة.
+            </p>
+            <div class="cta-banner">
+                يطوي المشهد يومه في صحيفة الموج، برصدٍ يربط الحدث بسياقه. إن كنت تبحث عن متابعة يومية واضحة ومختصرة، فـ اشترك 🔔 وفعّل الجرس ليصلك عدد الغد في موعده، ولا تنسَ الإعجاب 👍 والمشاركة 📤.
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <strong>صحيفة الموج | AL-MAWJ PRESS</strong>
+        <p style="margin-top: 0.4rem;">إعداد وتقديم: زاد الهاجري • جميع الحقوق محفوظة © 2026</p>
+    </footer>
+
+</body>
+</html>
 Kid rule rueيفة <span class="text-gold-500">الموج</span>
                         </h1>
                         <p class="text-cream-100/85 text-sm sm:text-base mt-1 font-light">
