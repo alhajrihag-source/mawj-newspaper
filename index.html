@@ -3,6 +3,1263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صحيفة الموج | AL-MAWJ PRESS - العدد: 026 | الخميس 26 نوفمبر 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy-dark: #071124;
+            --navy-main: #0c1b36;
+            --navy-card: #122447;
+            --gold-main: #d4af37;
+            --gold-light: #f3d06b;
+            --gold-dim: rgba(212, 175, 55, 0.25);
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --bg-body: #071124;
+            --border-color: rgba(212, 175, 55, 0.22);
+            --accent-red: #ef4444;
+        }
+
+        body.light-mode {
+            --bg-body: #f8fafc;
+            --navy-card: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --border-color: #cbd5e1;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.75;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: #040b18;
+            color: #e2e8f0;
+            padding: 8px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            border-bottom: 1px solid var(--gold-dim);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .top-meta {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .canada-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 2px 10px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .theme-btn {
+            background: transparent;
+            border: 1px solid var(--gold-main);
+            color: var(--gold-main);
+            padding: 4px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            transition: 0.2s;
+        }
+
+        .theme-btn:hover {
+            background: var(--gold-main);
+            color: #071124;
+        }
+
+        /* Header */
+        header.main-header {
+            background: linear-gradient(135deg, #071124 0%, #0f2347 100%);
+            padding: 28px 5%;
+            border-bottom: 3px solid var(--gold-main);
+            color: #fff;
+        }
+
+        .header-grid {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .brand-box {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .logo-wrapper {
+            width: 78px;
+            height: 78px;
+            flex-shrink: 0;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+        }
+
+        .brand-titles h1 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--gold-main);
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        .brand-titles .en-name {
+            font-size: 0.95rem;
+            letter-spacing: 3px;
+            color: #cbd5e1;
+            font-weight: 700;
+            display: block;
+        }
+
+        .brand-titles .slogan {
+            font-size: 0.95rem;
+            color: var(--gold-light);
+            margin-top: 4px;
+            font-weight: 600;
+        }
+
+        .edition-box {
+            text-align: left;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 18px;
+            border-radius: 12px;
+            border: 1px solid var(--gold-dim);
+        }
+
+        .edition-box div {
+            font-size: 0.9rem;
+            color: #e2e8f0;
+        }
+
+        .edition-box strong {
+            color: var(--gold-main);
+        }
+
+        /* Breaking Ticker */
+        .ticker-wrap {
+            background: #1a0b12;
+            border-bottom: 1px solid rgba(239, 68, 68, 0.4);
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            height: 40px;
+        }
+
+        .ticker-label {
+            background: var(--accent-red);
+            color: #fff;
+            font-weight: 800;
+            padding: 0 18px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-size: 0.88rem;
+            white-space: nowrap;
+            z-index: 2;
+        }
+
+        .ticker-content {
+            white-space: nowrap;
+            color: #fca5a5;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding-right: 20px;
+            animation: tickerScroll 35s linear infinite;
+        }
+
+        @keyframes tickerScroll {
+            0% { transform: translateX(-20%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Navigation & Search */
+        .nav-bar {
+            background: var(--navy-main);
+            padding: 10px 5%;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        .nav-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            padding-bottom: 2px;
+            max-width: 100%;
+        }
+
+        .nav-links::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.06);
+            color: #e2e8f0;
+            border: 1px solid transparent;
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+            font-size: 0.84rem;
+            font-weight: 700;
+            transition: 0.2s;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .nav-btn:hover, .nav-btn.active {
+            background: var(--gold-main);
+            color: #071124;
+        }
+
+        .search-input {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--gold-dim);
+            color: #fff;
+            padding: 7px 14px;
+            border-radius: 8px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 0.88rem;
+            min-width: 220px;
+        }
+
+        .search-input::placeholder {
+            color: #94a3b8;
+        }
+
+        @media (max-width: 768px) {
+            .nav-bar {
+                padding: 8px 4%;
+            }
+            .nav-inner {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 8px;
+            }
+            .nav-btn {
+                padding: 5px 11px;
+                font-size: 0.8rem;
+            }
+            .search-input {
+                width: 100%;
+                min-width: 0;
+                padding: 6px 12px;
+                font-size: 0.84rem;
+            }
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1280px;
+            margin: 30px auto;
+            padding: 0 5%;
+        }
+
+        /* Editorial & Anchor Section */
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: 2.2fr 1fr;
+            gap: 24px;
+            margin-bottom: 36px;
+        }
+
+        @media (max-width: 900px) {
+            .editorial-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .editorial-card {
+            background: var(--navy-card);
+            border: 1px solid var(--border-color);
+            border-right: 5px solid var(--gold-main);
+            border-radius: 14px;
+            padding: 28px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+        }
+
+        .section-tag {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--gold-main);
+            border: 1px solid var(--gold-main);
+            padding: 3px 12px;
+            border-radius: 6px;
+            font-size: 0.82rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .editorial-card h2 {
+            font-size: 1.75rem;
+            color: var(--gold-main);
+            margin-bottom: 16px;
+            font-weight: 900;
+        }
+
+        .editorial-card p {
+            margin-bottom: 14px;
+            font-size: 1.03rem;
+            text-align: justify;
+        }
+
+        .signature {
+            margin-top: 18px;
+            padding-top: 12px;
+            border-top: 1px dashed var(--border-color);
+            font-weight: 800;
+            color: var(--gold-main);
+            font-size: 1.05rem;
+        }
+
+        /* Anchor Card */
+        .anchor-card {
+            background: linear-gradient(160deg, #0c1b36 0%, #152b54 100%);
+            border: 1px solid var(--gold-main);
+            border-radius: 14px;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .anchor-top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+
+        .live-pill {
+            background: #dc2626;
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 2px 10px;
+            border-radius: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .anchor-photo-frame {
+            width: 100%;
+            max-width: 240px;
+            margin: 0 auto 14px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid var(--gold-main);
+            background: #071124;
+            position: relative;
+        }
+
+        .anchor-photo-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .anchor-fallback {
+            padding: 35px 15px;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .anchor-info h3 {
+            font-size: 1.25rem;
+            color: var(--gold-main);
+            font-weight: 900;
+        }
+
+        .anchor-info p {
+            font-size: 0.88rem;
+            color: #cbd5e1;
+            margin-top: 4px;
+        }
+
+        /* News Sections */
+        .news-section {
+            margin-bottom: 38px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--gold-main);
+        }
+
+        .section-header h2 {
+            font-size: 1.45rem;
+            font-weight: 900;
+            color: var(--gold-main);
+        }
+
+        .subsection-title {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--gold-light);
+            margin: 22px 0 12px;
+            padding-right: 10px;
+            border-right: 3px solid var(--gold-main);
+        }
+
+        body.light-mode .subsection-title {
+            color: #0c1b36;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 18px;
+        }
+
+        .news-card {
+            background: var(--navy-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .news-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--gold-main);
+        }
+
+        .news-card h3 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--gold-main);
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .dot-red {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: var(--accent-red);
+            border-radius: 50%;
+            margin-top: 8px;
+            flex-shrink: 0;
+        }
+
+        .news-card p {
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+
+        .source-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.84rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            text-decoration: none;
+            padding-top: 10px;
+            border-top: 1px solid var(--border-color);
+            word-break: break-word;
+        }
+
+        body.light-mode .source-link {
+            color: #0c1b36;
+        }
+
+        .source-link:hover {
+            text-decoration: underline;
+        }
+
+        .market-note {
+            margin-top: 14px;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--gold-dim);
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        /* Sports Tables */
+        .sports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .sport-box {
+            background: var(--navy-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 18px;
+        }
+
+        .sport-box h3 {
+            color: var(--gold-main);
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            font-weight: 800;
+        }
+
+        .sport-list {
+            list-style: none;
+            margin-bottom: 12px;
+            font-size: 0.92rem;
+        }
+
+        .sport-list li {
+            padding: 6px 0;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        /* Global Summary Box */
+        .summary-box {
+            background: linear-gradient(135deg, #0c1b36 0%, #14284e 100%);
+            border: 1px solid var(--gold-main);
+            border-radius: 14px;
+            padding: 26px;
+            color: #f1f5f9;
+            margin-bottom: 36px;
+        }
+
+        .summary-box h2 {
+            color: var(--gold-main);
+            font-size: 1.45rem;
+            margin-bottom: 14px;
+            font-weight: 900;
+        }
+
+        .summary-box p {
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #040b18;
+            color: #cbd5e1;
+            padding: 36px 5% 24px;
+            border-top: 3px solid var(--gold-main);
+            text-align: center;
+        }
+
+        .footer-brand {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+
+        .social-cta {
+            max-width: 650px;
+            margin: 16px auto;
+            background: rgba(255, 255, 255, 0.04);
+            padding: 16px;
+            border-radius: 12px;
+            border: 1px solid var(--gold-dim);
+        }
+
+        .social-badges {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+            font-weight: 700;
+            color: var(--gold-light);
+            font-size: 0.9rem;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-meta">
+            <span>📅 العدد: 026 | الخميس 26 نوفمبر 2026</span>
+            <span class="canada-badge">
+                <!-- Canadian Flag SVG -->
+                <svg width="22" height="14" viewBox="0 0 9600 4800" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="2400" height="4800" fill="#d80621"/>
+                    <rect x="2400" width="4800" height="4800" fill="#ffffff"/>
+                    <rect x="7200" width="2400" height="4800" fill="#d80621"/>
+                    <path fill="#d80621" d="M4800 900l-340 650-710-120 280 730-580 420 710 140-150 620 690-180v940h200v-940l690 180-150-620 710-140-580-420 280-730-710 120z"/>
+                </svg>
+                إصدار دولي – من كندا
+            </span>
+        </div>
+        <button class="theme-btn" onclick="toggleTheme()">☀️ / 🌙 تبديل وضع القراءة</button>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="header-grid">
+            <div class="brand-box">
+                <div class="logo-wrapper">
+                    <!-- Official Al-Mawj Press SVG Logo -->
+                    <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="200" height="200" fill="#071124"/>
+                        <rect x="18" y="18" width="164" height="164" rx="34" fill="none" stroke="#e2b426" stroke-width="7"/>
+                        <circle cx="136" cy="64" r="10" fill="#e2b426"/>
+                        <path d="M52 94 C72 68, 92 68, 108 94 C122 116, 138 116, 148 94" fill="none" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
+                        <path d="M52 122 C72 96, 92 96, 108 122 C122 144, 138 144, 148 122" fill="none" stroke="#e2b426" stroke-width="11" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="brand-titles">
+                    <h1>صحيفة الموج</h1>
+                    <span class="en-name">AL-MAWJ PRESS</span>
+                    <div class="slogan">نرصد الحدث.. ونربط الصورة بالسياق</div>
+                </div>
+            </div>
+            <div class="edition-box">
+                <div><strong>العدد:</strong> 026</div>
+                <div><strong>رئيس التحرير:</strong> زاد الهاجري</div>
+                <div><strong>تاريخ الإصدار:</strong> الخميس 26 نوفمبر 2026</div>
+                <div><strong>النطاق:</strong> إصدار دولي – من كندا</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breaking Ticker -->
+    <div class="ticker-wrap">
+        <div class="ticker-label">أخبار اليوم | الموج</div>
+        <div class="ticker-content">
+            🔴 غزة – مقتل ستة فلسطينيين في غارات إسرائيلية • 🔴 مضيق هرمز – مخاوف على إمدادات النفط • 🔴 واشنطن والناتو يدعوان موسكو إلى عدم توسيع الحرب • 🔴 أوكرانيا – هجوم على قاعدة جوية روسية • 🔴 الولايات المتحدة – عطلة عيد الشكر • 🔴 برنت فوق 94 دولاراً • 🔴 الذهب يحاول التعافي
+        </div>
+    </div>
+
+    <!-- Navigation & Search -->
+    <nav class="nav-bar">
+        <div class="nav-inner">
+            <div class="nav-links">
+                <button class="nav-btn active" onclick="filterSection('all', this)">الكل</button>
+                <button class="nav-btn" onclick="filterSection('editorial', this)">الافتتاحية</button>
+                <button class="nav-btn" onclick="filterSection('mideast', this)">فلسطين والشرق الأوسط</button>
+                <button class="nav-btn" onclick="filterSection('ukraine', this)">أوكرانيا وروسيا</button>
+                <button class="nav-btn" onclick="filterSection('west', this)">أمريكا وكندا وبريطانيا</button>
+                <button class="nav-btn" onclick="filterSection('economy', this)">الاقتصاد والطاقة والبورصات</button>
+                <button class="nav-btn" onclick="filterSection('sports', this)">الرياضة</button>
+                <button class="nav-btn" onclick="filterSection('summary', this)">قراءة المشهد الدولي</button>
+            </div>
+            <input type="text" id="searchInput" class="search-input" placeholder="ابحث في أخبار العدد..." onkeyup="searchNews()">
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Editorial + Anchor Card -->
+        <section id="sec-editorial" class="editorial-grid filterable-section" data-category="editorial">
+            <article class="editorial-card">
+                <span class="section-tag">افتتاحية</span>
+                <h2>افتتاحية</h2>
+                <p>التحول الأبرز في المشهد الدولي ليس في كثرة الأحداث، بل في تداخل المصالح خلفها. واشنطن تعيد حساباتها التجارية والأمنية، وأوروبا تواجه اختباراً في استقلال قرارها، فيما تبقى أسواق الطاقة شديدة التأثر بالتطورات السياسية. المؤشرات تكشف أن المرحلة المقبلة لن تُحسم بالقوة وحدها، بل بقدرة الدول على إدارة مصالحها وتجنب كلفة المواجهة.</p>
+                <div class="signature">
+                    زاد الهاجري<br>
+                    رئيس التحرير – صحيفة الموج
+                </div>
+            </article>
+
+            <!-- Anchor Studio Card -->
+            <aside class="anchor-card">
+                <div class="anchor-top-bar">
+                    <span class="live-pill">NEWS LIVE</span>
+                    <span style="display:inline-flex;align-items:center;gap:6px;font-size:0.8rem;font-weight:700;">
+                        <svg width="20" height="12" viewBox="0 0 9600 4800" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="2400" height="4800" fill="#d80621"/>
+                            <rect x="2400" width="4800" height="4800" fill="#ffffff"/>
+                            <rect x="7200" width="2400" height="4800" fill="#d80621"/>
+                            <path fill="#d80621" d="M4800 900l-340 650-710-120 280 730-580 420 710 140-150 620 690-180v940h200v-940l690 180-150-620 710-140-580-420 280-730-710 120z"/>
+                        </svg>
+                        استوديو كندا
+                    </span>
+                </div>
+
+                <div class="anchor-photo-frame">
+                    <img src="anchor.jpg" alt="زاد الهاجري - رئيس التحرير" onerror="this.style.display='none'; document.getElementById('anchorFallback').style.display='flex';">
+                    <div id="anchorFallback" class="anchor-fallback">
+                        <svg viewBox="0 0 200 200" width="76" height="76" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="200" height="200" fill="#071124"/>
+                            <rect x="18" y="18" width="164" height="164" rx="34" fill="none" stroke="#e2b426" stroke-width="7"/>
+                            <circle cx="136" cy="64" r="10" fill="#e2b426"/>
+                            <path d="M52 94 C72 68, 92 68, 108 94 C122 116, 138 116, 148 94" fill="none" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
+                            <path d="M52 122 C72 96, 92 96, 108 122 C122 144, 138 144, 148 122" fill="none" stroke="#e2b426" stroke-width="11" stroke-linecap="round"/>
+                        </svg>
+                        <span style="color:#d4af37;font-weight:800;font-size:0.95rem;">صحيفة الموج | AL-MAWJ PRESS</span>
+                        <span style="color:#94a3b8;font-size:0.78rem;">العدد: 026 – الخميس 26 نوفمبر 2026</span>
+                    </div>
+                </div>
+
+                <div class="anchor-info">
+                    <h3>زاد الهاجري</h3>
+                    <p>رئيس التحرير – صحيفة الموج</p>
+                    <p style="color:#f3d06b;font-size:0.8rem;margin-top:6px;">نرصد الحدث.. ونربط الصورة بالسياق</p>
+                </div>
+            </aside>
+        </section>
+
+        <!-- First: Palestine & Middle East -->
+        <section class="news-section filterable-section" data-category="mideast">
+            <div class="section-header">
+                <h2>أولاً: فلسطين والشرق الأوسط</h2>
+            </div>
+            <div class="cards-grid">
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>غزة – مقتل ستة فلسطينيين في غارات إسرائيلية</h3>
+                        <p>أفادت وكالة الأناضول، نقلاً عن مستشفى الشفاء، بمقتل ستة فلسطينيين في ضربتين منفصلتين بمدينة غزة؛ استهدفت إحداهما مخيم الشاطئ والأخرى حي التفاح. وتُنسب حصيلة الضحايا إلى المستشفى، ولم يرد في التقرير تحقق مستقل منها.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: وكالة الأناضول – 26 نوفمبر</div>
+                        <a class="source-link" href="https://www.aa.com.tr/en/middle-east/-israeli-drone-strikes-on-gaza-kill-6-palestinians/4138121" target="_blank" rel="noopener">🔗 https://www.aa.com.tr/en/middle-east/-israeli-drone-strikes-on-gaza-kill-6-palestinians/4138121</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>غزة – استمرار التوتر رغم وقف إطلاق النار</h3>
+                        <p>تأتي الضربات الجديدة وسط تبادل الاتهامات بشأن خروقات وقف إطلاق النار الذي دخل حيز التنفيذ في أكتوبر 2025، واستمرار المخاوف الإنسانية والصحية في القطاع.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: متابعة وكالة الأناضول</div>
+                        <a class="source-link" href="https://www.aa.com.tr/en/middle-east/" target="_blank" rel="noopener">🔗 https://www.aa.com.tr/en/middle-east/</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>اليمن – تهديدات حوثية للموانئ السعودية</h3>
+                        <p>هدد الحوثيون باستهداف موانئ سعودية على البحر الأحمر إذا تعرض ميناء الحديدة لهجوم، في تطور يزيد المخاوف بشأن أمن الملاحة والتجارة البحرية.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: رويترز – 25 نوفمبر</div>
+                        <a class="source-link" href="https://www.reuters.com/world/middle-east/yemens-houthis-threaten-target-jeddah-other-saudi-red-sea-ports-2026-11-25/" target="_blank" rel="noopener">🔗 https://www.reuters.com/world/middle-east/yemens-houthis-threaten-target-jeddah-other-saudi-red-sea-ports-2026-11-25/</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>السعودية – إعلان اعتراض مسيّرات فوق رأس تنورة</h3>
+                        <p>قالت قوات التحالف إنها اعترضت أربع مسيّرات فوق رأس تنورة، بينما لم تؤكد إصابة المصفاة التي تحدثت الجماعة الحوثية عن استهدافها.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: رويترز</div>
+                        <a class="source-link" href="https://www.reuters.com/" target="_blank" rel="noopener">🔗 https://www.reuters.com/</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>السعودية – تقارير عن إصابات في الرياض</h3>
+                        <p>أوردت تقارير أن الدفاع المدني السعودي أعلن إصابة 11 شخصاً في هجوم طال برجاً في المنطقة المالية بالعاصمة. وتُنسب الحصيلة إلى الإعلان الرسمي الذي نقلته التقارير.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: رويترز</div>
+                        <a class="source-link" href="https://www.reuters.com/" target="_blank" rel="noopener">🔗 https://www.reuters.com/</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>مضيق هرمز – مخاوف على إمدادات النفط</h3>
+                        <p>تصاعد التوترات البحرية في المنطقة يثير قلق أسواق الطاقة وشركات الشحن، وسط تقارير عن تعرض سفن تجارية لمقذوفات وتهديدات للملاحة. ونقلت رويترز مزاعم إيرانية عن حوادث ألغام بحرية، دون تحقق مستقل كامل من تفاصيلها.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: رويترز – 26 نوفمبر</div>
+                        <a class="source-link" href="https://www.reuters.com/business/energy/oil-rises-supply-concerns-iran-claims-mine-strikes-ships-2026-11-26/" target="_blank" rel="noopener">🔗 https://www.reuters.com/business/energy/oil-rises-supply-concerns-iran-claims-mine-strikes-ships-2026-11-26/</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>إيران – شروط لإعادة حركة الملاحة</h3>
+                        <p>أفادت تقارير رويترز بأن طهران ربطت عودة حركة الشحن الطبيعية عبر مضيق هرمز بتلبية مطالبها، ومنها رفع الحصار البحري الأمريكي عن الموانئ الإيرانية وإنهاء الحرب على مختلف الجبهات.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: رويترز</div>
+                        <a class="source-link" href="https://www.reuters.com/" target="_blank" rel="noopener">🔗 https://www.reuters.com/</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Second: Ukraine & Russia -->
+        <section class="news-section filterable-section" data-category="ukraine">
+            <div class="section-header">
+                <h2>ثانياً: أوكرانيا وروسيا</h2>
+            </div>
+            <div class="cards-grid">
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>واشنطن والناتو يدعوان موسكو إلى عدم توسيع الحرب</h3>
+                        <p>دعا الرئيس الأمريكي دونالد ترامب والأمين العام لحلف الناتو مارك روته روسيا إلى تجنب أي خطوات قد تؤدي إلى توسيع الحرب في أوكرانيا، وشددا على ضرورة التوصل إلى حل سلمي سريع.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: رويترز – 26 نوفمبر</div>
+                        <a class="source-link" href="https://www.reuters.com/world/china/trump-nato-chief-urge-russia-avoid-actions-that-widen-ukraine-war-2026-11-26/" target="_blank" rel="noopener">🔗 https://www.reuters.com/world/china/trump-nato-chief-urge-russia-avoid-actions-that-widen-ukraine-war-2026-11-26/</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>أوكرانيا – هجوم على قاعدة جوية روسية</h3>
+                        <p>قالت هيئة الأركان الأوكرانية إن قواتها استهدفت قاعدة سافاسلييكا الجوية الروسية، وألحقت أضراراً بخمس طائرات عسكرية. ولم يصدر تعليق روسي فوري يؤكد أو ينفي الأضرار وفق تقرير رويترز.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: رويترز – 25 نوفمبر</div>
+                        <a class="source-link" href="https://www.reuters.com/business/aerospace-defense/ukraine-says-it-struck-major-russian-air-base-damaging-five-planes-2026-11-25/" target="_blank" rel="noopener">🔗 https://www.reuters.com/business/aerospace-defense/ukraine-says-it-struck-major-russian-air-base-damaging-five-planes-2026-11-25/</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>ليبيا – مقتل ضابطين بعد هجوم على سفينة روسية</h3>
+                        <p>أفادت وكالة أسوشيتد برس بوفاة ضابطين ليبيين متأثرين بإصاباتهما في هجوم بطائرات بحرية مسيّرة على سفينة روسية في قاعدة بنغازي البحرية. وأعلن الجيش الوطني الليبي عزمه الرد، فيما لم تعلن أوكرانيا مسؤوليتها عن الهجوم في التقرير.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: أسوشيتد برس</div>
+                        <a class="source-link" href="https://apnews.com/article/5719d6750c0619695c7f23a373cecd7b" target="_blank" rel="noopener">🔗 https://apnews.com/article/5719d6750c0619695c7f23a373cecd7b</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>أوكرانيا – دعم أمريكي محتمل لمقاتلات F-16</h3>
+                        <p>وافقت الولايات المتحدة على بيع محتمل لمعدات دعم وصيانة لمقاتلات F-16 الأوكرانية بقيمة تقديرية تبلغ 621.9 مليون دولار، بحسب وزارة الخارجية الأمريكية.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: التغطية الدولية</div>
+                        <a class="source-link" href="https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-oil-refineries-casualties-map-b3091150.html" target="_blank" rel="noopener">🔗 https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-oil-refineries-casualties-map-b3091150.html</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>مفاوضات السلام – خلاف بشأن مشاركة أوروبا</h3>
+                        <p>لا تزال مشاركة الدول الأوروبية في المفاوضات موضع خلاف بين موسكو وكييف، فيما يطالب الرئيس الأوكراني بأن يكون لأوروبا دور مباشر في أي مسار تفاوضي.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: رويترز وأسوشيتد برس</div>
+                        <a class="source-link" href="https://www.reuters.com/world/china/trump-nato-chief-urge-russia-avoid-actions-that-widen-ukraine-war-2026-11-26/" target="_blank" rel="noopener">🔗 https://www.reuters.com/world/china/trump-nato-chief-urge-russia-avoid-actions-that-widen-ukraine-war-2026-11-26/</a>
+                        <a class="source-link" href="https://apnews.com/article/683810203340077f33611fd1d1757b23" target="_blank" rel="noopener">🔗 https://apnews.com/article/683810203340077f33611fd1d1757b23</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>أوكرانيا – أصول لوك أويل الدولية</h3>
+                        <p>أُعلن عن اتفاق مقترح لشراء أصول لوك أويل خارج روسيا عبر تحالف يضم جهات استثمارية أمريكية وإماراتية. وتتعلق الصفقة بأصول في 11 دولة، وأثارت نقاشاً بشأن توافقها مع القيود الأمريكية.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: أسوشيتد برس</div>
+                        <a class="source-link" href="https://apnews.com/article/8d5df1befb2ebb2a0ce4f6b259fcdf14" target="_blank" rel="noopener">🔗 https://apnews.com/article/8d5df1befb2ebb2a0ce4f6b259fcdf14</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>الضمانات الأمنية – تصريحات أمريكية بشأن موقف موسكو</h3>
+                        <p>نقلت تقارير عن المبعوث الأمريكي جاريد كوشنر اعتقاده بأن روسيا قد تقبل ضمانات أمنية شبيهة بالمادة الخامسة من معاهدة الناتو لأوكرانيا بعد الحرب. هذا تصريح منسوب إليه وليس اتفاقاً بين الأطراف.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: أسوشيتد برس</div>
+                        <a class="source-link" href="https://apnews.com/article/7b4a86809dcd466bba97d374045a1a78" target="_blank" rel="noopener">🔗 https://apnews.com/article/7b4a86809dcd466bba97d374045a1a78</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Third: US, Canada & UK -->
+        <section class="news-section filterable-section" data-category="west">
+            <div class="section-header">
+                <h2>ثالثاً: الولايات المتحدة وكندا وبريطانيا</h2>
+            </div>
+            <div class="cards-grid">
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>الولايات المتحدة – عطلة عيد الشكر</h3>
+                        <p>الأسواق الأمريكية مغلقة الخميس بمناسبة عيد الشكر، على أن تستأنف التداول يوم الجمعة بجلسة مختصرة.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: جدول الأسواق</div>
+                        <a class="source-link" href="https://www.nyse.com/markets/hours-calendars" target="_blank" rel="noopener">🔗 https://www.nyse.com/markets/hours-calendars</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>الولايات المتحدة – الرسوم الجمركية</h3>
+                        <p>تتابع الأسواق مقترحات الإدارة الأمريكية لفرض رسوم على واردات من 14 شريكاً تجارياً، بينهم الصين واليابان والاتحاد الأوروبي. وتشير تقارير رويترز إلى أن المقترحات بدت أقل حدة مما كان يخشاه بعض المستثمرين.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: رويترز – 26 نوفمبر</div>
+                        <a class="source-link" href="https://www.reuters.com/world/china/global-markets-global-markets-2026-11-26/" target="_blank" rel="noopener">🔗 https://www.reuters.com/world/china/global-markets-global-markets-2026-11-26/</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>الولايات المتحدة – إنفيديا وتقييمات قطاع التكنولوجيا</h3>
+                        <p>تراجعت أسهم إنفيديا في جلسة الأربعاء وسط مخاوف مرتبطة بتقييم شركات التكنولوجيا والذكاء الاصطناعي، فيما تتابع الأسواق أثر هذه التطورات على قطاع الرقائق.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: رويترز</div>
+                        <a class="source-link" href="https://www.reuters.com/" target="_blank" rel="noopener">🔗 https://www.reuters.com/</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>كندا – بورصة تورونتو تسجل مكاسب</h3>
+                        <p>ارتفع مؤشر S&P/TSX المركب 217.69 نقطة، بما يعادل 0.64%، ليغلق عند 34,179.99 نقطة يوم الأربعاء، مسجلاً أعلى إغلاق في أسبوع وفق الأرقام الواردة في التقرير.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: رويترز – 25 نوفمبر</div>
+                        <a class="source-link" href="https://www.reuters.com/markets/europe/tsx-futures-fall-softer-commodity-prices-rate-hike-bets-weigh-2026-11-25/" target="_blank" rel="noopener">🔗 https://www.reuters.com/markets/europe/tsx-futures-fall-softer-commodity-prices-rate-hike-bets-weigh-2026-11-25/</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>كندا – الإنفاق الدفاعي</h3>
+                        <p>قال رئيس الوزراء مارك كارني إن الرئيس الأمريكي لم يثر معه شخصياً الانتقادات المتعلقة بقدرات الجيش الكندي، وذلك بعد انتقاد وثيقة للبنتاغون مستوى الاستعداد والإنفاق الدفاعي الكندي.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: التغطية الكندية</div>
+                        <a class="source-link" href="https://images.cpac.ca/schedule" target="_blank" rel="noopener">🔗 https://images.cpac.ca/schedule</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>كندا – هدف الإنفاق الدفاعي</h3>
+                        <p>قال وزير الدفاع الكندي إن بلاده تسير نحو هدف إنفاق يعادل 5% من الناتج المحلي الإجمالي على الدفاع والأمن بحلول 2035، فيما تتضمن التوقعات بلوغ 4.1% في 2027-2028.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: التغطية الكندية</div>
+                        <a class="source-link" href="https://images.cpac.ca/schedule" target="_blank" rel="noopener">🔗 https://images.cpac.ca/schedule</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>كندا والولايات المتحدة – المحادثات التجارية</h3>
+                        <p>تتواصل المناقشات بشأن اتفاق تجاري مؤقت بين البلدين، في ظل الملفات الخلافية المتعلقة بالرسوم والتجارة الثنائية.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: التغطية الكندية</div>
+                        <a class="source-link" href="https://images.cpac.ca/schedule" target="_blank" rel="noopener">🔗 https://images.cpac.ca/schedule</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>بريطانيا – تحذير للشركات الداعمة لأوكرانيا</h3>
+                        <p>أفادت أسوشيتد برس بأن مسؤولين أمنيين بريطانيين حذروا شركات تقدم دعماً عسكرياً لأوكرانيا من احتمال تعرضها لمحاولات تخريب مرتبطة بروسيا.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: أسوشيتد برس</div>
+                        <a class="source-link" href="https://apnews.com/article/17406e53d24d5a71f3beaf551fdf1a99" target="_blank" rel="noopener">🔗 https://apnews.com/article/17406e53d24d5a71f3beaf551fdf1a99</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>بريطانيا – تحقيق بشأن التجارب النووية</h3>
+                        <p>وافقت الحكومة البريطانية على إجراء تحقيق مستقل في الآثار الصحية لتجارب نووية بريطانية خلال الحرب الباردة على قدامى المحاربين.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: أسوشيتد برس – 26 نوفمبر</div>
+                        <a class="source-link" href="https://apnews.com/article/2b54ada9198745cc2e7900222bdee8ef" target="_blank" rel="noopener">🔗 https://apnews.com/article/2b54ada9198745cc2e7900222bdee8ef</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Fourth: Economy, Energy & Global Markets -->
+        <section class="news-section filterable-section" data-category="economy">
+            <div class="section-header">
+                <h2>رابعاً: الاقتصاد والطاقة والبورصات العالمية</h2>
+            </div>
+
+            <h3 class="subsection-title">النفط والطاقة</h3>
+            <div class="cards-grid">
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>برنت فوق 94 دولاراً</h3>
+                        <p>ارتفع خام برنت إلى نحو 94.71 دولاراً للبرميل في التعاملات الآسيوية المبكرة، بينما صعد خام غرب تكساس إلى نحو 84.03 دولاراً، وسط مخاوف من اضطراب الإمدادات.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: رويترز – 26 نوفمبر</div>
+                        <a class="source-link" href="https://www.reuters.com/business/energy/oil-rises-supply-concerns-iran-claims-mine-strikes-ships-2026-11-26/" target="_blank" rel="noopener">🔗 https://www.reuters.com/business/energy/oil-rises-supply-concerns-iran-claims-mine-strikes-ships-2026-11-26/</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>أوبك+ تستعد لاجتماعها</h3>
+                        <p>يستعد وزراء أوبك+ للاجتماع في 29 نوفمبر لمناقشة سياسة الإنتاج لعام 2027، في وقت تتزايد فيه حساسية الأسواق تجاه المعروض النفطي والتوترات الجيوسياسية.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: رويترز</div>
+                        <a class="source-link" href="https://www.reuters.com/business/energy/oil-rises-supply-concerns-iran-claims-mine-strikes-ships-2026-11-26/" target="_blank" rel="noopener">🔗 https://www.reuters.com/business/energy/oil-rises-supply-concerns-iran-claims-mine-strikes-ships-2026-11-26/</a>
+                    </div>
+                </article>
+            </div>
+
+            <h3 class="subsection-title">الذهب والمعادن</h3>
+            <div class="cards-grid">
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>الذهب يحاول التعافي</h3>
+                        <p>استقر الذهب قرب 3,580.87 دولاراً للأونصة بعد هبوطه في الجلسة السابقة إلى ما دون 3,500 دولار، وسط ترقب بيانات التضخم الأمريكية وتوقعات أسعار الفائدة.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: رويترز – 26 نوفمبر</div>
+                        <a class="source-link" href="https://www.reuters.com/world/india/gold-steadies-after-hitting-over-1-year-low-fed-outlook-focus-2026-11-26/" target="_blank" rel="noopener">🔗 https://www.reuters.com/world/india/gold-steadies-after-hitting-over-1-year-low-fed-outlook-focus-2026-11-26/</a>
+                    </div>
+                </article>
+            </div>
+
+            <h3 class="subsection-title">الأسهم العالمية</h3>
+            <div class="cards-grid">
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>الأسواق الآسيوية ترتد صعوداً</h3>
+                        <p>ارتفع مؤشر نيكاي الياباني 1.6%، وصعد المؤشر الكوري الجنوبي 1.9%، فيما ارتفع مؤشر تايوان 1.4%، وفق رويترز.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: رويترز – 26 نوفمبر</div>
+                        <a class="source-link" href="https://www.reuters.com/world/china/global-markets-global-markets-2026-11-26/" target="_blank" rel="noopener">🔗 https://www.reuters.com/world/china/global-markets-global-markets-2026-11-26/</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>وول ستريت – تباين في الإغلاق</h3>
+                        <p>أغلق مؤشر S&P 500 منخفضاً 0.25% عند 7,182.78 نقطة، وتراجع ناسداك 0.62% إلى 23,585.80 نقطة، بينما ارتفع داو جونز 0.33% إلى 50,182.95 نقطة يوم الأربعاء.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: أسوشيتد برس</div>
+                        <a class="source-link" href="https://apnews.com/article/94fdb0ecb060ec65c0b02879ce0d2d09" target="_blank" rel="noopener">🔗 https://apnews.com/article/94fdb0ecb060ec65c0b02879ce0d2d09</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>الدولار وعوائد السندات</h3>
+                        <p>تراجع الدولار مع انخفاض عوائد سندات الخزانة الأمريكية، في ظل إعادة تقييم المستثمرين لاحتمالات رفع الفائدة الأمريكية خلال ديسمبر.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: رويترز</div>
+                        <a class="source-link" href="https://www.reuters.com/world/africa/dollar-steady-sliding-yields-temper-safe-haven-bid-2026-11-26/" target="_blank" rel="noopener">🔗 https://www.reuters.com/world/africa/dollar-steady-sliding-yields-temper-safe-haven-bid-2026-11-26/</a>
+                    </div>
+                </article>
+            </div>
+
+            <h3 class="subsection-title">كندا والأسواق</h3>
+            <div class="cards-grid">
+                <article class="news-card">
+                    <div>
+                        <h3><span class="dot-red"></span>بورصة تورونتو</h3>
+                        <p>سجل مؤشر TSX ارتفاعاً بنسبة 0.64% في جلسة الأربعاء، بدعم من قطاعات المواد والطاقة، وفق الأرقام الواردة في تقرير رويترز.</p>
+                    </div>
+                    <div>
+                        <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:6px;">المصدر: رويترز – 25 نوفمبر</div>
+                        <a class="source-link" href="https://www.reuters.com/markets/europe/tsx-futures-fall-softer-commodity-prices-rate-hike-bets-weigh-2026-11-25/" target="_blank" rel="noopener">🔗 https://www.reuters.com/markets/europe/tsx-futures-fall-softer-commodity-prices-rate-hike-bets-weigh-2026-11-25/</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="market-note">
+                <strong>ملاحظة اقتصادية:</strong> أرقام الأسهم تمثل إغلاق الأربعاء 25 نوفمبر، أما أسعار النفط والذهب فهي من التعاملات المبكرة الخميس 26 نوفمبر. الأسواق الأمريكية مغلقة الخميس بسبب عطلة عيد الشكر.
+            </div>
+        </section>
+
+        <!-- Fifth: Sports -->
+        <section class="news-section filterable-section" data-category="sports">
+            <div class="section-header">
+                <h2>خامساً: الرياضة والمواجهات القادمة</h2>
+            </div>
+            <p style="margin-bottom:16px;font-weight:700;">الخميس 26 نوفمبر 2026 — الأوقات بتوقيت شرق كندا EST – تورونتو وأوتاوا ومونتريال.</p>
+
+            <div class="sports-grid">
+                <!-- UEFA Europa League -->
+                <div class="sport-box">
+                    <h3>الدوري الأوروبي UEFA Europa League</h3>
+                    <p style="font-size:0.92rem;margin-bottom:10px;">🔴 مباريات الدوري الأوروبي: وردت في المسودة السابقة مواجهات وأوقات متعددة، لكن القائمة تحتاج مطابقة نهائية مع جدول الاتحاد الأوروبي لكرة القدم قبل النشر. لا تعتمد المواعيد أو أسماء الفرق الواردة في القائمة السابقة باعتبارها مؤكدة دون تحقق رسمي.</p>
+                    <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:4px;">جدول المباريات الرسمي:</div>
+                    <a class="source-link" href="https://www.uefa.com/uefaeuropaleague/fixtures-results/" target="_blank" rel="noopener">🔗 https://www.uefa.com/uefaeuropaleague/fixtures-results/</a>
+                </div>
+
+                <!-- UEFA Conference League -->
+                <div class="sport-box">
+                    <h3>دوري المؤتمر الأوروبي UEFA Conference League</h3>
+                    <p style="font-size:0.92rem;margin-bottom:10px;">🔴 مباريات دوري المؤتمر: تُراجع المواجهات ومواعيد انطلاقها من الجدول الرسمي للاتحاد الأوروبي قبل اعتمادها في النسخة المنشورة.</p>
+                    <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:4px;">جدول المباريات الرسمي:</div>
+                    <a class="source-link" href="https://www.uefa.com/uefaconferenceleague/fixtures-results/" target="_blank" rel="noopener">🔗 https://www.uefa.com/uefaconferenceleague/fixtures-results/</a>
+                </div>
+
+                <!-- NFL Thanksgiving -->
+                <div class="sport-box">
+                    <h3>دوري كرة القدم الأمريكية NFL – عيد الشكر</h3>
+                    <ul class="sport-list">
+                        <li>🔴 شيكاغو بيرز × ديترويت لايونز — الساعة 1:00 ظهراً.</li>
+                        <li>🔴 فيلادلفيا إيغلز × دالاس كاوبويز — الساعة 4:30 عصراً.</li>
+                        <li>🔴 كانساس سيتي تشيفز × بوفالو بيلز — الساعة 8:20 مساءً.</li>
+                    </ul>
+                    <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:4px;">المصدر: جدول مباريات عيد الشكر</div>
+                    <a class="source-link" href="https://www.nfl.com/schedules/" target="_blank" rel="noopener">🔗 https://www.nfl.com/schedules/</a>
+                </div>
+
+                <!-- NBA & NHL -->
+                <div class="sport-box">
+                    <h3>كرة السلة NBA وهوكي الجليد NHL</h3>
+                    <p style="font-size:0.92rem;margin-bottom:10px;">🔴 NBA وNHL: لا تظهر في الجدول الذي تمت مراجعته مباريات مقررة خلال يوم الخميس 26 نوفمبر نفسه. ويجب مراعاة اختلاف التاريخ بين التوقيت العالمي وتوقيت شرق كندا عند مراجعة المباريات الليلية.</p>
+                    <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:4px;">المصادر:</div>
+                    <a class="source-link" href="https://www.nba.com/schedule" target="_blank" rel="noopener">🔗 https://www.nba.com/schedule</a>
+                    <a class="source-link" href="https://www.nhl.com/schedule" target="_blank" rel="noopener">🔗 https://www.nhl.com/schedule</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sixth: Global Scene Reading -->
+        <section class="summary-box filterable-section" data-category="summary">
+            <h2>سادساً: قراءة المشهد الدولي</h2>
+            <p>🔴 المشهد الأمني: استمرار التوتر في غزة، وتداعيات الحرب الروسية الأوكرانية، ومخاطر امتداد التوتر البحري إلى طرق الطاقة والتجارة، خصوصاً في مضيق هرمز والبحر الأحمر.</p>
+            <p>🔴 المشهد السياسي: تتحرك الاتصالات الأمريكية والأوروبية بشأن الحرب الأوكرانية، بينما تظل ملفات إيران وإسرائيل وغزة حاضرة في الحسابات الدبلوماسية والأمنية.</p>
+            <p>🔴 المشهد الاقتصادي: عودة بعض الأسواق الآسيوية إلى الارتفاع، مقابل استمرار الحذر من تقييمات شركات الذكاء الاصطناعي والسياسات الجمركية الأمريكية.</p>
+            <p>🔴 المشهد الطاقوي: ارتفاع النفط يعيد أمن الإمدادات إلى واجهة الأسواق، خصوصاً مع التوترات البحرية واقتراب اجتماع أوبك+.</p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-brand">
+            <svg viewBox="0 0 200 200" width="44" height="44" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="200" fill="#071124"/>
+                <rect x="18" y="18" width="164" height="164" rx="34" fill="none" stroke="#e2b426" stroke-width="7"/>
+                <circle cx="136" cy="64" r="10" fill="#e2b426"/>
+                <path d="M52 94 C72 68, 92 68, 108 94 C122 116, 138 116, 148 94" fill="none" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
+                <path d="M52 122 C72 96, 92 96, 108 122 C122 144, 138 144, 148 122" fill="none" stroke="#e2b426" stroke-width="11" stroke-linecap="round"/>
+            </svg>
+            <div style="text-align:right;">
+                <strong style="color:#d4af37;font-size:1.15rem;display:block;">صحيفة الموج | AL-MAWJ PRESS</strong>
+                <span style="font-size:0.85rem;color:#94a3b8;">نرصد الحدث.. ونربط الصورة بالسياق.</span>
+            </div>
+        </div>
+        <p style="font-weight:700;color:#fff;margin-bottom:12px;">رئيس التحرير: زاد الهاجري</p>
+
+        <div class="social-cta">
+            <strong style="color:#d4af37;display:block;margin-bottom:6px;">تابعوا صحيفة الموج</strong>
+            <p style="font-size:0.9rem;">ندعوكم إلى متابعة صحيفة الموج لتصلكم الأخبار والتحديثات الدولية أولاً بأول.</p>
+            <div class="social-badges">
+                <span>👍 لا تنسوا الإعجاب بالمنشورات.</span>
+                <span>🔔 اشتركوا وتابعوا صفحاتنا لتصلكم التحديثات.</span>
+                <span>🔁 شاركوا الأخبار مع أصدقائكم ومتابعيكم.</span>
+            </div>
+            <p style="margin-top:10px;font-size:0.88rem;color:#cbd5e1;">دعمكم ومشاركتكم يساهمان في وصول الخبر إلى الجميع.</p>
+            <p style="margin-top:8px;font-size:0.85rem;color:#d4af37;font-weight:700;">صحيفة الموج – نرصد الحدث.. ونربط الصورة بالسياق.</p>
+        </div>
+
+        <p style="margin-top:14px;font-size:0.85rem;color:#94a3b8;">جميع الحقوق محفوظة لصحيفة الموج كندا 2026</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+        }
+
+        function filterSection(category, btn) {
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            document.querySelectorAll('.filterable-section').forEach(sec => {
+                if (category === 'all' || sec.dataset.category === category) {
+                    sec.classList.remove('hidden');
+                } else {
+                    sec.classList.add('hidden');
+                }
+            });
+        }
+
+        function searchNews() {
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+            document.querySelectorAll('.news-card').forEach(card => {
+                const text = card.innerText.toLowerCase();
+                card.style.display = text.includes(query) ? 'flex' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>صحيفة الموج | AL-MAWJ PRESS - عدد 25 نوفمبر 2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
